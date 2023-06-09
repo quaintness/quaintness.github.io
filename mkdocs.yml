@@ -9,15 +9,15 @@ nav:
   - Computer Science:
     - CS/Intro_CS.md
     - Algorithm:
-      - MIT 6.006(2011 Fall): CS/Algorithm/6.006.md
+      - MIT 6.006(2011 Fall): CS/Algorithm/6_006.md
     - Machine Learning:
       - CS 229: CS/ML/CS229.md
-      - CS 229 PS: CS/ML/CS229 Problem Set.md
+      - CS 229 PS: CS/ML/CS229_Problem_Set.md
   - Languages:
     - Languages/English/Intro_Languages.md
     - English:
-      - Grammar: Languages/English/English Grammar Notes.md
-      - IELTS Tips: Languages/English/IELTS Notes.md
+      - Grammar: Languages/English/English_Grammar_Notes.md
+      - IELTS Tips: Languages/English/IELTS_Notes.md
 
 # [UI]
 ## [top]
