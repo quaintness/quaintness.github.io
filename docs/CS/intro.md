@@ -1,0 +1,1 @@
+Here is some lecture notes and assignments for computer science courses.
