@@ -11,6 +11,7 @@ nav:
     - Basics:
       - Intro to CS (MIT 6.0001): CS/Basics/6_0001.md
       - Algorithm (MIT 6.006): CS/Basics/6_006.md
+      - Computer Networking: CS/Basics/Computer-Networking-Lecture-CS144-Stanford.md
     - Machine Learning:
       - CS229: CS/ML/CS229.md
       - CS229bPS: CS/ML/CS229_Problem_Set.md
