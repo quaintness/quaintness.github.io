@@ -8,11 +8,13 @@ site_description: Record and Share
 nav:
   - Computer Science:
     - CS/Intro_CS.md
-    - Algorithm:
-      - MIT 6.006(2011 Fall): CS/Algorithm/6_006.md
+    - Basics:
+      - Intro to CS (MIT 6.0001): CS/Basics/6_0001.md
+      - Algorithm (MIT 6.006): CS/Basics/6_006.md
     - Machine Learning:
-      - CS 229: CS/ML/CS229.md
-      - CS 229 PS: CS/ML/CS229_Problem_Set.md
+      - CS229: CS/ML/CS229.md
+      - CS229bPS: CS/ML/CS229_Problem_Set.md
+      - CS231n: CS/ML/CS231n.md
   - Languages:
     - Languages/English/Intro_Languages.md
     - English:
