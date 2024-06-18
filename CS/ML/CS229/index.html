@@ -1,0 +1,2516 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Record and Share">
+      
+      
+        <meta name="author" content="quaintness">
+      
+      
+        <link rel="canonical" href="https://quaintness.github.io/CS/ML/CS229/">
+      
+      
+        <link rel="prev" href="../../Basics/Linux-tutorial/">
+      
+      
+        <link rel="next" href="../CS231n/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
+    
+    
+      
+        <title>CS229 - Welcome to Wonderland</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/no-footer.css">
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/unordered-list-symbols.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#machine-learning" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Welcome to Wonderland" class="md-header__button md-logo" aria-label="Welcome to Wonderland" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Welcome to Wonderland
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CS229
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/quaintness/quaintness.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    quaintness.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../Intro_CS/" class="md-tabs__link">
+          
+  
+    
+  
+  Computer Science
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Languages/English/Intro_Languages.md" class="md-tabs__link">
+          
+  
+    
+  
+  Languages
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Welcome to Wonderland" class="md-nav__button md-logo" aria-label="Welcome to Wonderland" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Welcome to Wonderland
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/quaintness/quaintness.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    quaintness.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Computer Science
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Computer Science
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Intro_CS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro CS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Basics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Basics/6_0001/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro to CS (MIT 6.0001)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Basics/6_006/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Algorithm (MIT 6.006)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Basics/Computer-Networking-Lecture-CS144-Stanford/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Computer Networking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Basics/Linux-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Machine Learning
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Machine Learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    CS229
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    CS229
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linear-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linear Regression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Linear Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multivariate-linear-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multivariate linear regression
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gradient-descent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gradient Descent
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gradient Descent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#batch-gradient-descent" class="md-nav__link">
+    <span class="md-ellipsis">
+      “Batch” Gradient Descent
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#normal-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Normal Equation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CS229_Problem_Set.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CS229bPS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CS231n/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CS231n
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Languages
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Languages
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Languages/English/Intro_Languages.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    English
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            English
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Languages/English/English_Grammar_Notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grammar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Languages/English/IELTS_Notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IELTS Tips
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linear-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linear Regression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Linear Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multivariate-linear-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multivariate linear regression
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gradient-descent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gradient Descent
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gradient Descent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#batch-gradient-descent" class="md-nav__link">
+    <span class="md-ellipsis">
+      “Batch” Gradient Descent
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#normal-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Normal Equation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/quaintness/quaintness.github.io/edit/main/docs/CS/ML/CS229.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="machine-learning">Machine Learning<a class="headerlink" href="#machine-learning" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Programming  Environment: <strong>Octave</strong></p>
+<ol>
+<li><strong>Supervised Learning</strong></li>
+</ol>
+<p>Dataset offers the correct answer.</p>
+<ul>
+<li>
+<p>Regression</p>
+<p>To predict a continuous valued output.</p>
+</li>
+<li>
+<p>Classification</p>
+<p>To predict  a discrete valued output.</p>
+<ul>
+<li>Support Vector Machine</li>
+</ul>
+<p>Allow a computer to deal with an infinite number of features.</p>
+</li>
+<li>
+<p><strong>Unsupervised Learning</strong></p>
+</li>
+</ul>
+<p>Given a dataset and find some structure in the data.</p>
+<ul>
+<li>
+<p>Clustering Algorithm</p>
+<p>e.g. Organize computing clusters, Social network analysis, Market segmentation, Astronomical data analysis</p>
+</li>
+<li>
+<p>Cocktail Party Algorithm</p>
+<p>Find structures in the data and separate out them</p>
+</li>
+</ul>
+<h2 id="linear-regression">Linear Regression<a class="headerlink" href="#linear-regression" title="Permanent link">&para;</a></h2>
+<p>Terms</p>
+<ul>
+<li>
+<p>Training set</p>
+</li>
+<li>
+<p><span class="arithmatex">\(m\)</span> --- # training examples </p>
+</li>
+<li>
+<p><span class="arithmatex">\(x\)</span> --- "input" variable / features</p>
+</li>
+<li>
+<p><span class="arithmatex">\(y\)</span> --- "output" variable / features</p>
+</li>
+<li>
+<p><span class="arithmatex">\((x,y)\)</span> --- one training example</p>
+</li>
+<li>
+<p><span class="arithmatex">\((x^{(i)},y^{(i)})\)</span> --- <span class="arithmatex">\(i_{th}\)</span> training example</p>
+</li>
+<li>
+<p><span class="arithmatex">\(h\)</span> --- hypothesis</p>
+<p><strong><u>Univariate Liner Regression / Linear Regression with one variable</u></strong>
+$$
+h_\Theta(x) = \Theta _0 + \Theta _1 x
+$$</p>
+</li>
+</ul>
+<p><strong>Cost Function</strong> <span class="arithmatex">\(J(\Theta _0,\Theta _1)\)</span> --- <em>Overall Objective Function</em></p>
+<p>Goal： minimize <span class="arithmatex">\(J(\Theta _0,\Theta _1)\)</span></p>
+<p><strong>Square Error Function</strong>
+$$
+\displaylines {J(\Theta <em i="1">0,\Theta _1) = \frac{1}{2m} {\displaystyle \sum</em>
+\ \space \underset {\Theta _0, \Theta _1}  {minimize} \space J(\Theta _0,\Theta _1) }
+$$}^m (h_\theta (x^{(i)})-(y^{(i)}))^2 </p>
+<p>Contour Plot  is  a better way to visualize <span class="arithmatex">\(J(\Theta _0,\Theta _1)\)</span> .</p>
+<p><img alt="image-20220316112050960" src="https://gitee.com/violets/typora--images/raw/main/imgs/202203161120162.png" /></p>
+<h4 id="multivariate-linear-regression">Multivariate linear regression<a class="headerlink" href="#multivariate-linear-regression" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Feature scaling</strong>: Get every feature into approximately a <span class="arithmatex">\(-1 \le x _i \le 1\)</span> range.</li>
+</ul>
+<p>Make sure features are on a similar scale, then gradient descent can converge more quickly.</p>
+<p><img src="https://gitee.com/violets/typora--images/raw/main/imgs/202203190931206.png" alt="image-20220319093132010" style="zoom: 50%;" /></p>
+<ul>
+<li><strong>Mean normalization</strong>: Replace <span class="arithmatex">\(x_i\)</span> with <span class="arithmatex">\(x_i-\mu_i\)</span> to make features have approximately zero mean. (Do not apply to <span class="arithmatex">\(x_0 = 1\)</span>)</li>
+</ul>
+<p><img src="https://gitee.com/violets/typora--images/raw/main/imgs/202203190946277.png" alt="image-20220319094608197" style="zoom:50%;" /></p>
+<ul>
+<li>"Debugging": How to make sure gradient descent is working correctly.</li>
+</ul>
+<p>Declare convergence if <span class="arithmatex">\(J (\theta)\)</span> decreases by less than <span class="arithmatex">\(\epsilon\)</span> in one iteration, but choose a proper threshold <span class="arithmatex">\(\epsilon\)</span> is hard.</p>
+<ul>
+<li>
+<p>How to choose <strong>Learning rate <span class="arithmatex">\(\alpha\)</span></strong></p>
+</li>
+<li>
+<p>If <span class="arithmatex">\(\alpha\)</span> is too small: slow convergence</p>
+</li>
+<li>If <span class="arithmatex">\(\alpha\)</span> is too large: <u><span class="arithmatex">\(J(\theta)\)</span> may not decrease on every iteration; may not converge;</u> slow convergence.</li>
+</ul>
+<p>Try a range of value for <span class="arithmatex">\(\alpha\)</span>, every value is roughly 3 times bigger than its previous value. <em><u>(e.g. <span class="arithmatex">\(...0.001, 0.003, 0.01,0.03...\)</span>)</u></em>, <strong>Find a value too small, and a value that is too large, pick the largest possible value between them.</strong></p>
+<h2 id="gradient-descent">Gradient Descent<a class="headerlink" href="#gradient-descent" title="Permanent link">&para;</a></h2>
+<p>Have some function <span class="arithmatex">\(J (\theta _0, \theta _1)\)</span> <em><u>can be <span class="arithmatex">\(\theta _0, \theta _1 ... \theta _n\)</span></u></em></p>
+<p>Want <span class="arithmatex">\(\underset {\theta _0, \theta _1}  {minimize} \space J(\theta _0,\theta _1)\)</span></p>
+<p><strong>Outline:</strong></p>
+<ul>
+<li>Start with some <span class="arithmatex">\(\theta _0, \theta _1\)</span></li>
+<li>Keep changing <span class="arithmatex">\(\theta _0, \theta _1\)</span> to reduce <span class="arithmatex">\(J (\theta _0, \theta _1)\)</span> until we hopefully end up at a minimum.</li>
+</ul>
+<p><strong><u>Subtlety:</u></strong></p>
+<ol>
+<li>
+<p>All <span class="arithmatex">\(\theta _j\)</span> should be updated simultaneously.</p>
+</li>
+<li>
+<p>As we approach a local minimum, gradient descent will automatically take smaller steps. So, <u>no need to decrease <span class="arithmatex">\(\alpha\)</span> over time.</u></p>
+</li>
+</ol>
+<p><img src="C:%5CUsers%5CLENOVO%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220318105203244.png" alt="image-20220318105203244" style="zoom:50%;" /></p>
+<h4 id="batch-gradient-descent">“Batch” Gradient Descent<a class="headerlink" href="#batch-gradient-descent" title="Permanent link">&para;</a></h4>
+<p>Each step of gradient descent uses all the training examples.</p>
+<h2 id="normal-equation">Normal Equation<a class="headerlink" href="#normal-equation" title="Permanent link">&para;</a></h2>
+<p>Method to solve for <span class="arithmatex">\(\theta\)</span> analytically
+$$
+\theta = (X^T X)^{-1} X^T y
+$$
+<span class="arithmatex">\(X\)</span> --- design matrix</p>
+<p><img src="C:%5CUsers%5CLENOVO%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220319141338956.png" alt="image-20220319141338956" style="zoom:50%;" /></p>
+<p><strong><em>Comparison between Gradient descent &amp; Normal equation</em></strong></p>
+<p><img src="https://gitee.com/violets/typora--images/raw/main/imgs/202203191358853.png" alt="image-20220319135851696" style="zoom:50%;" /></p>
+<h1 id="cs-229">CS 229<a class="headerlink" href="#cs-229" title="Permanent link">&para;</a></h1>
+<h2 id="lecture-5-gda-naive-bayes">Lecture 5 GDA &amp; Naive Bayes<a class="headerlink" href="#lecture-5-gda-naive-bayes" title="Permanent link">&para;</a></h2>
+<p><strong>Two examples</strong></p>
+<ol>
+<li>Continuous value features (e.g. tumor classification) —— GDA</li>
+<li>Discrete features (e.g. email spam, NLP)</li>
+</ol>
+<h3 id="gaussian-discriminant-analysis">Gaussian Discriminant Analysis<a class="headerlink" href="#gaussian-discriminant-analysis" title="Permanent link">&para;</a></h3>
+<p><strong>Multi-variate Gaussian</strong></p>
+<h2 id="lecture-6-support-vector-machine">Lecture 6  Support Vector Machine<a class="headerlink" href="#lecture-6-support-vector-machine" title="Permanent link">&para;</a></h2>
+<hr />
+<p><strong>Notation :</strong></p>
+<p><img alt="image-20220401105602016" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204011056105.png" /></p>
+<p><img alt="image-20220401105943402" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204011059523.png" /></p>
+<p>Labels <span class="arithmatex">\(y \in \{-1, +1\}\)</span> </p>
+<hr />
+<h3 id="optimal-margin-classifier">Optimal Margin Classifier<a class="headerlink" href="#optimal-margin-classifier" title="Permanent link">&para;</a></h3>
+<p><img alt="image-20220401142258348" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204011422483.png" /></p>
+<h4 id="functional-margin">Functional Margin<a class="headerlink" href="#functional-margin" title="Permanent link">&para;</a></h4>
+<p><span class="arithmatex">\(\Gamma \gamma\)</span></p>
+<p><img alt="image-20220401103431429" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204011034634.png" /></p>
+<p>If classifier has a large functional margin, two "if" statements listed above are TRUE.</p>
+<p><img alt="image-20220401111129080" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204011111184.png" /></p>
+<p><span class="arithmatex">\(\Gamma _{i} ^{hat} \gt\gt 0\)</span></p>
+<p><img alt="image-20220401111143855" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204011111941.png" /></p>
+<ul>
+<li>Easy to cheat and increase the functional margin --- (<strong>Solution: Normalize the length of your parameters (or any length you want, doesn't change the classification)</strong>)</li>
+</ul>
+<p><img alt="image-20220401111636388" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204011116439.png" /></p>
+<h4 id="geometric-margin-11230">Geometric Margin [1:12:30]<a class="headerlink" href="#geometric-margin-11230" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20220401112245672" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204011122770.png" /></p>
+<p><img alt="image-20220401140353877" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204011403957.png" /></p>
+<p><img alt="image-20220401140630383" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204011406485.png" /></p>
+<h2 id="lecture-7-kernels">Lecture 7 Kernels<a class="headerlink" href="#lecture-7-kernels" title="Permanent link">&para;</a></h2>
+<h3 id="l-_1-norm-soft-margin-svm"><strong><span class="arithmatex">\(L _1\)</span> norm soft margin SVM</strong><a class="headerlink" href="#l-_1-norm-soft-margin-svm" title="Permanent link">&para;</a></h3>
+<p><img alt="image-20220403134635522" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204031346717.png" /></p>
+<p><u>For some kernel, we can use dynamic programming <strong><em>Knuth-Morris-Pratt</em></strong> to make <span class="arithmatex">\(\phi (x)^T \phi (z) = K(x,z)\)</span></u></p>
+<h2 id="lecture-8-data-splits-models-cross-validation">Lecture 8 Data Splits, Models &amp; Cross-validation<a class="headerlink" href="#lecture-8-data-splits-models-cross-validation" title="Permanent link">&para;</a></h2>
+<h3 id="bias-and-variance">Bias and Variance<a class="headerlink" href="#bias-and-variance" title="Permanent link">&para;</a></h3>
+<p><img alt="image-20220403185227848" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204031852011.png" /></p>
+<h3 id="regularization-lambda2-theta-2">Regularization  <span class="arithmatex">\(\lambda/2 \|\Theta\| ^2\)</span><a class="headerlink" href="#regularization-lambda2-theta-2" title="Permanent link">&para;</a></h3>
+<p>regularization is the most effective way to prevent over-fitting. </p>
+<p><img alt="image-20220403193711027" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204031937102.png" /></p>
+<p>The optimization objective of the support vector machine was to minimize <span class="arithmatex">\(\|w\|^2\)</span>, this turns out to maximize the geometric margin SVM</p>
+<p>In order to make sure the <span class="arithmatex">\(\lambda\)</span> on the same scale, a common pre-processing step we're using learning algorithms is normalizing different sized features to a similar scale. [<u>the normalization also makes gradient descent run faster</u>]</p>
+<p><strong>Another way to think about Regularization</strong></p>
+<p><img alt="image-20220403203326691" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204032033797.png" /></p>
+<p><img alt="image-20220403203441394" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204032034503.png" /></p>
+<p><strong><em>Statistics world <u>Frequentist VS Bayesian</u></em></strong></p>
+<p><img alt="image-20220403204437001" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204032044118.png" /></p>
+<p><strong>Regularization and choose polynomial degree</strong> </p>
+<p><img alt="image-20220403205429341" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204032054466.png" /></p>
+<h3 id="cross-validation">Cross Validation<a class="headerlink" href="#cross-validation" title="Permanent link">&para;</a></h3>
+<p><strong>Different mechanistic procedures to find the optimum point</strong></p>
+<ol>
+<li>Split your dataset into <span class="arithmatex">\(S _{train}, S _{dev}, S _{test}\)</span></li>
+</ol>
+<p><u><span class="arithmatex">\(S_{dev}\)</span> also called <strong>Cross Validation Set</strong></u></p>
+<ol>
+<li>
+<p>Train each model i (option for degree of polynomial) on <span class="arithmatex">\(S _{train}\)</span>, get some hypothesis <span class="arithmatex">\(h_i\)</span></p>
+</li>
+<li>
+<p>Measure error on <span class="arithmatex">\(S _{dev}\)</span>. Pick model with lowest error on <span class="arithmatex">\(S _{dev}\)</span></p>
+</li>
+</ol>
+<p><strong><em>Don't evaluate algorithms on training set.</em></strong> <em><u>Cause over-fit, because more complex algorithm will always do better on the training set.</u></em></p>
+<ol>
+<li><em>[Optional]</em> Evaluate the algorithm on a separate test set (<span class="arithmatex">\(S _{test}\)</span>) and report that error.</li>
+</ol>
+<p><strong>How do you decide how much data should go into  <span class="arithmatex">\(S _{train}, S _{dev}, S _{test}\)</span> ?</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Common Weight on Dataset</th>
+<th style="text-align: center;"><span class="arithmatex">\(S _{train}\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(S _{dev}\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(S _{test}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Small dataset(without dev set)</td>
+<td style="text-align: center;">70%</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">30%</td>
+</tr>
+<tr>
+<td style="text-align: center;">Small dataset(with dev set)</td>
+<td style="text-align: center;">60%</td>
+<td style="text-align: center;">20%</td>
+<td style="text-align: center;">20%</td>
+</tr>
+<tr>
+<td style="text-align: center;">Large dataset</td>
+<td style="text-align: center;">90%</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: center;">5%</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Choose <span class="arithmatex">\(S _{train}, S _{dev}\)</span> to be big enough </li>
+<li>If you want to tease out very small differences(e.g. 0.001%), you may want a large <span class="arithmatex">\(S_{test}\)</span> .</li>
+<li>If you want to compare algorithms with large accuracy differences(e.g. 1% vs 2%),  small-size <span class="arithmatex">\(S_{test}\)</span> is enough.</li>
+</ul>
+<p><strong>Do not make ANY decisions about your model using the test set.</strong></p>
+<h4 id="simple-hold-out-cross-validation">(Simple) Hold-out Cross Validation<a class="headerlink" href="#simple-hold-out-cross-validation" title="Permanent link">&para;</a></h4>
+<p>==<strong>When you have a large dataset, Cross Validation can be used to choose</strong>==</p>
+<ol>
+<li>==the model of polynomial==</li>
+<li>==the regularization parameter <span class="arithmatex">\(\lambda\)</span> or <span class="arithmatex">\(C\)</span> or <span class="arithmatex">\(\tau\)</span>==</li>
+</ol>
+<h4 id="k-fold-cross-validation">K-fold Cross Validation<a class="headerlink" href="#k-fold-cross-validation" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Makes more efficient of the data</li>
+<li>Computationally expensive</li>
+</ul>
+<p>==<strong>When you have a small dataset, without too much data waste</strong>==</p>
+<p><span class="arithmatex">\(K = 10\)</span> is typical</p>
+<p>==[Use when <span class="arithmatex">\(m=50\)</span>(roughly) or less]== When <span class="arithmatex">\(K = m\)</span> , this method called <strong>Leave-one-out Cross Validation</strong></p>
+<h3 id="feature-selection">Feature Selection<a class="headerlink" href="#feature-selection" title="Permanent link">&para;</a></h3>
+<p><em><u>A special case for model selection</u></em></p>
+<p>If you have a lot of features, one way to reduce over-fitting is to try to find a small subset of most useful features for your task.</p>
+<h4 id="forward-search">Forward Search<a class="headerlink" href="#forward-search" title="Permanent link">&para;</a></h4>
+<p>Keep iterating until adding more features now hurts performance, then pick whichever feature subset allows you to have the best possible performance of dev set.</p>
+<h4 id="backward-search">Backward Search<a class="headerlink" href="#backward-search" title="Permanent link">&para;</a></h4>
+<h2 id="lecture-9-approxestimation-error-erm">Lecture 9 Approx/Estimation Error &amp; ERM<a class="headerlink" href="#lecture-9-approxestimation-error-erm" title="Permanent link">&para;</a></h2>
+<p><strong>Assumptions</strong></p>
+<ol>
+<li>Data distribution D</li>
+</ol>
+<p><img alt="image-20220407190938033" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204071909127.png" /></p>
+<ol>
+<li>Independent samples</li>
+</ol>
+<p><img alt="image-20220406201138648" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204062011584.png" /></p>
+<p><strong>Bias and Variance</strong></p>
+<p>Bias and Variance correspond to first and second moment of the sampling distribution.</p>
+<p><em>There's no correlation between bias and variance.</em></p>
+<ul>
+<li><em>Parameter View</em></li>
+</ul>
+<p><img alt="image-20220407193326253" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204071933425.png" /></p>
+<ul>
+<li>If you increase the size of data(i.e. <span class="arithmatex">\(m\)</span>), the variance of <span class="arithmatex">\(\hat \theta\)</span> will be small</li>
+</ul>
+<p><img alt="image-20220408144523621" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204081445704.png" /></p>
+<p><strong><em>Statistical Efficiency</em></strong> : how efficient of your algorithm from squeezing information from given amount of data.</p>
+<p><img alt="image-20220408145726716" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204081457824.png" /></p>
+<p><strong>How we can Fight Variance</strong></p>
+<ul>
+<li>
+<p><strong>How we can address variance?</strong></p>
+</li>
+<li>
+<p>Increase #Data <span class="arithmatex">\(m --&gt; \infin\)</span></p>
+</li>
+<li>
+<p>Regularization</p>
+<p><img alt="image-20220408193347924" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204081933083.png" /></p>
+</li>
+</ul>
+<p><img alt="image-20220408205348665" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204082053781.png" /></p>
+<p><img alt="image-20220408200426581" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204082004799.png" /></p>
+<p><img alt="image-20220408205205753" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204082052960.png" /></p>
+<ul>
+<li><strong>Fix high bias</strong></li>
+</ul>
+<p>Enlarge <span class="arithmatex">\(H\)</span></p>
+<p>Reduce bias, magnify variance.</p>
+<h3 id="empirical-risk-minimizer"><strong>Empirical Risk Minimizer</strong><a class="headerlink" href="#empirical-risk-minimizer" title="Permanent link">&para;</a></h3>
+<p><img alt="image-20220409142957707" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204091430933.png" />
+$$
+\begin{aligned}
+\hat{\varepsilon}(h)&amp;=\frac{1}{m} \sum_{i=1}^{m} 1\left{h\left(x^{(i)}\right) \neq y^{(i)}\right}\
+\hat{\theta} &amp; =\arg \min <em _theta="\theta">{\theta} \hat{\varepsilon}\left(h</em>\right)
+\end{aligned}
+$$</p>
+<h4 id="uniform-convergence">Uniform Convergence<a class="headerlink" href="#uniform-convergence" title="Permanent link">&para;</a></h4>
+<p><em>e.g.</em> How the risk curve converges uniformly to the generalization risk curve.</p>
+<ol>
+<li>A given hypothesis <span class="arithmatex">\(h\)</span> have some amount of training error <span class="arithmatex">\(\hat{\varepsilon}(h)\)</span>, what does that say about its generalization error <span class="arithmatex">\(\varepsilon(h)\)</span></li>
+</ol>
+<p><span class="arithmatex">\(\hat{\varepsilon}(h) \space \text{vs} \space \varepsilon(h)\)</span></p>
+<p><img alt="image-20220409160020182" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204091600298.png" /></p>
+<p>==<em>Solution</em>==
+   $$
+   m \geq \frac{1}{2 \gamma^{2}} \log \frac{2 k}{\delta}
+   $$</p>
+<ol>
+<li>How does the generalization error of our learned hypothesis <span class="arithmatex">\(\varepsilon(\hat {h})\)</span> compare to the best possible generalization error in that class <span class="arithmatex">\(\varepsilon({h} ^*)\)</span></li>
+</ol>
+<p><span class="arithmatex">\(\varepsilon(\hat {h}) \space \text{vs} \space \varepsilon({h} ^*)\)</span></p>
+<p><img alt="image-20220409171006478" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204091710602.png" /></p>
+<p><img alt="image-20220409171411755" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204091714826.png" /></p>
+<ul>
+<li><strong>Finite hypothesis class</strong></li>
+</ul>
+<p><img alt="image-20220409165820253" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204091658405.png" /></p>
+<ul>
+<li><strong>Infinite hypothesis class</strong></li>
+</ul>
+<p>The number of examples for a wanted sample complexity is generally an order of the VC dimension to get good results.</p>
+<p><img alt="image-20220409171922175" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204091719297.png" /></p>
+<p><strong>Tools</strong></p>
+<ol>
+<li><strong>Union Bound</strong></li>
+</ol>
+<p><img alt="image-20220409150627187" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204091506263.png" /></p>
+<ol>
+<li><strong>Hoeffding's Inequality</strong></li>
+</ol>
+<p>The probability of your estimate deviating more than a certain margin only reduces as you increase m.
+   $$
+   P\left(\left|\varepsilon\left(h_{i}\right)-\hat{\varepsilon}\left(h_{i}\right)\right|&gt;\gamma\right) \leq 2 \exp \left(-2 \gamma^{2} m\right)
+   $$
+   <img alt="image-20220409153642053" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204091536280.png" /></p>
+<h2 id="lecture-10-decision-tree-and-ensemble-methods">Lecture 10 Decision Tree and Ensemble Methods<a class="headerlink" href="#lecture-10-decision-tree-and-ensemble-methods" title="Permanent link">&para;</a></h2>
+<p>Decision tree is a classical example model class to use with various ensembling methods</p>
+<h3 id="decision-tree"><a href="https://aman.ai/cs229/decision-trees/">Decision Tree</a><a class="headerlink" href="#decision-tree" title="Permanent link">&para;</a></h3>
+<p><strong>PROS</strong></p>
+<ul>
+<li>Easy to explain</li>
+<li>Interpretable</li>
+<li>Categorical Variables</li>
+<li>Fast</li>
+</ul>
+<p><strong>CONS</strong></p>
+<ul>
+<li>High variance</li>
+<li>Bad at additive</li>
+<li>Low predictive accuracy</li>
+</ul>
+<p><img alt="image-20220411091029696" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204110910929.png" /></p>
+<p><img alt="image-20220411091617025" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204110916112.png" /></p>
+<p><strong><em>How to choose split?</em></strong></p>
+<p>Define <span class="arithmatex">\(L(R)\)</span> : Loss in R given C classes, define <span class="arithmatex">\(\hat P_c\)</span> to be the proportion of examples in <span class="arithmatex">\(R\)</span> that are of class <span class="arithmatex">\(C\)</span>.</p>
+<p>==Misclassification Loss==</p>
+<p><span class="arithmatex">\(L _{misclass} = 1 - \underset{c}{max} \space \hat P_c\)</span></p>
+<p><img alt="image-20220411193028414" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204111930498.png" /></p>
+<p><img alt="image-20220411111301378" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204111113597.png" /></p>
+<p><em><u>Misclassification loss is not sensitive enough. (Right one makes better decision than left, but misclassification loss is same.)</u></em> To solve this, define ==cross entropy loss==</p>
+<p>Want to pick  a split that decrease the loss as much as possible.</p>
+<p>$\underset{j,t}{max} \space \underbrace{L(R_p)}<em _space="\space" children="children" loss="loss">{parent \space loss} - \underbrace{(L(R_1)+L(R_2))}</em> $</p>
+<p>==Cross Entropy Loss==</p>
+<h1 id="bits-you-need-to-communicate-to-tell-someone-who-already-knows-what-the-probabilities-are-what-class-you-are-looking-at">bits you need to communicate to tell someone who already knows  what the probabilities are what class you are looking at.<a class="headerlink" href="#bits-you-need-to-communicate-to-tell-someone-who-already-knows-what-the-probabilities-are-what-class-you-are-looking-at" title="Permanent link">&para;</a></h1>
+<p><span class="arithmatex">\(L_{cross} = - \underset{c}{\Sigma} \space \hat {P_c}log_2 \hat {P_c}\)</span></p>
+<p><img alt="image-20220411192900233" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204111929349.png" /></p>
+<ul>
+<li>Strictly concave curve CAN successfully used for decision splits.</li>
+</ul>
+<p>==Gini Loss==</p>
+<p><span class="arithmatex">\(L_{gini} =\underset{c}{\sum} \space \hat {P_c}(1-\hat {P_c})\)</span></p>
+<h4 id="regression-tree">Regression Tree<a class="headerlink" href="#regression-tree" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20220411200937329" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204112009442.png" /></p>
+<p>Decision trees for regression. Predict the mean of the values left instead of predict the majority of the class.</p>
+<p><em>e.g, predict the amount of snowfall you would expect in that area around that time.</em>
+$$
+\begin{aligned}
+\hat y_m &amp; = \frac{\underset{i ∈ R_m}{\sum} y_i}{|R_m|} \</p>
+<p>L_{squared} &amp; =  \frac{\underset{i ∈ R_m}{\sum} (y_i - \hat y_m)^2}{|R_m|}
+\end{aligned}
+$$</p>
+<h4 id="categorical-variable">Categorical Variable<a class="headerlink" href="#categorical-variable" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20220411200955312" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204112009397.png" /></p>
+<p>if you have <span class="arithmatex">\(q\)</span> categories, there will be <span class="arithmatex">\(2^q\)</span> possible splits.</p>
+<h4 id="regularization-of-decision-trees">Regularization of Decision Trees<a class="headerlink" href="#regularization-of-decision-trees" title="Permanent link">&para;</a></h4>
+<ol>
+<li>min leaf size</li>
+<li>max depth</li>
+<li>max #nodes</li>
+<li>min decrease in loss</li>
+<li>Pruning (misclassification with a validation set)</li>
+</ol>
+<h4 id="runtime">Runtime<a class="headerlink" href="#runtime" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20220411212411097" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204112124160.png" /></p>
+<p><img alt="image-20220411212357987" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204112123106.png" /></p>
+<h4 id="no-additive-structure">No additive structure<a class="headerlink" href="#no-additive-structure" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20220411212649153" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204112126227.png" /></p>
+<h3 id="ensembling"><a href="https://aman.ai/cs229/ensemble-methods/">Ensembling</a><a class="headerlink" href="#ensembling" title="Permanent link">&para;</a></h3>
+<p>Take <span class="arithmatex">\(X_i\)</span>'s which are random variables that are independent identically distributed (IID)
+$$
+\begin{aligned}
+Var(X_i) &amp;= \sigma ^2 \
+Var(\bar X) = Var(\frac{1}{n} &amp; \underset{i}{\sum} X_i) = \frac {\sigma ^2}{n}
+\end{aligned}
+$$
+Drop the independence assumption, so now <span class="arithmatex">\(X_i\)</span>'s just identically distributed(ID), <span class="arithmatex">\(X\)</span>'s correlated by <span class="arithmatex">\(\rho\)</span>.
+$$
+Var(\bar X) = \rho \sigma ^2 +\frac{1-\rho}{n} \sigma ^2
+$$</p>
+<h4 id="ways-to-ensemble">Ways to Ensemble<a class="headerlink" href="#ways-to-ensemble" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>~~different algorithms~~</p>
+</li>
+<li>
+<p>~~different training sets~~</p>
+</li>
+<li>
+<p>==Bagging== (<em>e.g. Random Forests</em>)</p>
+</li>
+</ol>
+<p>Try to approximate having different training sets.</p>
+<ol>
+<li>==Boosting== (<em>e.g. AdaBoost, XGBoost</em>)</li>
+</ol>
+<h4 id="bagging-bootstrap-aggregation">Bagging - Bootstrap Aggregation<a class="headerlink" href="#bagging-bootstrap-aggregation" title="Permanent link">&para;</a></h4>
+<p>Take a bunch of bootstrap samples, train separate models on each and then average their outputs.</p>
+<p><strong>Bootstrap</strong></p>
+<ol>
+<li>Have a true population P</li>
+<li>Training set <span class="arithmatex">\(S \sim P\)</span></li>
+<li>Assume <span class="arithmatex">\(P=S\)</span></li>
+<li>Bootstrap samples <span class="arithmatex">\(Z \sim S\)</span></li>
+</ol>
+<p><strong>Bootstrap Aggregation</strong></p>
+<ol>
+<li>Bootstrap samples <span class="arithmatex">\(Z_1, Z_2, Z_3..., Z_M\)</span></li>
+<li>Train model <span class="arithmatex">\(G_m\)</span> on <span class="arithmatex">\(Z_m\)</span></li>
+<li>Define a meta model <span class="arithmatex">\(G(m) = \frac {\displaystyle \sum^{M}_{m=1} G_m(x)}{M}\)</span></li>
+</ol>
+<p><strong>Bias-Variance Analysis</strong></p>
+<p><span class="arithmatex">\(Var(\bar X) = \rho \sigma ^2 +\frac{1-\rho}{M} \sigma ^2\)</span></p>
+<ul>
+<li>Bootstrapping is driving down <span class="arithmatex">\(\rho\)</span></li>
+</ul>
+<p><em><u>Increasing the number of bootstrap models in your training, doesn't cause you to overfit anymore than you were beforehand.</u></em></p>
+<ul>
+<li>
+<p>More <span class="arithmatex">\(M\)</span> leads to less variance. <em>(There is  a lower bound, can't make variance 0)</em></p>
+</li>
+<li>
+<p>Bias is slightly increased because of random subsampling. <em>(Because the bootstrap samples <span class="arithmatex">\(Z\)</span> are actually subsets of the original set <span class="arithmatex">\(S\)</span>, so you model become less complex, that increases bias)</em></p>
+</li>
+</ul>
+<p><strong>Decision trees + Bagging</strong></p>
+<p>Decision trees are high variance, low bias.</p>
+<p>Ideal fit for bagging</p>
+<h5 id="random-forests">Random Forests<a class="headerlink" href="#random-forests" title="Permanent link">&para;</a></h5>
+<p>At each split, consider only a fraction of total features.</p>
+<ul>
+<li>Decrease <span class="arithmatex">\(\rho\)</span></li>
+<li>Decorrelate Models</li>
+</ul>
+<h4 id="boosting">Boosting<a class="headerlink" href="#boosting" title="Permanent link">&para;</a></h4>
+<p><em>Adaboost, XGBoost, gradient boost machine</em></p>
+<ul>
+<li>Decrease bias</li>
+<li>Additive</li>
+</ul>
+<p>==AdaBoost==</p>
+<p><img alt="image-20220412141131214" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204121411433.png" /></p>
+<h2 id="lecture-11-introduction-to-neural-networks">lecture 11 Introduction to Neural Networks<a class="headerlink" href="#lecture-11-introduction-to-neural-networks" title="Permanent link">&para;</a></h2>
+<hr />
+<p><strong>Outline</strong></p>
+<ul>
+<li>Logistic Regression (in DP view)</li>
+<li>Neural Network</li>
+</ul>
+<p><strong>Deep Learning</strong></p>
+<ul>
+<li>Computational power</li>
+<li>Data available</li>
+<li>algorithms</li>
+</ul>
+<hr />
+<h3 id="logistic-regression-in-dp-view">Logistic Regression (in DP view)<a class="headerlink" href="#logistic-regression-in-dp-view" title="Permanent link">&para;</a></h3>
+<p><strong>Goal 1: Find cats in images</strong></p>
+<p><img alt="image-20220419200601535" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204192006790.png" /></p>
+<p><code>#Parameters</code> for this Logistics Model is <code>#weights + #bias</code> (i.e. <code>12288+1</code>), so the <code>#Parameters</code> depends on the size of the input.
+$$
+\begin{aligned}
+neuron &amp; = linear + activation \
+model &amp; = architecture + parameters
+\end{aligned}
+$$</p>
+<ul>
+<li><strong><u><em>neuron</em></u></strong></li>
+</ul>
+<p><img alt="image-20220419201724267" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204192017336.png" /></p>
+<p><code>wx+b</code>(or <code>z</code>) is the linear part, <code>σ</code> is the activation.</p>
+<ul>
+<li>
+<p><strong><u><em>model</em></u></strong></p>
+</li>
+<li>
+<p>architecture</p>
+<p><em>In this case the architecture is a one-neuron neural network</em></p>
+<p><strong><u>Tips :</u></strong> One thing needs to be considered for architecture: <em><u>Is the output layer have the same number of neurons as you wants. (<code>#classes</code> for classification and <code>1</code>  for regression)</u></em></p>
+</li>
+<li>
+<p>parameters</p>
+<p><code>w</code> and <code>b</code></p>
+</li>
+<li>
+<p>Loss function</p>
+</li>
+</ul>
+<p><span class="arithmatex">\(\mathcal L = -\left(y \log \hat y + \left(1-y \right) \log \left(1 -\hat y \right) \right)\)</span></p>
+<p><strong>Goal 2: Find cat/lion/iguana in images</strong></p>
+<p><img alt="image-20220419214245518" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204192142671.png" /></p>
+<ul>
+<li>
+<p>Red part shows how to represent labels in the dataset.</p>
+</li>
+<li>
+<p><code>#parameters = #neuron * #parameters_pre_neuron</code></p>
+</li>
+<li>
+<p>Loss Function</p>
+</li>
+</ul>
+<p><strong>How to train these parameters?</strong></p>
+<p><span class="arithmatex">\(\mathcal L _{3N} = -\displaystyle \sum ^3_{k=1} \left(y_k \log \hat y_k + \left(1-y_k \right) \log \left(1 -\hat y_k \right) \right)\)</span></p>
+<p><span class="arithmatex">\(\mathcal L _{3N}\)</span> stands for loss function for 3 neurons.</p>
+<p>The derivative of one specific k won't be more complex than one-neuron network.</p>
+<p><strong>Goal 3: add constraint <em><u>Unique animal in one image</u></em> ==Softmax Multi-class <u>Network/Regression</u>==</strong></p>
+<p><img alt="image-20220419215120470" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204192151585.png" /></p>
+<ul>
+<li><a href="https://e2eml.school/softmax.html">Softmax</a> formula</li>
+</ul>
+<p>Instead of getting a probabilistic output for each <span class="arithmatex">\(\hat y_i\)</span>, we will get a probability distribution over all the classes.</p>
+<p><em><u>Make same layer's neurons have "dependencies" (i.e. probabilities sum to 1) on each other due to the implement of Softmax.</u></em></p>
+<ul>
+<li>Labels' format</li>
+</ul>
+<p><img alt="image-20220419220141945" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204192201016.png" /></p>
+<ul>
+<li>
+<p><code>#parameters = #neuron * #parameters_pre_neuron</code></p>
+</li>
+<li>
+<p>Loss Function ==Softmax Cross-entropy Loss==
+  $$
+  \begin{aligned}
+  \mathcal L_{CE} = -\sum_{k=1}^m y_k \log \hat y_k
+  \end{aligned}
+  $$
+  <strong><u><em>Softmax Cross-entropy Loss is very often used in multi-classification</em></u></strong></p>
+</li>
+</ul>
+<h3 id="neural-networks">Neural Networks<a class="headerlink" href="#neural-networks" title="Permanent link">&para;</a></h3>
+<p><strong>GOAL: Predict cat's age in the image</strong></p>
+<ul>
+<li>
+<p>For neuron's activation, use ==ReLU== <a href="https://en.wikipedia.org/wiki/Rectifier_(neural_networks)">(<strong><u>Rectified Linear Unit</u></strong>)</a> </p>
+</li>
+<li>
+<p>Modify Loss function to <span class="arithmatex">\(|y-\hat y|\)</span> or <span class="arithmatex">\(\|y-\hat y\|^2\)</span></p>
+</li>
+</ul>
+<p><span class="arithmatex">\(L1\)</span> and <span class="arithmatex">\(L2\)</span> norm loss is much easier to optimize for a regression task than it is for a classification task and vice versa.</p>
+<p><strong>Goal 1: Given an image, tells if there's cat or no cat</strong></p>
+<p><img alt="image-20220420101623630" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204201016813.png" /></p>
+<ul>
+<li>
+<p><code>#parameters = sum(#parameters_in_each_layer)</code> (e.g, <code>#parems_in_1st_layer = 3n+3</code>)</p>
+</li>
+<li>
+<p><strong>Terminology</strong> </p>
+</li>
+</ul>
+<p>==Hidden Layer== : we don't really know what it's going to figure out, but with enough data, it should understand very complex information about the data.</p>
+<p>Similarly, 1st layer of the neuron network called ==Input Layer==, last layer is ==Output Layer==</p>
+<p>==Fully connected layer==: all the neurons among previous layer are connected to each other in its next layer.</p>
+<p>==End-to-end learning/Blackbox model== : Training just based on the input and output. (i.e. train the network without adding constraints for the hidden layers.)</p>
+<p><img src="https://gitee.com/violets/typora--images/raw/main/imgs/202204201036632.png" alt="image-20220420103642501" style="zoom: 67%;" /></p>
+<h4 id="propagation-equation">Propagation Equation<a class="headerlink" href="#propagation-equation" title="Permanent link">&para;</a></h4>
+<p><strong>Forward Propagation Equation</strong>
+$$
+\begin{aligned}
+z^{[\ell]}&amp;=W^{[\ell]} a^{[\ell-1]}+b^{[\ell]} \
+a^{[\ell]}&amp;=g^{[\ell]}\left(z^{[\ell]}\right)
+\end{aligned}
+$$</p>
+<p><img src="https://gitee.com/violets/typora--images/raw/main/imgs/202204201429095.png" alt="image-20220420142934957" style="zoom:80%;" /></p>
+<p><strong><u><em>What happens for an input batch of m examples?</em></u></strong></p>
+<p><img alt="image-20220420143052904" src="https://gitee.com/violets/typora--images/raw/main/imgs/202204201430005.png" /></p>
+<ul>
+<li>Need to broadcast <span class="arithmatex">\(b^{[i]}\)</span> to make the linear algebra work.</li>
+</ul>
+<p><strong>Backward Propagation Equation</strong></p>
+<p><img src="https://gitee.com/violets/typora--images/raw/main/imgs/202204201431693.png" alt="image-20220420143143551" style="zoom:80%;" /></p>
+<p><img src="https://gitee.com/violets/typora--images/raw/main/imgs/202204201425232.png" alt="image-20220420142530063" style="zoom:80%;" /></p>
+<ul>
+<li>Need correspond Forward Propagation Equation to remember the path to take in your chain rule</li>
+</ul>
+<h4 id="improving-your-neural-networks">Improving Your Neural Networks<a class="headerlink" href="#improving-your-neural-networks" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>different Activation Functions</strong></p>
+</li>
+<li>
+<p>Sigmoid</p>
+<p><strong><u>Pros</u></strong> Used in classification problems</p>
+<p><strong><u>Cons</u></strong> Sigmoid activation works good in its linear regime, but has trouble working in saturating regime. (Because if z is very high or very low, your gradient is very close to 0, makes z hard to update)</p>
+</li>
+<li>
+<p>ReLU</p>
+<p><strong><em>ReLU is mostly used</em></strong>
+$$
+ReLU'(z) = \mathbb I{z&gt;0}
+$$</p>
+<p>Slope is 1, so ReLU is actually just directing the gradient to some entry.</p>
+</li>
+<li>
+<p>tanh
+    $$
+    \begin{aligned}
+    \tanh(z) &amp; = \frac{e^z - e^{-z}}{e^z + e^{-z}} \
+    \tanh '(z) &amp; = 1 - \tanh(z)^2
+    \end{aligned}
+    $$
+    <strong><u>Pros and Cons</u></strong> same as sigmoid</p>
+</li>
+</ul>
+<p><em><u></em><em>Why we need activation functions?</em><em></u></em></p>
+<p>If you don't use activation functions (i.e. use identity function as activation), your neural network is going to be equivalent to a linear regression, no matter how deep it is.</p>
+<ul>
+<li>
+<p><strong>Initialization methods</strong></p>
+</li>
+<li>
+<p>Normalize your inputs</p>
+<p><img src="https://gitee.com/violets/typora--images/raw/main/imgs/202204211018031.png" alt="image-20220421101825896" style="zoom:50%;" /></p>
+<p><img src="https://gitee.com/violets/typora--images/raw/main/imgs/202204211018418.png" alt="image-20220421101803227" style="zoom:50%;" /></p>
+</li>
+<li>
+<p>Vanishing and exploding gradients</p>
+<p>Errors add up by multiply each other. When neurons' weights is bigger than one, explode situation; when it's less than one, vanish situation.</p>
+<p>To solve this issue,  we need to <strong><em>initialize neurons' weights properly.</em></strong></p>
+<p><img src="https://gitee.com/violets/typora--images/raw/main/imgs/202204211037277.png" alt="image-20220421103735153" style="zoom:50%;" /></p>
+<p><img src="C:%5CUsers%5CLENOVO%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220421103705786.png" alt="image-20220421103705572" style="zoom:50%;" /></p>
+<p><strong><em>Some commonly used weight initialization techniques</em></strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Commonly used weights initialization techinques</span>
+<span class="c1">## Initialize one layer&#39;s weight proportionally to #former_layer_inpus (works very well for sigmoid activations)</span>
+<span class="c1">### add random to avoid symmetry problems(every is going to learn the same thing)</span>
+<span class="n">w_l</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">n_</span><span class="p">(</span><span class="n">l</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+<span class="c1">### Modify above function a little bit, makes it works better on ReLU</span>
+<span class="n">w_l</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="n">n_</span><span class="p">(</span><span class="n">l</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+<span class="c1">## Xavier Initialization (for tanh activations)</span>
+<span class="c1">## He Initialization (very often used), doing the same thing but also for the back propagated gradients</span>
+</code></pre></div>
+<p><img src="https://gitee.com/violets/typora--images/raw/main/imgs/202204211050932.png" alt="image-20220421105004806" style="zoom:50%;" /></p>
+</li>
+<li>
+<p>Optimization</p>
+</li>
+<li>
+<p>==Mini-batch gradient descent==</p>
+<p><em>A trade-off between stochastic gradient descent and batch GD. (i.e. a trade-off between stochasticity and vectorization)</em></p>
+<p><img src="https://gitee.com/violets/typora--images/raw/main/imgs/202204211119227.png" alt="image-20220421111907156" style="zoom:50%;" /></p>
+<div class="highlight"><pre><span></span><code>/*Mini-batch gradient descent*/
+mini_m = #examples_per_minibatch
+for t in (1, #iteration):
+    select a batch x[t],y[t]
+    forward_propagate(batch) /*J  = 1/mini_m * sum(L[t])*/
+    backward_propagate(batch)
+    update w[l],b[l]
+</code></pre></div>
+<p><img src="https://gitee.com/violets/typora--images/raw/main/imgs/202204211114130.png" alt="image-20220421111455037" style="zoom:50%;" /></p>
+<p><center> left: Batch GD right: Mini-Batch GD</p>
+<p>The smaller the batch, the more stochasticity, the more noise on the cost function graph.</p>
+</li>
+<li>
+<p>==(GD +)Momentum Algorithm==
+    $$
+    \begin{array}{l}
+    v_{d W^{[\ell]}}=\beta v_{d W^{[\ell]}}+(1-\beta) \frac{\partial J}{\partial W^{[\ell]}}\
+    W^{[\ell]}=W^{[\ell]}-\alpha v_{d W[\ell]}
+    \end{array}
+    $$
+    <img src="https://gitee.com/violets/typora--images/raw/main/imgs/202204211127799.png" alt="image-20220421112719707" style="zoom:50%;" /></p>
+<p><em>Take past updates into consideration (Look at the past update and take the average of it) in order to find the right way to go.</em></p>
+</li>
+<li>
+<p>RMS prop (CS230)</p>
+</li>
+<li>
+<p>Atom (CS230)</p>
+</li>
+<li>
+<p>Regularization</p>
+</li>
+</ul>
+<h2 id="lecture-13-debugging-ml-models-and-error-analysis">Lecture 13 Debugging ML Models and Error Analysis<a class="headerlink" href="#lecture-13-debugging-ml-models-and-error-analysis" title="Permanent link">&para;</a></h2>
+<hr />
+<p><strong><em>Outline</em></strong></p>
+<ol>
+<li>Diagnostics for debugging learning algorithms</li>
+<li>Error analyses and ablative analysis</li>
+<li>How to get started in a machine learning  problem.</li>
+<li>Premature (statistical) optimization</li>
+</ol>
+<hr />
+<h3 id="diagnostics-for-debugging-learning-algorithms">Diagnostics for debugging learning algorithms<a class="headerlink" href="#diagnostics-for-debugging-learning-algorithms" title="Permanent link">&para;</a></h3>
+<p><strong>Workflow to figure out what's the problem</strong></p>
+<ul>
+<li>
+<p>Bias &amp; Variance Diagnostics</p>
+</li>
+<li>
+<p>Optimization Diagnostics</p>
+</li>
+<li>
+<p>Is the algorithm converging?</p>
+</li>
+<li>Is there something wrong with the numerical model?</li>
+<li>
+<p>Did we use the right cost function <span class="arithmatex">\(J(\theta)\)</span></p>
+</li>
+<li>
+<p>Error analysis</p>
+</li>
+</ul>
+<p><em>Figure the differences between where you are and perfect performance.</em></p>
+<p>When you have a  complex machine learning pipeline, error analysis helps you break down the error (i.e. attribute the error to different components), which let you focus on what to work on.</p>
+<ul>
+<li>Ablative Analysis</li>
+</ul>
+<p><em>Figure the differences between where you are and something much worse.</em></p>
+<h2 id="lecture-14-expectation-maximization-algorithms">Lecture 14 Expectation-Maximization Algorithms<a class="headerlink" href="#lecture-14-expectation-maximization-algorithms" title="Permanent link">&para;</a></h2>
+<p>EM implements a softer way of assigning points to the different cluster centroids.</p>
+<ul>
+<li>
+<p>To do EM, we need a concave function</p>
+</li>
+<li>
+<p><strong>E-step</strong>
+   $$
+   Q _i(z^{(i)}) = P(z ^{(i)} \mid x ^{(i)};\theta)
+   $$
+   <em><span class="arithmatex">\(Q _i(z^{(i)})\)</span> is <span class="arithmatex">\(w _j^{(i)}\)</span></em></p>
+</li>
+<li>
+<p><strong>M-step</strong>
+   $$
+   \theta := \arg \max <em _i_="^{(i)" z="z">\theta \sum_i \sum</em>
+   $$}} Q _i(z^{(i)}) \log \frac {P(x ^{(i)}, z^{(i)} ; \theta)}{Q _i (z^{(i)})</p>
+</li>
+</ul>
+<p>Iterative E-step and M-step, the algorithm should converge to a local optima.</p>
+<p><em><u>Question: Why don't we just maximize <span class="arithmatex">\(\max _\theta  l (\theta)\)</span> ?</u></em></p>
+<p><em>Because there's no known way to solve that.</em></p>
+<h3 id="clustering-k-means">Clustering (K-means)<a class="headerlink" href="#clustering-k-means" title="Permanent link">&para;</a></h3>
+<p><strong><u>How to choose <span class="arithmatex">\(K\)</span> ?</u></strong></p>
+<p><em><u>Issue:</u></em> <code>#clusters</code> might be ambiguous.</p>
+<p><em><u>Solution:</u></em> </p>
+<ol>
+<li><a href="https://en.wikipedia.org/wiki/Akaike_information_criterion">AIC</a> or BIC criteria for automatically choosing <code>#clusters</code></li>
+<li><strong>Choose manually</strong></li>
+</ol>
+<p><strong><u>What to do when K-means stuck in local minima?</u></strong></p>
+<p>Run K-means on different iteration times and different initializations of cluster centroids. Pick the lowest cost function <span class="arithmatex">\(J(c,\mu)\)</span> run.</p>
+<h3 id="density-estimation">Density Estimation<a class="headerlink" href="#density-estimation" title="Permanent link">&para;</a></h3>
+<p><img src="C:%5CUsers%5CLENOVO%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220424143810471.png" alt="image-20220424143810471" style="zoom:50%;" /></p>
+<p><strong>EM algorithm visualization:</strong></p>
+<ul>
+<li>At E-step, constructing a lower bound (green curve) for the log-likelihood.</li>
+</ul>
+<p>Green curve has two properties</p>
+<ol>
+<li>
+<p>Green curve is a lower bound (i.e. green curve lies blow the blue curve)</p>
+</li>
+<li>
+<p>Its value is equal to the blue curve at the current value of <span class="arithmatex">\(\theta\)</span>. (<u><em>This property guarantees that when you optimize the green function, you can improving blue function too.</em></u>)
+     $$
+     \log {E_{z^{(i)} \sim Q_i}\left[\frac {P(x ^{(i)}, z^{(i)} ; \theta)}{Q <em z_i_="z^{(i)">i (z^{(i)})}\right]} = E</em>\right]
+     $$
+     To ensure this property, we need
+     $$
+     Q _i(z^{(i)}) = P(z ^{(i)} \mid x ^{(i)};\theta)
+     $$} \sim Q_i}\left[\log {\frac {P(x ^{(i)}, z^{(i)} ; \theta)}{Q _i (z^{(i)})}</p>
+</li>
+<li>
+<p>At M-step, take the green curve and find its maximum</p>
+</li>
+</ol>
+<p>Move <span class="arithmatex">\(\theta\)</span> from green value to the red value.</p>
+<h4 id="mixture-of-gaussian-model">Mixture of Gaussian Model<a class="headerlink" href="#mixture-of-gaussian-model" title="Permanent link">&para;</a></h4>
+<p><img src="https://gitee.com/violets/typora--images/raw/main/imgs/202204231727286.png" alt="image-20220423172723025" style="zoom:50%;" /></p>
+<p><strong>Gaussian Discrimination Analysis(GDA) vs Mixture of Gaussians</strong></p>
+<ol>
+<li><strong>Dataset</strong> <em>(supervised or unsupervised)</em></li>
+</ol>
+<p>For a given dataset, GDA has example <span class="arithmatex">\((x^{(i)}, y^{(i)})\)</span> where <span class="arithmatex">\(y^{(i)}\)</span> is observed, MG doesn't.</p>
+<ol>
+<li><strong>Probability Distribution</strong></li>
+</ol>
+<p>For GDA, <span class="arithmatex">\(y^{(i)} \sim Bernoulli(\phi)\)</span></p>
+<p>For MG, <span class="arithmatex">\(z^{(i)} \sim Multinomial(\phi)\)</span></p>
+<ol>
+<li><strong>Variance for Gaussian Distribution</strong> <span class="arithmatex">\(\Sigma\)</span></li>
+</ol>
+<p>For GDA, <span class="arithmatex">\(x^{(i)} \mid y^{(i)}_j \sim \mathcal N (\mu _j ,\Sigma)\)</span></p>
+<p>For MG, <span class="arithmatex">\(x^{(i)} \mid z^{(i)}_j \sim \mathcal N (\mu _j ,\Sigma _j)\)</span></p>
+<h4 id="jensens-inequality">Jensen's Inequality<a class="headerlink" href="#jensens-inequality" title="Permanent link">&para;</a></h4>
+<p>Let <span class="arithmatex">\(f\)</span> be a convex function (i.e. <span class="arithmatex">\(f''(x) \gt 0\)</span>), let <span class="arithmatex">\(x\)</span> be a random variable, then <span class="arithmatex">\(f(EX) \le E[f(x)]\)</span></p>
+<p><strong><u>Addendum</u></strong></p>
+<ul>
+<li>If <span class="arithmatex">\(f''(x) \gt 0\)</span> (i.e. <span class="arithmatex">\(f\)</span> is strictly convex), then <span class="arithmatex">\(f(EX) = E[f(x)] \Longleftrightarrow X = E[X] \text { with probablity 1 }(i.e. x \text{ is a constant})\)</span> </li>
+<li><em><u>Jensen's Equality in concave form:</u></em> Let <span class="arithmatex">\(f\)</span> be a <strong><em>concave</em></strong> function (i.e. <span class="arithmatex">\(f''(x) \lt 0\)</span>), let <span class="arithmatex">\(x\)</span> be a random variable, then <span class="arithmatex">\(f(EX) \ge E[f(x)]\)</span></li>
+</ul>
+<h2 id="lecture-15-em-algorithms-factor-analysis">Lecture 15 EM Algorithms &amp; Factor Analysis<a class="headerlink" href="#lecture-15-em-algorithms-factor-analysis" title="Permanent link">&para;</a></h2>
+<hr />
+<p><strong>Outline :</strong></p>
+<ul>
+<li><strong>EM convergence</strong></li>
+</ul>
+<p>How to monitor if EM is converging</p>
+<ul>
+<li><strong>Gaussian Properties</strong></li>
+</ul>
+<p>Map the EM equations back to mixture of Gaussian models <span class="arithmatex">\(Q _i(z^{(i)}) \Rightarrow w _j^{(i)}\)</span></p>
+<ul>
+<li><strong>Factor Analysis</strong> :star:</li>
+</ul>
+<p>A useful model for datasets which is very high-dimensional but very few training examples</p>
+<ul>
+<li>
+<p><strong>Gaussian Marginals &amp; Conditionals</strong></p>
+</li>
+<li>
+<p><strong>EM Steps</strong></p>
+</li>
+</ul>
+<p>Derive for the Factor Analysis model</p>
+<hr />
+<h3 id="em-convergence">EM convergence<a class="headerlink" href="#em-convergence" title="Permanent link">&para;</a></h3>
+<p><em>Different <span class="arithmatex">\(Q _i(z^{(i)})\)</span> means different choices of lower bounds. In algorithm perspective, we write code to compute <span class="arithmatex">\(w ^{(i)}_j\)</span></em></p>
+<h3 id="factor-analysis-zi-sim-mathcal-n">Factor Analysis <span class="arithmatex">\(z^{(i)} \sim \mathcal N\)</span><a class="headerlink" href="#factor-analysis-zi-sim-mathcal-n" title="Permanent link">&para;</a></h3>
+<p>Factor analysis can take very high dimensional data and model them to a lower dimensional subspace with a little bit of fuzz.</p>
+<p>$\color{WildStrawberry} \text {If the data doesn't lie in a  subspace, model may not be the best model. } $</p>
+<p><span class="arithmatex">\(\color{NavyBlue} \text{But it's still a reasonable way to fit a Factor Analysis to n&gt;&gt;m dataset. }\)</span> <a href="https://www.youtube.com/watch?v=tw6cmL5STuY&amp;t=2759s"><em>[Time Label]</em></a></p>
+<p>A continuous <span class="arithmatex">\(z\)</span> EM model</p>
+<ul>
+<li>
+<p><strong>One Other View of EM</strong></p>
+</li>
+<li>
+<p>Coordinate Ascent <span class="arithmatex">\(J(\theta, Q)\)</span></p>
+</li>
+<li>
+<p>Comparison between Mixture of Gaussian &amp; Factor Analysis</p>
+</li>
+<li>
+<p>When <span class="arithmatex">\(m \gg n\)</span>, use MG</p>
+<p><img src="https://gitee.com/violets/typora--images/raw/main/imgs/202204242111882.png" alt="img" style="zoom:25%;" /></p>
+</li>
+<li>
+<p>else FA</p>
+</li>
+</ul>
+<p>If <code>#Training Examples</code> &lt; the dimension of the data, usual MLE function of covariance <span class="arithmatex">\(\Sigma\)</span> will be singular(non-invertible)</p>
+<h3 id="gaussian-marginals-conditionals">Gaussian Marginals &amp; Conditionals<a class="headerlink" href="#gaussian-marginals-conditionals" title="Permanent link">&para;</a></h3>
+<p><img src="https://gitee.com/violets/typora--images/raw/main/imgs/202204251504385.png" alt="image-20220425150407136" style="zoom:50%;" /></p>
+<p><strong>Marginal :</strong> calculate <span class="arithmatex">\(P(x_1)\)</span> and we have <span class="arithmatex">\(x_1 \sim \mathcal N (\mu _1, \Sigma _{11})\)</span></p>
+<p><strong>Conditional :</strong> calculate <span class="arithmatex">\(P(x_1 \mid x_2)\)</span> we have <span class="arithmatex">\(x_1 \mid x_2 \sim \mathcal N (\mu _{1 \mid 2}, \Sigma _{1 \mid 2})\)</span>
+$$
+\begin{aligned}
+\mu <em 12="12">{1 \mid 2} &amp; = \mu_1 + \Sigma</em> (x_2 - \mu } \Sigma_{22}^{-1<em 1="1" 2="2" _mid="\mid">2)  \
+\
+\Sigma </em>
+\end{aligned}
+$$} &amp; = \Sigma_{11} - \Sigma_{12} \Sigma_{22}^{-1} \Sigma_{21</p>
+<h3 id="em-steps">EM Steps<a class="headerlink" href="#em-steps" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Derive <span class="arithmatex">\(P(x, z)\)</span>, <span class="arithmatex">\(z\)</span> and <span class="arithmatex">\(x\)</span> has a joint Gaussian distribution
+   $$
+   \begin{aligned}
+   \begin{pmatrix}
+   z \
+   x 
+   \end{pmatrix} &amp; \sim \mathcal N (\mu _{x,z}, \Sigma) \
+   z &amp; \sim  \mathcal N (0,I) \
+   x &amp; = \mu + \Lambda z + \epsilon
+   \end{aligned}
+   $$
+   <img src="https://gitee.com/violets/typora--images/raw/main/imgs/202204251533971.png" alt="image-20220425153323755" style="zoom:50%;" /></li>
+</ol>
+<p>Simplify above equations. Finally we have
+   $$
+   \begin{aligned}
+   \mu _{x,z} &amp; = \begin{pmatrix}
+   0 \
+   \mu 
+   \end{pmatrix} \
+   \Sigma &amp; = \begin{pmatrix}
+   I &amp; \Lambda ^T \
+   \Lambda &amp; \Lambda \Lambda ^T + \Psi
+   \end{pmatrix}</p>
+<p>\end{aligned}
+   $$
+   Putting everything together, we have
+   $$
+   \left[\begin{array}{l}
+   z \
+   x
+   \end{array}\right] \sim \mathcal{N}\left(\left[\begin{array}{l}
+   \vec{0} \
+   \mu
+   \end{array}\right],\left[\begin{array}{lc}
+   I &amp; \Lambda^{T} \
+   \Lambda &amp; \Lambda \Lambda^{T}+\Psi
+   \end{array}\right]\right)
+   $$
+   <font color=DarkBlue>There's no parameters' closed form when solve derivatives of</font> <span class="arithmatex">\(\color{DarkBlue} P(x^{(i)})\)</span><font color=DarkBlue>'s log likelihood.</font></p>
+<p><font color=Crimson>So, we use EM to solve these parameters.</font></p>
+<ol>
+<li>
+<p><strong>EM for Factor Analysis</strong></p>
+</li>
+<li>
+<p><strong>E-Step</strong>
+     $$
+     \begin{aligned}
+     Q <em z_i_="z^{(i)">i(z^{(i)}) &amp; = P(z ^{(i)} \mid x ^{(i)};\theta) \
+     z^{(i)} \mid x^{(i)} &amp; \sim \mathcal N (\mu </em>, \Sigma } \mid x^{(i)}<em z_i_="z^{(i)">{z^{(i)} \mid x^{(i)}})
+     \end{aligned}
+     $$
+     Where
+     $$
+     \begin{aligned}
+     \mu </em> - \mu) \
+     \Sigma _{z^{(i)} \mid x^{(i)}} &amp; = I - \Lambda ^T (\Lambda \Lambda^T + \Psi) ^ {-1} \Lambda
+     \end{aligned}
+     $$} \mid x^{(i)}} &amp; = \vec 0 + \Lambda ^T (\Lambda \Lambda^T + \Psi) ^ {-1} (x^{(i)</p>
+</li>
+<li>
+<p><strong>M-step</strong>
+     $$
+     \begin{aligned}
+     \Lambda &amp; =\left(\sum_{i=1}^{m}\left(x^{(i)}-\mu\right) \mu_{z^{(i)} \mid x^{(i)}}^{T}\right)\left(\sum_{i=1}^{m} \mu_{z^{(i)} \mid x^{(i)}} \mu_{z^{(i)} \mid x^{(i)}}^{T}+\Sigma_{z^{(i)} \mid x^{(i)}}\right)^{-1} \
+     \mu &amp; = \frac{1}{m} \sum_{i=1}^{m} x^{(i)} \
+     \Psi &amp;= \frac{1}{m} \sum_{i=1}^{m} x^{(i)} x^{(i)^{T}}-x^{(i)} \mu_{z^{(i)} \mid x^{(i)}}^{T} \Lambda^{T}-\Lambda \mu_{z^{(i)} \mid x^{(i)}} x^{(i)^{T}}+\Lambda\left(\mu_{z^{(i)} \mid x^{(i)}} \mu_{z^{(i)} \mid x^{(i)}}^{T}+\Sigma_{z^{(i)} \mid x^{(i)}}\right) \Lambda^{T}
+     \end{aligned}
+     $$</p>
+</li>
+</ol>
+<p><strong><em>Tips:</em></strong></p>
+<p>Simplify integrals by
+  $$
+  \underset {z^{(i)}} \int {Q_i(z^{(i)}) {z^{(i)}}} d{z^{(i)}} = E[z^{(i)}] = \mu _{z^{(i)} \mid x^{(i)}}
+  $$</p>
+<h2 id="lecture-16-independent-components-analysis-reinforced-learning">Lecture 16 Independent Components Analysis &amp; Reinforced Learning<a class="headerlink" href="#lecture-16-independent-components-analysis-reinforced-learning" title="Permanent link">&para;</a></h2>
+<hr />
+<p><strong>Outline :</strong></p>
+<ul>
+<li><strong>Independent Components Analysis</strong></li>
+<li>CDF (cumulative distribution functions) </li>
+<li>ICA model</li>
+<li>Reinforcement Learning</li>
+<li>MDP (Markov decision processes)</li>
+</ul>
+<hr />
+<h3 id="independent-components-analysis">Independent Components Analysis<a class="headerlink" href="#independent-components-analysis" title="Permanent link">&para;</a></h3>
+<ul>
+<li>If the data is Gaussian, ICA is not possible. Because Gaussian distribution is rotational symmetric, so there will be a rotational ambiguity (<em>i.e. Any axis can be your component.</em>).</li>
+</ul>
+<p><font color=Salmone>Gaussian density is the only distribution that is rotationally symmetric.</font></p>
+<ol>
+<li>Compute density <span class="arithmatex">\(x\)</span></li>
+</ol>
+<p><span class="arithmatex">\(P_x (X) = P_s(WX) |W|\)</span></p>
+<ol>
+<li>Choose the density of s <span class="arithmatex">\(\longleftrightarrow\)</span> <span class="arithmatex">\(P_s (S) = ?\)</span></li>
+</ol>
+<p>Common choice of <span class="arithmatex">\(P_s (S)\)</span></p>
+<ul>
+<li>Laplacian Distribution (Double-Sided Exponential Function)</li>
+<li>Derivation of SIgmoid</li>
+</ul>
+<p>To summarize, we have
+$$
+\begin{aligned}
+P_x(X) &amp; = P_s(WX) |W| \
+&amp; = \left(\prod_{j=1}^n P_s\left(w_j^T x \right)\right) |W|
+\end{aligned}
+$$
+MLE of this is
+$$
+l(w) = \sum _{i=1}^m \log \left(\prod_j P_s(w_j ^T x^{(i)}) |W| \right)
+$$</p>
+<h3 id="reinforcement-learning">Reinforcement Learning<a class="headerlink" href="#reinforcement-learning" title="Permanent link">&para;</a></h3>
+<p>When you don't have a mapping from X to Y, you can't use supervised learning.</p>
+<p>Reinforcement Learning specify a reward function.</p>
+<p>Our goal is to write a cost function of a reward function give good results a high reward.</p>
+<p><strong>Challenge :</strong>  Credit Assignment</p>
+<h4 id="mdp-markov-decision-processes">MDP (Markov decision processes)<a class="headerlink" href="#mdp-markov-decision-processes" title="Permanent link">&para;</a></h4>
+<p>MDP is a five-element tuple, <strong>(S, A, {<span class="arithmatex">\(P_{Sa}\)</span>}, <span class="arithmatex">\(\gamma\)</span>, R)</strong>. MDP provides the formalism in which RL problems are usually posed.</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(S\)</span> --- set of states</p>
+</li>
+<li>
+<p><span class="arithmatex">\(A\)</span> --- set of actions</p>
+</li>
+<li>
+<p><span class="arithmatex">\(P_{Sa}\)</span> --- state transition probabilities (<span class="arithmatex">\(\sum _{s'} P_{Sa}(s') = 1\)</span>)</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\gamma\)</span> --- discount factor (<span class="arithmatex">\(\gamma \in [0,1)\)</span> usually to be chosen slightly less than 1)</p>
+</li>
+</ul>
+<p><span class="arithmatex">\(\gamma\)</span> is the power of the time that reward is multiplied by. <em>(e.g. encourages the robot to get deposited rewards faster or postpone the negative rewards.)</em></p>
+<p><span class="arithmatex">\(\gamma\)</span> guarantees that total payoff is a bounded value.</p>
+<ul>
+<li><span class="arithmatex">\(R\)</span> --- reward function</li>
+</ul>
+<p><strong><em>Goal of RL</em></strong> : Choose actions over time to maximize the expected value of the total payoff. <span class="arithmatex">\(E\left[\sum_i \gamma ^i R(s_i) \right]\)</span></p>
+<p>Output a optimal policy/controller <span class="arithmatex">\(\pi (s)\)</span> / <span class="arithmatex">\(a = \pi (s)\)</span> that maps states to actions <em>(i.e. <span class="arithmatex">\(\pi : S \rightarrow A\)</span>)</em></p>
+<p><strong>Value Function:</strong> <span class="arithmatex">\(V ^{\pi} (s)\)</span> is simply the expected sum of discounted rewards upon starting in state s, and taking actions according to <span class="arithmatex">\(\pi\)</span>
+$$
+V^{\pi}(s)=\mathrm{E}\left[R\left(s_{0}\right)+\gamma R\left(s_{1}\right)+\gamma^{2} R\left(s_{2}\right)+\cdots \mid s_{0}=s, \pi\right]
+$$</p>
+<h4 id="bellman-equations">Bellman equations<a class="headerlink" href="#bellman-equations" title="Permanent link">&para;</a></h4>
+<p>Bellman equation can be used to efficiently solve for <span class="arithmatex">\(V^\pi\)</span>
+$$
+\begin{aligned}
+V^{\pi}(s) &amp;= R(s)+\gamma \sum_{s^{\prime} \in S} P_{s \pi(s)}\left(s^{\prime}\right) V^{\pi}\left(s^{\prime}\right) \
+&amp;= R(s)+\gamma E_{s^{\prime} \sim P_{s \pi(s)}}\left[V^{\pi}\left(s^{\prime}\right)\right]
+\end{aligned}
+$$</p>
+<p>Bellman equation sets up a solvable system of linear equations.</p>
+<h2 id="lecture-17-mdps-valuepolicy-iteration">Lecture 17 MDPs &amp; Value/Policy Iteration<a class="headerlink" href="#lecture-17-mdps-valuepolicy-iteration" title="Permanent link">&para;</a></h2>
+<p><em><u>Challenge of finding a  policy: There's exponentially large number of possible policies.</u></em></p>
+<p>So how to compute the optimal policy?</p>
+<ul>
+<li>finding <span class="arithmatex">\(V^*\)</span></li>
+<li>finding <span class="arithmatex">\(\pi ^ *\)</span></li>
+</ul>
+<hr />
+<p><strong>What if don't know <span class="arithmatex">\(P_{sa}\)</span> ?</strong></p>
+<p>Can perform Laplace smoothing to avoid <span class="arithmatex">\(\frac{0}{0}\)</span> evaluation, but not necessary. Because unlike Naive Bayes, Reinforcement learning is not that sensitive for 0 values.</p>
+<hr />
+<p><strong>MDP with unknown state transition probabilities</strong></p>
+<div class="highlight"><pre><span></span><code>1.Initialize π randomly
+2.Repeat{
+        (a)Execute π in the MDP for some number of trials.
+        (b)Using the accumulated experience in the MDP,update our esti-
+        mates for $P_{sa}$ (and R,if applicable).
+        (c)Apply value iteration with the estimated state transition probabil-
+        ities and rewards to get a new estimated value function V.
+        (d)Update π to be the greedy policy with respect to V.
+        }
+</code></pre></div>
+<h3 id="value-iteration">Value Iteration<a class="headerlink" href="#value-iteration" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Focus on finding <span class="arithmatex">\(V^*\)</span></strong></li>
+</ul>
+<p>For absorbing state, set its <span class="arithmatex">\(P_{sa}\)</span> to 0</p>
+<p>Value iteration converges very quickly. (Due to <span class="arithmatex">\(\gamma\)</span>, converges exponentially quickly) </p>
+<h3 id="policy-iteration">Policy Iteration<a class="headerlink" href="#policy-iteration" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Focus on finding <span class="arithmatex">\(\pi ^ *\)</span></strong> </li>
+</ul>
+<h3 id="comparison">Comparison<a class="headerlink" href="#comparison" title="Permanent link">&para;</a></h3>
+<p><strong>Value iteration VS Policy Iteration</strong></p>
+<ul>
+<li>Policy iteration works good for relatively small <code>#states</code> problems, poor on large.</li>
+</ul>
+<p>For small problem, policy iteration converge faster than value iteration.</p>
+<ul>
+<li>Value Iteration will converge to <span class="arithmatex">\(V^*\)</span>, but won't ever get to exactly <span class="arithmatex">\(V^*\)</span></li>
+</ul>
+<h3 id="exploration-vs-exploitation-problem"><strong>Exploration VS Exploitation Problem</strong><a class="headerlink" href="#exploration-vs-exploitation-problem" title="Permanent link">&para;</a></h3>
+<p>When you acting a MDP, how aggressively of how greedy should you be at just taking actions to maximize your rewards?</p>
+<p>Using <strong>epsilon greedy</strong> to solve this problem.</p>
+<div class="highlight"><pre><span></span><code>1.Initialize π randomly
+2.Repeat{
+        (a)Execute EPSILON-GREEDY π in the MDP for some number of trials.
+        (b)Using the accumulated experience in the MDP,update our esti-
+        mates for $P_{sa}$ (and R,if applicable).
+        (c)Apply value iteration with the estimated state transition probabil-
+        ities and rewards to get a new estimated value function V.
+        (d)Update π to be the greedy policy with respect to V.
+        }
+</code></pre></div>
+<p><strong>Questions</strong></p>
+<ul>
+<li>Is <span class="arithmatex">\(\epsilon\)</span> in <strong>epsilon greedy</strong> have to be constant?</li>
+</ul>
+<p>No, it doesn't have to be. *Boltzmann exploration</p>
+<ul>
+<li>Can you get a reward for reaching states you've never seen before?</li>
+</ul>
+<p>Intrinsic reinforcement learning / Intrinsic Motivation.</p>
+<ul>
+<li>How many actions should you take before updating <span class="arithmatex">\(\pi\)</span>?</li>
+</ul>
+<p>Run as frequently as it can.</p>
+<h2 id="lecture-18-continuous-state-mdp-model-simulation">Lecture 18 Continuous State MDP &amp; Model Simulation<a class="headerlink" href="#lecture-18-continuous-state-mdp-model-simulation" title="Permanent link">&para;</a></h2>
+<hr />
+<p><strong>Outline</strong></p>
+<ul>
+<li>
+<p>Discretization</p>
+</li>
+<li>
+<p>Models/Simulation</p>
+</li>
+<li>
+<p>Fitted Value Iteration</p>
+</li>
+</ul>
+<p>Fitted Value Iteration works best with a model/simulator of the MDP</p>
+<hr />
+<h3 id="discretization">Discretization<a class="headerlink" href="#discretization" title="Permanent link">&para;</a></h3>
+<p><font color=darkRed>CONS</font></p>
+<ol>
+<li>
+<p>Not smooth</p>
+</li>
+<li>
+<p>Curse of dimensionality</p>
+</li>
+</ol>
+<p>If state space is in <span class="arithmatex">\(s \in \mathbb R ^n\)</span>, and discretize each into <span class="arithmatex">\(k\)</span> values, get <span class="arithmatex">\(k^n\)</span> discrete states.</p>
+<p>Besides, large <span class="arithmatex">\(n\)</span> will also cause computational complexity problem,</p>
+<h3 id="modelssimulation-of-mdp">Models/Simulation of MDP<a class="headerlink" href="#modelssimulation-of-mdp" title="Permanent link">&para;</a></h3>
+<p><img src="https://gitee.com/violets/typora--images/raw/main/imgs/202205051517700.png" alt="image-20220505151714544" style="zoom:50%;" /></p>
+<p><strong>How to build a model?</strong></p>
+<ul>
+<li>
+<p>Physics simulator</p>
+</li>
+<li>
+<p>Learn model from data</p>
+</li>
+<li>
+<p>Get <span class="arithmatex">\(m\)</span> examples
+     $$
+     \begin{align}
+     &amp; s_{0}^{(1)} \stackrel{a_{0}^{(1)}}{\longrightarrow} s_{1}^{(1)} \stackrel{a_{1}^{(1)}}{\longrightarrow} s_{2}^{(1)} \stackrel{a_{2}^{(1)}}{\longrightarrow} \cdots \cdot \stackrel{a_{T-1}^{(1)}}{\longrightarrow} s_{T}^{(1)} \
+     &amp; s_{0}^{(2)} \stackrel{a_{0}^{(2)}}{\longrightarrow} s_{1}^{(2)} \stackrel{a_{1}^{(2)}}{\longrightarrow} s_{2}^{(2)} \stackrel{a_{2}^{(2)}}{\longrightarrow} \cdots \stackrel{a_{T-1}^{(2)}}{\longrightarrow} s_{T}^{(2)} \
+     &amp; s_{0}^{(m)} \stackrel{a_{0}^{(m)}}{\longrightarrow} s_{1}^{(m)} \stackrel{a_{1}^{(m)}}{\longrightarrow} s_{2}^{(m)} \stackrel{a_{2}^{(m)}}{\longrightarrow} \cdots \stackrel{a_{T-1}^{(m)}}{\longrightarrow} s_{T}^{(m)} \
+     \end{align}
+     $$</p>
+</li>
+<li>
+<p>Apply supervised learning to estimate <span class="arithmatex">\(s_{t+1}\)</span> as function of <span class="arithmatex">\(s_t, a_t\)</span>.</p>
+</li>
+</ul>
+<p><em>e.g. linear regression version</em> </p>
+<ul>
+<li>
+<p>Deterministic model</p>
+<p><span class="arithmatex">\(s_{t+1} = A s_t + B a_t\)</span></p>
+<p>A lot of deterministic model will learn a  brittle model.</p>
+<p>Exception: LQR and LQG will use deterministic models.</p>
+</li>
+<li>
+<p>Stochastic model</p>
+<p><span class="arithmatex">\(s_{t+1} = A s_t + B a_t + \epsilon_t\)</span> where <span class="arithmatex">\(\epsilon_t \sim \mathcal N (0, \sigma ^2 I)\)</span> </p>
+</li>
+</ul>
+<p>$$
+     \arg \min <em i="1">{A, B} \sum</em>
+   $$}^{m} \sum_{t=0}^{T-1}\left|s_{t+1}^{(i)}-\left(A s_{t}^{(i)}+B a_{t}^{(i)}\right)\right|^{2</p>
+<p>==Model-based reinforcement learning==: build a model of the robot and train the RL algorithm in a simulator, and take the learned policy and apply it back on your real robot.</p>
+<p>**Choose feature <span class="arithmatex">\(\phi (s)\)</span> of state <span class="arithmatex">\(s\)</span> **</p>
+<p>When you designing features, pick a bunch of features that you think hope convey how well is your robot doing.
+$$
+V(s) = \theta ^T \phi(s)
+$$</p>
+<h3 id="fitted-value-iteration">Fitted Value Iteration<a class="headerlink" href="#fitted-value-iteration" title="Permanent link">&para;</a></h3>
+<p><img src="https://gitee.com/violets/typora--images/raw/main/imgs/202205051637190.png" alt="image-20220505163700073" style="zoom:80%;" /></p>
+<p><strong>Tricks</strong></p>
+<p><img alt="image-20220505191832726" src="https://gitee.com/violets/typora--images/raw/main/imgs/202205051918895.png" /></p>
+<p><img alt="image-20220505192110935" src="https://gitee.com/violets/typora--images/raw/main/imgs/202205051921065.png" /></p>
+<ul>
+<li>Important to have noise in the simulator in model based RL, but when you're deploying, set noise <span class="arithmatex">\(\epsilon = 0\)</span> and <span class="arithmatex">\(k=1\)</span></li>
+</ul>
+<h2 id="lecture-19-reward-model-linear-dynamical-system">Lecture 19 Reward Model &amp; Linear Dynamical System<a class="headerlink" href="#lecture-19-reward-model-linear-dynamical-system" title="Permanent link">&para;</a></h2>
+<hr />
+<p><strong>Outline</strong></p>
+<ul>
+<li>
+<p>State-action rewards</p>
+</li>
+<li>
+<p>Finite horizon MDP</p>
+</li>
+<li>
+<p>Linear dynamical systems</p>
+</li>
+</ul>
+<p><em>Can compute the exact value function (without approximation) even though the state space is continuous.</em></p>
+<ul>
+<li>Model</li>
+<li>LQR (Linear Quadratic Regulation)</li>
+</ul>
+<hr />
+<h3 id="state-action-rewards">State-action rewards<a class="headerlink" href="#state-action-rewards" title="Permanent link">&para;</a></h3>
+<p>Rewards is a function mapping from states and actions to the rewards (i.e. <span class="arithmatex">\(R(s, a) : S \times A  \longmapsto \mathbb R\)</span>)</p>
+<p>In this case, Bellman's equation is
+$$
+V^<em>(s) = \max <em s_prime="s^\prime">a \left(R(s, a) + \gamma \sum </em>(s^\prime)V^} P_{sa</em>(s^\prime)\right)
+$$
+Can use value iteration to solve <span class="arithmatex">\(V^*(s)\)</span>, then you can get optimal policy, which is
+$$
+\pi^<em> (s)  = \arg \max <em s_prime="s^\prime">a \left(R(s, a) + \gamma \sum </em>(s^\prime)V^} P_{sa</em>(s^\prime)\right)
+$$</p>
+<h3 id="finite-horizon-mdp">Finite horizon MDP<a class="headerlink" href="#finite-horizon-mdp" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex">\(\left(\mathcal{S}, \mathcal{A}, P_{s a}^{(t)}, T, R^{(t)}\right)\)</span></p>
+<p>Replace discount factor <span class="arithmatex">\(\gamma\)</span> with a horizon time <span class="arithmatex">\(T\)</span>, MDP will run a finite number of <span class="arithmatex">\(T\)</span>  steps.</p>
+<ul>
+<li>Action you take might depend on what time it is on the clock.</li>
+</ul>
+<p>Thus <span class="arithmatex">\(\pi\)</span> should be time dependent (i.e. <span class="arithmatex">\(\pi _t^*(s)\)</span>) ==Non-stationary policy==</p>
+<p><strong>Non-stationary state transitions</strong> <span class="arithmatex">\(s_{t+1} \sim P_{s_t a_t}^{(t)}\)</span></p>
+<p><strong>Non-stationary Reward</strong> <span class="arithmatex">\(R ^{(t)} (s,a)\)</span></p>
+<p><em>Examples</em></p>
+<ul>
+<li>Changing dynamics</li>
+<li>Weather forecasts</li>
+<li>Industrial automation</li>
+</ul>
+<p><strong>How to solve for a finite horizon MDP</strong></p>
+<ol>
+<li>
+<p>Define the optimal value function
+   $$
+   V_{t}(s)=\mathbb{E}\left[R^{(t)}\left(s_{t}, a_{t}\right)+\cdots+R^{(T)}\left(s_{T}, a_{T}\right) \mid s_{t}=s, \pi\right]
+   $$
+   <span class="arithmatex">\(V_{t}(s)\)</span> it the total payoff start on state <span class="arithmatex">\(s\)</span> at time <span class="arithmatex">\(t\)</span> execute <span class="arithmatex">\(\pi\)</span></p>
+</li>
+<li>
+<p>Value iteration (a dynamic programming problem in this case)
+   $$
+   \forall t&lt;T, s \in \mathcal{S}: \quad V_{t}^{<em>}(s):=\max <em s_prime="s^{\prime">{a \in \mathcal{A}}\left[R^{(t)}(s, a)+\mathbb{E}</em>^{} \sim P_{s a}^{(t)}}\left[V_{t+1</em>}\left(s^{\prime}\right)\right]\right]
+   $$
+   Base case (the final step)
+   $$
+   V^<em>_T (s) = \max _a R(s,a)
+   $$
+   Get the optimal policy
+   $$
+   \pi_t^</em>(s) =  \arg \max <em s_prime="s^\prime">a \left(R(s, a) + \sum </em>^} P_{sa}(s^\prime)V_{t+1<em>(s^\prime)\right)
+   $$
+    </em><u>Make <span class="arithmatex">\(R, P_{sa}\)</span> be <span class="arithmatex">\(R^{(t)}, P_{sa}^{(t)}\)</span> for non-stationary problems</u>*</p>
+</li>
+<li>
+<p>If make <span class="arithmatex">\(T\)</span> infinite, value function <span class="arithmatex">\(V_t^* (s)\)</span> will be unbounded, thus simply make <span class="arithmatex">\(T\)</span> infinite wouldn't get a <u>discounted MDP formalism (traditional MDP)</u> value iteration, we also need discount <span class="arithmatex">\(\gamma\)</span> to ensure a value function bound.</p>
+</li>
+</ol>
+<h3 id="linear-quadratic-regulation-lqr">Linear Quadratic Regulation (LQR)<a class="headerlink" href="#linear-quadratic-regulation-lqr" title="Permanent link">&para;</a></h3>
+<p>Convenient to develop with the finite horizon setting <span class="arithmatex">\(\left(\mathcal{S}, \mathcal{A}, P_{s a}^{(t)}, T, R^{(t)}\right)\)</span>, but also works with discounted MDP formalism  <span class="arithmatex">\(\left(\mathcal{S}, \mathcal{A}, P_{s a}, \gamma, R \right)\)</span></p>
+<p><strong>Where to get <span class="arithmatex">\(A,B\)</span> ?</strong></p>
+<ul>
+<li>Learn from data</li>
+</ul>
+<p>Linear regression on m examples</p>
+<ul>
+<li>Linearize a non-linear model</li>
+</ul>
+<p><strong><em>A remarkable property</em></strong></p>
+<ul>
+<li>Using LQR make the value function a quadratic function, can solve <span class="arithmatex">\(V^\star\)</span> exactly.</li>
+</ul>
+<h4 id="dynamic-programming-for-lqr">Dynamic programming for LQR<a class="headerlink" href="#dynamic-programming-for-lqr" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>Base case
+   $$
+   \begin{aligned}
+   V_T^{\star}(s_T) &amp;= \max_{a_T} \space R\left(s_T,a_T\right) \
+   &amp;= - s_T^T U s_T \
+   \pi^{\star}_T (s_T) &amp;= \vec 0
+   \end{aligned}
+   $$
+   ==Initialize <span class="arithmatex">\(\Phi _T = -U, \Psi_T = \vec 0\)</span>==</p>
+</li>
+<li>
+<p>The key step</p>
+</li>
+</ol>
+<p>It's can be show that
+   $$
+   \begin{align}
+   \text {if } \space V_{t+1}^{<em>}\left(s_{t+1}\right) &amp; = s_{t+1}^{\top} \Phi_{t+1} s_{t+1}+\Psi_{t+1} \<br />
+   \text {then }  \space V_{t}^{</em>}\left(s_{t}\right) &amp; = s_{t}^{\top} \Phi_{t} s_{t}+\Psi_{t} 
+   \end{align}
+   $$
+   Then we can solve LQR recursively.</p>
+<p>==Recursive calculate <span class="arithmatex">\(\Phi_t, \Psi_t\)</span>   using <span class="arithmatex">\(\Phi_{t+1}, \Psi_{t+1}\)</span> for <span class="arithmatex">\(t=T-1,T-2,...,0\)</span>==
+   $$
+   \begin{array}{l}
+   \Phi_{t}=A_{t}^{\top}\left(\Phi_{t+1}-\Phi_{t+1} B_{t}\left(B_{t}^{\top} \Phi_{t+1} B_{t}-W_{t}\right)^{-1} B_{t} \Phi_{t+1}\right) A_{t}-U_{t} \
+   \Psi_{t}=-\operatorname{tr}\left(\Sigma_{t} \Phi_{t+1}\right)+\Psi_{t+1}
+   \end{array}
+   $$
+   ==Calculate <span class="arithmatex">\(L_t\)</span>==</p>
+<p>==<span class="arithmatex">\(\pi ^\star (s_t) = L_t s_t\)</span>==
+   $$
+   \begin{aligned}
+   L_{t} &amp;=\left[\left(B_{t}^{\top} \Phi_{t+1} B_{t}-W_{t}\right)^{-1} B_{t} \Phi_{t+1} A_{t}\right]\
+   \pi ^\star(s_t) &amp;= a_{t}^{<em>} =\left[\left(B_{t}^{\top} \Phi_{t+1} B_{t}-V_{t}\right)^{-1} B_{t} \Phi_{t+1} A_{t}\right] \cdot s_{t} \
+   &amp;=L_{t} \cdot s_{t} \
+   \end{aligned}
+   $$
+   </em><strong>Takeaway: Optimal action is a linear function of state <span class="arithmatex">\(s_t\)</span></strong>*</p>
+<p><em><u>Fun Fact about LQR</u></em></p>
+<ul>
+<li><span class="arithmatex">\(L_t\)</span> depends on <span class="arithmatex">\(\Phi_{t+1}\)</span> but not <span class="arithmatex">\(\Psi_{t+1}\)</span>, means that in order to take action, constant item for the quadratic function doesn't matter. :warning: ==So it's NOT NECESSARY to calculate <span class="arithmatex">\(\Psi\)</span> in the LQR algorithm==</li>
+</ul>
+<p>Thus <span class="arithmatex">\(\pi ^\star, L_t\)</span> don't depend on <span class="arithmatex">\(\Sigma_w\)</span>, but <span class="arithmatex">\(V ^\star\)</span> does.</p>
+<h2 id="lecture-20-rl-debugging-and-diagnostics">Lecture 20 RL Debugging and Diagnostics<a class="headerlink" href="#lecture-20-rl-debugging-and-diagnostics" title="Permanent link">&para;</a></h2>
+<hr />
+<p><strong>Outline :</strong></p>
+<ul>
+<li>RL debugging/diagnostics</li>
+<li>Policy search</li>
+<li>Conclusion</li>
+</ul>
+<hr />
+<h3 id="rl-debuggingdiagnostics">RL debugging/diagnostics<a class="headerlink" href="#rl-debuggingdiagnostics" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Improving simulator</li>
+<li>Modify value function <span class="arithmatex">\(V_\pi (s)\)</span></li>
+<li>Modify RL algorithms <span class="arithmatex">\(R(s)\)</span></li>
+</ol>
+<h3 id="direct-policy-search">(Direct) Policy Search<a class="headerlink" href="#direct-policy-search" title="Permanent link">&para;</a></h3>
+<p>Solve <span class="arithmatex">\(\pi ^ \star\)</span> directly (instead of using <span class="arithmatex">\(V^\star\)</span> to solve <span class="arithmatex">\(\pi ^ \star\)</span>)</p>
+<p>DPS focus on coming up with the class of policies you'll entertain or come up with the set of functions you use to approximate the policy.</p>
+<p><strong><em>New definition:</em></strong> A stochastic policy is a function <span class="arithmatex">\(\pi : S \times A \longmapsto \mathbb R\)</span> when <span class="arithmatex">\(\pi(s,a)\)</span> is the probability of taking action <span class="arithmatex">\(a\)</span> in state <span class="arithmatex">\(s\)</span> (<span class="arithmatex">\(\sum_a \pi(s,a)=1\)</span>)</p>
+<p><strong>Goal :</strong> Find <span class="arithmatex">\(\theta\)</span> so that when we execute <span class="arithmatex">\(\pi_\theta (s,a)\)</span>, we maximize total payoff (expected sum of rewards), i.e.
+$$
+\max_ \theta E\left[R\left(s_0,a_0\right)+...+R\left(s_T,a_T\right)\mid \pi_\theta \right]
+$$
+ <strong>How to do that</strong> Derive a stochastic gradient ascent algorithm as a function of <span class="arithmatex">\(\theta\)</span> solve the equation above.</p>
+<p>==Reinforce Algorithm== (<em>Very inefficient</em>)</p>
+<div class="highlight"><pre><span></span><code>loop{
+/*Sample*/
+s_0, a_0, s_1,a_1 ... s_T,a_T
+/* Compute payoff*/
+$R(s_0,a_0),...,R(s_T,a_T)$
+/*Update $\theta$ (using gradient ascent)*/
+Implement $\theta$ update rule
+}
+</code></pre></div>
+<p><span class="arithmatex">\(\theta\)</span> update rule
+$$
+\theta := \theta + \alpha \left[\frac{\nabla \pi_\theta(s_0 ,a_0)}{\pi_\theta(s_0 ,a_0)} +\frac{\nabla \pi_\theta(s_1 ,a_1)}{\pi_\theta(s_1 ,a_1)}+...+\frac{\nabla \pi_\theta(s_T ,a_T)}{\pi_\theta(s_T ,a_T)} \right] \left(R(s_0,a_0),...,R(s_T,a_T)\right)
+$$</p>
+<p><strong><em>Note:</em></strong> One difference between policy search and estimated value function is that in Direct policy search <span class="arithmatex">\(s_0\)</span> is a fixed initial state <span class="arithmatex">\(s_0\)</span> or there's a fixed distribution over initial state <span class="arithmatex">\(s_0\)</span>.</p>
+<p>Direct policy search also works for continuous value function, in that situation, we have <span class="arithmatex">\(a = \theta^T + \text{Gaussian noise}\)</span>.</p>
+<h4 id="direct-policy-search-vs-value-function-based-approach">Direct Policy Search vs Value-function-based Approach<a class="headerlink" href="#direct-policy-search-vs-value-function-based-approach" title="Permanent link">&para;</a></h4>
+<p>When to use DPS:</p>
+<ol>
+<li>POMDP (Partially Observable MDP)</li>
+</ol>
+<p>At each step, get a partial (and potentially noisy) measurement of the state. Have to choose an action <span class="arithmatex">\(a\)</span> using that.</p>
+<p><em><u>If we just have partially observed value of the state, even if we know <span class="arithmatex">\(V^\star (s), \pi ^\star (s)\)</span>,  because we can't ensure what the state is, we still can not apply then. So we can only use DPS</u></em></p>
+<p>Can apply <a href="https://en.wikipedia.org/wiki/Kalman_filter">Kalman filter</a> to estimate full state vector using partial observation state vectors, and plug them as features into policy search.</p>
+<ol>
+<li>When <span class="arithmatex">\(\pi^\star\)</span> is simpler than <span class="arithmatex">\(V^\star\)</span></li>
+</ol>
+<p>For low-level control task, we often have simple map form <span class="arithmatex">\(\mathcal S \longmapsto \mathcal A\)</span> i.e. simpler policy <span class="arithmatex">\(\pi^\star\)</span>. For multi-step reasoning problems, we should prefer to choose value function based approaches.</p>
+<p>CONS for Reinforce Algorithm</p>
+<ul>
+<li>Very inefficient</li>
+</ul>
+<p>Gradient estimate for reinforcement algorithm turns out to be very noisy, even though the expected value is right.</p>
+<h1 id="andrew-ng-rocks">Andrew Ng Rocks！<a class="headerlink" href="#andrew-ng-rocks" title="Permanent link">&para;</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      quaintness
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/quaintness" target="_blank" rel="noopener" title="GitHub | quaintness" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      
+        <script src="../../../mkdocs/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

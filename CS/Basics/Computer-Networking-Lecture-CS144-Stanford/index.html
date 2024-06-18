@@ -1,0 +1,2652 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Record and Share">
+      
+      
+        <meta name="author" content="quaintness">
+      
+      
+        <link rel="canonical" href="https://quaintness.github.io/CS/Basics/Computer-Networking-Lecture-CS144-Stanford/">
+      
+      
+        <link rel="prev" href="../6_006/">
+      
+      
+        <link rel="next" href="../Linux-tutorial/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
+    
+    
+      
+        <title>Computer Networking - Welcome to Wonderland</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/no-footer.css">
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/unordered-list-symbols.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#stanford-cs144" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Welcome to Wonderland" class="md-header__button md-logo" aria-label="Welcome to Wonderland" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Welcome to Wonderland
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Computer Networking
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/quaintness/quaintness.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    quaintness.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../Intro_CS/" class="md-tabs__link">
+          
+  
+    
+  
+  Computer Science
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Languages/English/Intro_Languages.md" class="md-tabs__link">
+          
+  
+    
+  
+  Languages
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Welcome to Wonderland" class="md-nav__button md-logo" aria-label="Welcome to Wonderland" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Welcome to Wonderland
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/quaintness/quaintness.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    quaintness.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Computer Science
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Computer Science
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Intro_CS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro CS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Basics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6_0001/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro to CS (MIT 6.0001)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6_006/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Algorithm (MIT 6.006)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Computer Networking
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Computer Networking
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#stanford-cs144" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stanford CS144
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stanford CS144">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-0-the-internet-and-ip-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      1-0 The Internet and IP Introduction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-1-a-day-in-the-life-of-an-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      1-1 A day in the life of an application
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-2-the-four-layer-internet-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      1-2 The four layer Internet model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-3-the-ip-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      1-3 The IP Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-4-a-day-in-the-life-of-a-packet" class="md-nav__link">
+    <span class="md-ellipsis">
+      1-4 A Day in the Life of a Packet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-5-principle-packet-switching-principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      1-5 Principle: Packet switching principle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-6-principle-layering" class="md-nav__link">
+    <span class="md-ellipsis">
+      1-6 Principle: Layering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-7-principle-encapsulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1-7 Principle: Encapsulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-8-byte-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      1-8 Byte Order
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-9-ipv4-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      1-9 IPv4 addresses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-10-longest-prefix-matchlpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      1-10 Longest Prefix Match(LPM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-11-address-resolution-protocolarp" class="md-nav__link">
+    <span class="md-ellipsis">
+      1-11 Address Resolution Protocol(ARP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-12-recap" class="md-nav__link">
+    <span class="md-ellipsis">
+      1-12 recap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-13-sip-jon-peterson-interview" class="md-nav__link">
+    <span class="md-ellipsis">
+      1-13 SIP, Jon Peterson Interview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-0-transport-intro" class="md-nav__link">
+    <span class="md-ellipsis">
+      2-0 Transport (intro)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-1-the-tcp-service-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      2-1 The TCP Service Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-2-udp-service-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      2-2 UDP service model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-3-the-internet-control-message-protocol-icmp-service-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      2-3 The Internet Control Message Protocol (ICMP) Service Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-4-end-to-end-principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      2-4 End-to-End Principle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-5-error-detection-3-schemes-3-schemes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2-5 Error Detection: 3 schemes: 3 schemes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-6-finite-state-machines" class="md-nav__link">
+    <span class="md-ellipsis">
+      2-6 Finite State Machines
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-7-flow-control-i-stop-and-wait" class="md-nav__link">
+    <span class="md-ellipsis">
+      2-7 Flow Control I: Stop-and-Wait
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-8-flow-control-ii-sliding-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      2-8 Flow Control II: Sliding Window
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-9-retransmission-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      2-9 Retransmission Strategies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-10-tcp-header" class="md-nav__link">
+    <span class="md-ellipsis">
+      2-10 TCP Header
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-11-tcp-setup-and-teardown" class="md-nav__link">
+    <span class="md-ellipsis">
+      2-11 TCP Setup and Teardown
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-12-tcp-recap" class="md-nav__link">
+    <span class="md-ellipsis">
+      2-12 TCP Recap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-13-tcpip-kevin-fall" class="md-nav__link">
+    <span class="md-ellipsis">
+      2-13 TCP/IP -- Kevin Fall
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-0-packet-switching" class="md-nav__link">
+    <span class="md-ellipsis">
+      3-0 Packet Switching
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-1-the-history-of-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      3-1 The History of Networks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-2-what-is-packet-switching" class="md-nav__link">
+    <span class="md-ellipsis">
+      3-2 What is packet switching?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-3-terminology-end-to-end-delay-and-queueing" class="md-nav__link">
+    <span class="md-ellipsis">
+      3-3 Terminology, End to End Delay and Queueing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-4-playback-buffers" class="md-nav__link">
+    <span class="md-ellipsis">
+      3-4 Playback Buffers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-5-simple-deterministic-queue-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      3-5 Simple Deterministic Queue Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-6-queueing-model-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      3-6 Queueing Model Properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-7-switching-and-forwarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      3-7 Switching and Forwarding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#congestion-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Congestion Control
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#potpourri" class="md-nav__link">
+    <span class="md-ellipsis">
+      potpourri
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="potpourri">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rfc" class="md-nav__link">
+    <span class="md-ellipsis">
+      RFC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RFC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wireshark" class="md-nav__link">
+    <span class="md-ellipsis">
+      wireshark
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wifi" class="md-nav__link">
+    <span class="md-ellipsis">
+      WiFi 与 路由器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP 吞吐研究
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      论文阅读
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="论文阅读">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ethane-taking-control-of-the-enterprise-sigcomm-07" class="md-nav__link">
+    <span class="md-ellipsis">
+      《Ethane: Taking Control of the Enterprise, SIGCOMM 07》
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Linux-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Machine Learning
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Machine Learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ML/CS229/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CS229
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ML/CS229_Problem_Set.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CS229bPS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ML/CS231n/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CS231n
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Languages
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Languages
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Languages/English/Intro_Languages.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    English
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            English
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Languages/English/English_Grammar_Notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grammar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Languages/English/IELTS_Notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IELTS Tips
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#stanford-cs144" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stanford CS144
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stanford CS144">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-0-the-internet-and-ip-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      1-0 The Internet and IP Introduction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-1-a-day-in-the-life-of-an-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      1-1 A day in the life of an application
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-2-the-four-layer-internet-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      1-2 The four layer Internet model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-3-the-ip-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      1-3 The IP Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-4-a-day-in-the-life-of-a-packet" class="md-nav__link">
+    <span class="md-ellipsis">
+      1-4 A Day in the Life of a Packet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-5-principle-packet-switching-principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      1-5 Principle: Packet switching principle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-6-principle-layering" class="md-nav__link">
+    <span class="md-ellipsis">
+      1-6 Principle: Layering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-7-principle-encapsulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1-7 Principle: Encapsulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-8-byte-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      1-8 Byte Order
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-9-ipv4-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      1-9 IPv4 addresses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-10-longest-prefix-matchlpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      1-10 Longest Prefix Match(LPM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-11-address-resolution-protocolarp" class="md-nav__link">
+    <span class="md-ellipsis">
+      1-11 Address Resolution Protocol(ARP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-12-recap" class="md-nav__link">
+    <span class="md-ellipsis">
+      1-12 recap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-13-sip-jon-peterson-interview" class="md-nav__link">
+    <span class="md-ellipsis">
+      1-13 SIP, Jon Peterson Interview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-0-transport-intro" class="md-nav__link">
+    <span class="md-ellipsis">
+      2-0 Transport (intro)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-1-the-tcp-service-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      2-1 The TCP Service Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-2-udp-service-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      2-2 UDP service model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-3-the-internet-control-message-protocol-icmp-service-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      2-3 The Internet Control Message Protocol (ICMP) Service Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-4-end-to-end-principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      2-4 End-to-End Principle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-5-error-detection-3-schemes-3-schemes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2-5 Error Detection: 3 schemes: 3 schemes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-6-finite-state-machines" class="md-nav__link">
+    <span class="md-ellipsis">
+      2-6 Finite State Machines
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-7-flow-control-i-stop-and-wait" class="md-nav__link">
+    <span class="md-ellipsis">
+      2-7 Flow Control I: Stop-and-Wait
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-8-flow-control-ii-sliding-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      2-8 Flow Control II: Sliding Window
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-9-retransmission-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      2-9 Retransmission Strategies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-10-tcp-header" class="md-nav__link">
+    <span class="md-ellipsis">
+      2-10 TCP Header
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-11-tcp-setup-and-teardown" class="md-nav__link">
+    <span class="md-ellipsis">
+      2-11 TCP Setup and Teardown
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-12-tcp-recap" class="md-nav__link">
+    <span class="md-ellipsis">
+      2-12 TCP Recap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-13-tcpip-kevin-fall" class="md-nav__link">
+    <span class="md-ellipsis">
+      2-13 TCP/IP -- Kevin Fall
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-0-packet-switching" class="md-nav__link">
+    <span class="md-ellipsis">
+      3-0 Packet Switching
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-1-the-history-of-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      3-1 The History of Networks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-2-what-is-packet-switching" class="md-nav__link">
+    <span class="md-ellipsis">
+      3-2 What is packet switching?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-3-terminology-end-to-end-delay-and-queueing" class="md-nav__link">
+    <span class="md-ellipsis">
+      3-3 Terminology, End to End Delay and Queueing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-4-playback-buffers" class="md-nav__link">
+    <span class="md-ellipsis">
+      3-4 Playback Buffers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-5-simple-deterministic-queue-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      3-5 Simple Deterministic Queue Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-6-queueing-model-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      3-6 Queueing Model Properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-7-switching-and-forwarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      3-7 Switching and Forwarding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#congestion-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Congestion Control
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#potpourri" class="md-nav__link">
+    <span class="md-ellipsis">
+      potpourri
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="potpourri">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rfc" class="md-nav__link">
+    <span class="md-ellipsis">
+      RFC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RFC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wireshark" class="md-nav__link">
+    <span class="md-ellipsis">
+      wireshark
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wifi" class="md-nav__link">
+    <span class="md-ellipsis">
+      WiFi 与 路由器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP 吞吐研究
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      论文阅读
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="论文阅读">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ethane-taking-control-of-the-enterprise-sigcomm-07" class="md-nav__link">
+    <span class="md-ellipsis">
+      《Ethane: Taking Control of the Enterprise, SIGCOMM 07》
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/quaintness/quaintness.github.io/edit/main/docs/CS/Basics/Computer-Networking-Lecture-CS144-Stanford.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+
+
+  <h1>Computer Networking</h1>
+
+<h3 id="stanford-cs144">Stanford CS144<a class="headerlink" href="#stanford-cs144" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Note from <a href="https://github.com/huangrt01/CS-Notes/blob/master/Notes/Output/Computer-Networking-Lecture-CS144-Stanford.md">huangrt01</a></p>
+</li>
+<li>
+<p><a href="https://www.bilibili.com/video/BV1wt41167iN?from=search&amp;seid=12807244912122184980">CS144视频（b站）</a></p>
+</li>
+<li><a href="https://cs144.github.io/">CS144课程网站（包括Pdf、Lab）</a></li>
+<li><a href="https://github.com/huangrt01/CS-Notes/blob/master/Notes/Output/Computer-Networking-Lab-CS144-Stanford.md">我的CS144 Lab笔记</a></li>
+</ul>
+<p>[toc]</p>
+<h5 id="1-0-the-internet-and-ip-introduction">1-0 The Internet and IP Introduction<a class="headerlink" href="#1-0-the-internet-and-ip-introduction" title="Permanent link">&para;</a></h5>
+<p>internet layer: Internet Protocol, IP address, packet's path</p>
+<p>彩蛋：世一大惺惺相惜
+<img src="https://raw.githubusercontent.com/huangrt01/Markdown-Transformer-and-Uploader/mynote/Notes/Computer-Networking-Lecture-CS144-Stanford/005.jpg" alt="Stanford-THU" style="zoom:60%;" /></p>
+<p>用<code>ping</code>和<code>traceroute</code>看IP地址; 光纤2/3光速，8637km -&gt; RTT=86ms</p>
+<h5 id="1-1-a-day-in-the-life-of-an-application">1-1 A day in the life of an application<a class="headerlink" href="#1-1-a-day-in-the-life-of-an-application" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Networked Applications: connectivity, bidirectional and reliable data stream</li>
+<li>Byte Stream Model: A - Internet - B, server和A、B均可中断连接</li>
+<li>World Wide Web (HTTP: HyperText Transfer Protocol)</li>
+<li>request: GET, PUT, DELETE, INFO, 400 (bad request) </li>
+<li>GET - response(200, OK)  , 200代表有效</li>
+<li>document-centric: "GET/HTTP/1.1", "HTTP/1.1 200 OK \&lt;contents of the index.html&gt;"</li>
+<li>BitTorrent: peer-to-peer model</li>
+<li>breaks files into "pieces" and the clients join and leave "swarms" of clients</li>
+<li>先下载 torrent file -- tracker 存储 lists of other clients</li>
+<li>dynamically exchange data</li>
+<li>Skype: proprietary system, a mixed system</li>
+<li>
+<p>two clients： A -- (Internet + Rendezvous server) -- NAT -- B</p>
+</li>
+<li>
+<p>NAT(Network Address Translator): 连接的单向性，使得A只能通过Rendezvous server询问B是否直连A =&gt;reverse connection</p>
+</li>
+<li>
+<p>Rendezvous server</p>
+</li>
+<li>
+<p>如果模式是A -- NAT-- (Internet + Rendezvous server) -- NAT -- B，Skype用Relay来间接传递信息</p>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/huangrt01/Markdown-Transformer-and-Uploader/mynote/Notes/Computer-Networking-Lecture-CS144-Stanford/003.jpg" alt="Lego TCP/IP" style="zoom:60%;" /></p>
+<h5 id="1-2-the-four-layer-internet-model">1-2 The four layer Internet model<a class="headerlink" href="#1-2-the-four-layer-internet-model" title="Permanent link">&para;</a></h5>
+<p><img src="https://raw.githubusercontent.com/huangrt01/Markdown-Transformer-and-Uploader/mynote/Notes/Computer-Networking-Lecture-CS144-Stanford/001.jpg" alt="4-layer" style="zoom:60%;" /></p>
+<p>4 layer: 利于reuse</p>
+<p>Internet: end-hosts, links and routers
+* Link Layer: 利用 link 在 end host和router 或 router和router之间 传输数据, hop-by-hop逐跳转发
+  * e.g. Ethernet and WiFi
+* Network Layer: datagrams, Packet: (Data, Header(from, to))
+  * packets可能失去/损坏/复制，no guarantees
+  * must use the IP
+  * may be out of order
+* Transport Layer: TCP(Transmission Control Protocol) 负责上述Network层的局限性，controls congestion<br />
+  * sequence number -&gt; 保序
+  * ACK(acknowledgement of receipt)，如果发信人没收到就resend
+  * 比如视频传输不需要TCP，可以用UDP(User Datagram Protocol),不保证传输
+* Application Layer</p>
+<p>two extra things
+* IP is the "thin waist"   ,这一层的选择最少
+* the 7-layer OSI Model</p>
+<p><img src="https://raw.githubusercontent.com/huangrt01/Markdown-Transformer-and-Uploader/mynote/Notes/Computer-Networking-Lecture-CS144-Stanford/002.jpg" alt="7-layer" style="zoom:60%;" /></p>
+<h5 id="1-3-the-ip-service">1-3 The IP Service<a class="headerlink" href="#1-3-the-ip-service" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Link Frame (IP Datagram(IP Data(Data, Hdr), IP Hdr), Link Hdr )</li>
+<li>The IP Service Model的特点</li>
+<li>Datagram: (Data, IP SA, IP DA)，每个 router 有 forwarding table，类比为 postal service 中的 letter</li>
+<li>Unreliable: 失去/损坏/复制，保证只在必要的时候不可靠（比如queue congestion）</li>
+<li><strong>Best-effort</strong> attempt</li>
+<li>Connectionless : no per-flow state, mis-sequenced</li>
+<li>IP设计简单的原因</li>
+<li>minimal, faster, streamlined</li>
+<li>end-to-end (在end points implement features)</li>
+<li>build a variety of reliable/unreliable services on top</li>
+<li>
+<p>works over any link layer</p>
+</li>
+<li>
+<p>the IP Service Model</p>
+</li>
+<li>tries to prevent packets looping forever (实现：在每个datagram的header加hop-count field: time to live TTL field, 比如从128开始decrement)</li>
+<li>will fragment packets if they're too long (e.g. Ethernet, 1500bytes)</li>
+<li>header checksum：增强可靠性</li>
+<li>allows for new versions of IP</li>
+<li>allows for new options to be added to header (由router处理新特性，慎重使用)</li>
+</ul>
+<h5 id="1-4-a-day-in-the-life-of-a-packet">1-4 A Day in the Life of a Packet<a class="headerlink" href="#1-4-a-day-in-the-life-of-a-packet" title="Permanent link">&para;</a></h5>
+<ul>
+<li>3-way handshake</li>
+<li>client: SYN </li>
+<li>server: SYN/ACK</li>
+<li>client: ACK</li>
+<li>IP packets</li>
+<li>IP address + TCP port (web server通常是80)</li>
+<li>hops, Routers: wireless access point (WiFi的第一次hop)</li>
+<li>forwarding table</li>
+<li>default router</li>
+</ul>
+<h5 id="1-5-principle-packet-switching-principle">1-5 Principle: Packet switching principle<a class="headerlink" href="#1-5-principle-packet-switching-principle" title="Permanent link">&para;</a></h5>
+<p>packet: self-contained</p>
+<p>packet switching: independently for each arriving packet, pick its outgoing link. If the link is free, send it. Else hold the packet for later.</p>
+<p>source packet: (Data, (dest, C, B, A))  发展成只存destination，每个switch有table</p>
+<p>two consequences
+* simple packet forwarding: No per-flow state required，state不需要store/add/remove
+* efficient sharing of links: busty data traffic; statistical multiplexing =&gt; 对packet一视同仁，可共享links</p>
+<h5 id="1-6-principle-layering">1-6 Principle: Layering<a class="headerlink" href="#1-6-principle-layering" title="Permanent link">&para;</a></h5>
+<ul>
+<li>一种设计理念，layers are functional components, they communicate sequentially </li>
+<li>
+<p>edit -&gt; compile -&gt; link -&gt; execute</p>
+</li>
+<li>
+<p>compiler: self-contained, e.g. lexical analysis, parsing the code, preprocessing declarations, code generation and optimization</p>
+</li>
+<li>有时需要 break layering</li>
+<li>比如Linux内核的部分代码C语言直接用汇编 =&gt; code不再layer-independent</li>
+<li>a continual tension to improve the Internet by making cross-layer optimizations and the resulting loss of flexibility. e.g. NATs=&gt;很难加其它类型的传输层</li>
+<li>epoll这个接口是linux独有的，FreeBSD里是kqueue</li>
+<li>
+<p>UDP header 的 checksum 计算用到 IP header</p>
+</li>
+<li>
+<p>layering的原因：1.modularity 2.well defined service 3.reuse 4.separation of concerns 5.continuous improvement 6.p2p communications</p>
+</li>
+</ul>
+<h5 id="1-7-principle-encapsulation">1-7 Principle: Encapsulation<a class="headerlink" href="#1-7-principle-encapsulation" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>TCP segment is the <strong>payload</strong> of the IP packet. IP packet encapsulates the TCP segment.</p>
+</li>
+<li>
+<p>一层层，套footer和header</p>
+<ul>
+<li>两种写法，底层的写法(switch design)header在右边，software的写法(protocol)header在左边（IETF）</li>
+<li>VPN: (Eth, (IP, (TCP, (TLS, IP Packet))))，外层的TCP指向VPN gateway</li>
+</ul>
+</li>
+</ul>
+<h5 id="1-8-byte-order">1-8 Byte Order<a class="headerlink" href="#1-8-byte-order" title="Permanent link">&para;</a></h5>
+<ul>
+<li>2^32 ~ 4GB ~  0x0100000000</li>
+<li>1024=0x0400   大端：0x04 0x00；小端: 0x00 0x04. </li>
+<li>Little endian: x86, big endian: ARM, network byte order</li>
+<li>e.g. <code>uint16_t http_port=80; if(packet-&gt;port==http_port){...}</code> IPv4的packet_length注意大小端</li>
+<li>函数：<code>htons(),ntohs(),htonl(),ntohl()</code></li>
+<li>host/network, short/long</li>
+<li><code>#include&lt;arpa/inet.h&gt;</code></li>
+</ul>
+<h5 id="1-9-ipv4-addresses">1-9 IPv4 addresses<a class="headerlink" href="#1-9-ipv4-addresses" title="Permanent link">&para;</a></h5>
+<p>goal:
+* stitch many different networks together
+* need network-independent, unique address</p>
+<p>IPv4:
+* layer 3 address
+* 4 octets  a.b.c.d
+* 子网掩码netmask: 255.128.0.0 前9位，1越少网络越大，same network不需要路由，直接link即可</p>
+<p><img src="https://raw.githubusercontent.com/huangrt01/Markdown-Transformer-and-Uploader/mynote/Notes/Computer-Networking-Lecture-CS144-Stanford/004.jpg" alt="IPv4 Datagram" style="zoom:60%;" /></p>
+<p>IPv4 Datagram
+* Total Packet Length: 大端，最多65535bytes, 1400 -&gt; 0x0578
+* Protocol ID: 6-&gt;TCP</p>
+<p>Address Structure
+* network+host
+* class A,B,C: 0,7+24; 10, 14+16; 110, 21+8</p>
+<p>Classless Inter-Domain Routing (CIDR，无类别域间路由)
+* address block is a pair: address, count
+* counts是2的次方? 表示netmask长度
+* e.g. Stanford 5/16 blocks <code>5*2^(32-16)</code>
+* 前缀聚合，防止路由表爆炸
+* IANA(Internet Assigned Numbers Authority): give /8s to RIRs</p>
+<h5 id="1-10-longest-prefix-matchlpm">1-10 Longest Prefix Match(LPM)<a class="headerlink" href="#1-10-longest-prefix-matchlpm" title="Permanent link">&para;</a></h5>
+<p>forwarding table: CIDR entries
+* LPM的前提是必须先match，再看prefix
+* default: 0.0.0.0/0</p>
+<h5 id="1-11-address-resolution-protocolarp">1-11 Address Resolution Protocol(ARP)<a class="headerlink" href="#1-11-address-resolution-protocolarp" title="Permanent link">&para;</a></h5>
+<p>IP address(host) -&gt; link address(Ethernet card, 48bits)</p>
+<p>Addressing Problem: 一个host对应多个IP地址，不容易对应
+* 解决方案：gateway两侧ip地址不同，link address确定card，network address确定host
+* 这有点历史遗留问题，ip和link address的机制没有完全地分离开，decoupled logically but coupled in practice
+* 对于A，ip的目标是B，link的目标是gateway</p>
+<p><strong>ARP，地址解析协议</strong>：由IP得到MAC地址 =&gt; 进一步可得到gateway address
+* 是一种request-reply protocol
+* nodes cache mappings, cache entries expire
+* 节点request a link layer broadcast address，然后收到回复，回复的packet有redundant data，看到它的节点都能生成mapping
+* reply：原则上unicast，只回传给发送者=&gt;实际实现时更常见broadcast
+* No "sharing" of state: bad state will die eventually
+* MacOS中保留20min
+* gratuitous request: 要求不存在的mapping，推销自己</p>
+<p><img src="https://raw.githubusercontent.com/huangrt01/Markdown-Transformer-and-Uploader/mynote/Notes/Computer-Networking-Lecture-CS144-Stanford/007.jpg" alt="ARP" style="zoom:60%;" /></p>
+<p>e.g. </p>
+<p>hardware:1(Ethernet)</p>
+<p>protocol: 0x0800(IP)</p>
+<p>hardware length:6 (48 bit Ethernet)</p>
+<p>protocol length:4(32 bit IP)</p>
+<p>opcode: 1(request) /2(reply)</p>
+<p>Destination: broadcast (ff:ff:ff:ff:ff:ff)</p>
+<h5 id="1-12-recap">1-12 recap<a class="headerlink" href="#1-12-recap" title="Permanent link">&para;</a></h5>
+<h5 id="1-13-sip-jon-peterson-interview">1-13 SIP, Jon Peterson Interview<a class="headerlink" href="#1-13-sip-jon-peterson-interview" title="Permanent link">&para;</a></h5>
+<p>the intersection between technology and public policy
+* IETF ( The Internet Engineering Task Force)
+* ICANN（The Internet Corporation for Assigned Names and Numbers）</p>
+<p>SIP（Session Initiation Protocol，会话初始协议）
+* end-to-end的设计
+* soft switching: 将呼叫控制功能从传输层分离
+* PSTN ( Public Switched Telephone Network ) -&gt; VOIP(Voice over Internet Protocol): telephony replacement</p>
+<p>SIP的应用场景
+* Skype内部协议转换成SIP
+* VOIP, FiOS( a telecom service offered over fiber-optic lines)</p>
+<p>现代技术
+* SDN (Software Defined Network)
+* I2RS(interface to the routing system)
+* CDN(Content Delivery Network): 1.express coverage areas 2.advertise services that they provide, in order to allow collaboration or peering among CDNs =&gt; optimal selections of CDNs
+* 识别robo calling</p>
+<h5 id="2-0-transport-intro">2-0 Transport (intro)<a class="headerlink" href="#2-0-transport-intro" title="Permanent link">&para;</a></h5>
+<ul>
+<li>关注TCP的correctness</li>
+<li>detect errors的三个算法：checksums, cyclic redundancy checks, message authentication codes</li>
+<li>TCP(Transmission Control Protocol)、UDP(User Datagram Protocol)、ICMP(Internet Control Message Protocol)</li>
+</ul>
+<h5 id="2-1-the-tcp-service-model">2-1 The TCP Service Model<a class="headerlink" href="#2-1-the-tcp-service-model" title="Permanent link">&para;</a></h5>
+<p><strong>The TCP Service Model</strong></p>
+<ul>
+<li>reliable, end-to-end, bi-directional, in-sequence, bytestream service</li>
+<li>Positive acknowledgement with retransmission</li>
+<li>Peer TCP layers communicate: connection</li>
+<li>
+<p>传输层方面，由于链路层带宽大增，TCP window scale option 被普遍使用，另外 TCP timestamps option 和 TCP selective ack option 也很常用</p>
+</li>
+<li>
+<p>Flow control using sliding window (包括 Nagle 算法等)</p>
+</li>
+<li>提高吞吐量，充分利用链路层带宽</li>
+<li>tcp connection互不感知，缺少对网卡带宽的统筹安排</li>
+<li>
+<p>原来设计 TCP 的时候，人们认为丢包通常是拥塞造成的，这时应该放慢发送速度，减轻拥塞；无线网中，丢包可能是信号太弱造成的，这时反而应该快速重试，以保证性能</p>
+</li>
+<li>
+<p>congestion control</p>
+</li>
+<li>防止过载造成丢包</li>
+<li>包括 slow start、congestion avoidance、fast retransmit 等</li>
+</ul>
+<p><strong>过程</strong>：三次握手和四次挥手（参考2-6的状态转移图理解）</p>
+<p><strong>Techniques to manufacture reliability</strong></p>
+<p>Remedies
+* Sequence numbers: detect missing data
+* Acknowledgments: correct delivery
+  * Acknowledgment (from receiver to sender)<br />
+  * Timer and timeout (at sender)
+  * Retransmission (by sender)
+* Checksums/MACs: detect corrupted data
+  * Header checksum (IP)
+  * Data checksum (UDP)
+* Window-based Flow-control: prevents overrunning receiver
+* Forward error correction (FEC)
+* Retransmission
+* Heartbeats</p>
+<p>Correlated failure</p>
+<p>TCP/DNS</p>
+<p>Paradox of airplanes</p>
+<p><strong>The TCP Segment Format</strong>
+<img src="https://raw.githubusercontent.com/huangrt01/Markdown-Transformer-and-Uploader/mynote/Notes/Computer-Networking-Lecture-CS144-Stanford/008.jpg" alt="TCP header" style="zoom:60%;" /></p>
+<ul>
+<li><a href="https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml">IANA port number</a>: ssh 22, smtp 23, web 80</li>
+<li>source port: 初始化用不同的port避免冲突</li>
+<li>Flags</li>
+<li>PSH flag: push，比如键盘敲击</li>
+<li>URG应该在ACK前面</li>
+<li>HLEN 和 (TCP options) 联系</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/huangrt01/Markdown-Transformer-and-Uploader/mynote/Notes/Computer-Networking-Lecture-CS144-Stanford/009.jpg" alt="TCP uniqueness" style="zoom:60%;" />
+五个部分，104bit</p>
+<p>唯一性
+* 要求source port initiator每次increment: 64k new connections
+* TCP picks ISN to avoid overlap with previous connection with same ID, 多一个域，增加随机性
+* ISN的意义在于：1）security，避免自己的window被overlap 2）便于filter out不同类型的包  </p>
+<h5 id="2-2-udp-service-model">2-2 UDP service model<a class="headerlink" href="#2-2-udp-service-model" title="Permanent link">&para;</a></h5>
+<p>不需要可靠性：app自己控制重传，比如早期版本的NFS (network file system)</p>
+<p><img src="https://raw.githubusercontent.com/huangrt01/Markdown-Transformer-and-Uploader/mynote/Notes/Computer-Networking-Lecture-CS144-Stanford/010.jpg" alt="UDP header" style="zoom:60%;" />
+* Checksum 对于 IPv4 可选，可以为全0
+* Checksum 用了 IP header，违背 layering principle，是为了能detect错传
+* UDP header 有 length 字段，而TCP没有，因为TCP对空间要求高，用隐含的方式计算 length
+* port demultiplexing, connectionless, unreliable</p>
+<p><strong>应用</strong></p>
+<p>DNS: domain name system，因为request全在单个datagram里</p>
+<p>DHCP: Dynamic Host Configuration Protocol
+* new host在join网络时得到IP
+* 连WiFi</p>
+<p>对重传、拥塞控制、in-sequence delivery 有 special needs 的应用，比如音频，但现在UDP不像以前用的那么多，因为很多是http，基于TCP。</p>
+<h5 id="2-3-the-internet-control-message-protocol-icmp-service-model">2-3 The Internet Control Message Protocol (ICMP) Service Model<a class="headerlink" href="#2-3-the-internet-control-message-protocol-icmp-service-model" title="Permanent link">&para;</a></h5>
+<p>report errors and diagnoise problems about network layer</p>
+<p>网络层work的三个因素：IP、Routing Tables、ICMP</p>
+<p><img src="https://raw.githubusercontent.com/huangrt01/Markdown-Transformer-and-Uploader/mynote/Notes/Computer-Networking-Lecture-CS144-Stanford/011.jpg" alt="ICMP" style="zoom:40%;" /></p>
+<p>Message的意义见RFC 792</p>
+<p>应用于ping：先发送8 0( echo request)，再送回0 0(echo reply)</p>
+<p>应用于traceroute: 
+* 核心思想：连续发送TTL从1开始递增的UDP，期待回复的11 0(TTL expires)
+  * Source is random and different for each; destination starts with a random number and increases by one for each
+* 由于路由选择问题，traceroute 无法保证每次到同一个主机经过的路由都是相同的。
+* traceroute 发送的 UDP 数据报端口号是大于 30000 的。如果目的主机没有任何程序使用该端口，主机会产生一个 3 3(端口不可达) ICMP报文给源主机。</p>
+<h5 id="2-4-end-to-end-principle">2-4 End-to-End Principle<a class="headerlink" href="#2-4-end-to-end-principle" title="Permanent link">&para;</a></h5>
+<p><strong>Why Doesn't the Network Help?</strong>
+* e.g.：压缩数据、Reformat/translate/improve requests、serve cached data、add security、migrate connections across the network
+* end-to-end principle: function的正确完整实现只依赖于通信系统的end points</p>
+<p>end-to-end check 
+* e.g. File Transfer: link layer的error detection只检测transmission错误，不检测error storage
+* e.g. TCP小概率会出错（stack）、BitTorrent
+* wireless link相比wire link功能复杂，可靠性低，所以在link layer重传，可提升TCP性能
+* RFC1958: "strong" end to end: 不推荐在 middle 实现任何功能，比如在 link layer 重传，假定了reliabilty的提升值得latency的牺牲</p>
+<h5 id="2-5-error-detection-3-schemes-3-schemes">2-5 Error Detection: 3 schemes: 3 schemes<a class="headerlink" href="#2-5-error-detection-3-schemes-3-schemes" title="Permanent link">&para;</a></h5>
+<ul>
+<li>detect errors的三个算法：checksums, CRC(cyclic redundancy checks), MAC(message authentication codes)</li>
+<li>增补方式</li>
+<li>append: ethernet CRC, TLS MAC</li>
+<li>prepend: IP checksum</li>
+<li>Checksum (IP, TCP)</li>
+<li>not very robust, 只能检1位错</li>
+<li>fast and cheap even in software</li>
+<li>IP, UDP, TCP use one's complement算法：16-bit word packet求和，进位加到底部，再取反码（特例：0xffff -&gt; 0xffff，因为在TCP，checksum field 为 0 意味着没有 checksum）</li>
+<li>CRC: computes remainder of a polynomial (Ethernet)，见<a href="https://github.com/huangrt01/CS-Notes/blob/master/Notes/%E9%80%9A%E4%BF%A1%E4%B8%8E%E7%BD%91%E7%BB%9C.md">通信与网络笔记</a></li>
+<li>通常是由网卡硬件完成的，在发包的时候由硬件填充 CRC，在收包的时候网卡自动丢弃 CRC 不合格的包</li>
+<li>虽然more expensive，但支持硬件计算</li>
+<li>可对抗2 bits error、奇数error、小于c bits的突发错(burst)</li>
+<li>可incrementally计算</li>
+<li>e.g. USB(CRC-16):  <img src="https://www.zhihu.com/equation?tex=%5Cbf%7BM%7D%20%3D%200x8005%20%3D%20x%5E%7B16%7D%2Bx%5E%7B15%7D%2Bx%5E2%2B1" alt="\bf{M} = 0x8005 = x^{16}+x^{15}+x^2+1" class="ee_img tr_noresize" eeimg="1"> ，对于generator需要给左边pad 1</li>
+<li>MAC: message authentication code: cryptographic transformation of data(TLS)</li>
+<li>robust to malicious modifications, but not errors</li>
+<li>检错能力有局限，受随机性影响，不如CRC，no error detection guarantee</li>
+<li><img src="https://www.zhihu.com/equation?tex=c%3DMAC%28M%2Cs%29" alt="c=MAC(M,s)" class="ee_img tr_noresize" eeimg="1"> ，M + c意味着对方有secret或者replay</li>
+<li>对于replay，<code>ctr++</code>, 具体见<a href="https://github.com/huangrt01/CS-Notes/blob/master/Notes/Output/Security-Privacy-Cryptography.md">我的密码学笔记</a>的TLS部分【目前尚未整理】</li>
+</ul>
+<h5 id="2-6-finite-state-machines">2-6 Finite State Machines<a class="headerlink" href="#2-6-finite-state-machines" title="Permanent link">&para;</a></h5>
+<p><img src="https://raw.githubusercontent.com/huangrt01/Markdown-Transformer-and-Uploader/mynote/Notes/Computer-Networking-Lecture-CS144-Stanford/012.jpg" alt="HTTP Request" style="zoom:40%;" /></p>
+<p><img src="https://raw.githubusercontent.com/huangrt01/Markdown-Transformer-and-Uploader/mynote/Notes/Computer-Networking-Lecture-CS144-Stanford/013.jpg" alt="TCP Connection" style="zoom:100%;" /></p>
+<ul>
+<li>非常规路线的处理：比如对于第二个SYN或者FIN信号，接收机选择忽视，具体见<code>bool TCPReceiver::segment_received(const TCPSegment &amp;seg)</code>的实现</li>
+</ul>
+<h5 id="2-7-flow-control-i-stop-and-wait">2-7 Flow Control I: Stop-and-Wait<a class="headerlink" href="#2-7-flow-control-i-stop-and-wait" title="Permanent link">&para;</a></h5>
+<ul>
+<li>核心是 receiver 给 sender 反馈，让sender不要送太多 packets</li>
+<li>基本方法</li>
+<li>方案一：stop and wait</li>
+<li>方案二：sliding window</li>
+</ul>
+<p><strong>stop and wait</strong>
+* flight 中最多一个 packet
+* 针对 ACK Delay（收到ACK的时间刚好在timeout之后）的情形，会有duplicates
+  * 解决方案：用一个1-bit counter 提供信息
+  * assumptions：1）网络不产生重复packets；2）不delay multiple timeouts</p>
+<p><img src="https://raw.githubusercontent.com/huangrt01/Markdown-Transformer-and-Uploader/mynote/Notes/Computer-Networking-Lecture-CS144-Stanford/014.jpg" alt="stop-and-wait" style="zoom:100%;" /></p>
+<h5 id="2-8-flow-control-ii-sliding-window">2-8 Flow Control II: Sliding Window<a class="headerlink" href="#2-8-flow-control-ii-sliding-window" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Stop-and-Wait的性能：RTT=50ms, Bottleneck=10Mbps, Ethernet packet length=12Kb =&gt; 性能(2%)远远不到瓶颈</li>
+<li>Sliding Window计算Window size填满性能</li>
+</ul>
+<p><strong>Sliding Window Sender</strong></p>
+<ul>
+<li>Every segment has a sequence number (SeqNo)</li>
+<li>Maintain 3 variables</li>
+<li>Send window size(SWS)</li>
+<li>Last acknowledgment(LAR)</li>
+<li>Last segment sent(LSS)</li>
+<li>Maintain invariant:  <img src="https://www.zhihu.com/equation?tex=%28LSS%20-%20LAR%29%20%5Cleq%20SWS" alt="(LSS - LAR) \leq SWS" class="ee_img tr_noresize" eeimg="1"> </li>
+<li>Advance LAR on new acknowledgement </li>
+<li>Buffer up to SWS segments</li>
+</ul>
+<p><strong>Sliding Window Receiver</strong>
+* Maintain 3 variables
+  * Receive window size(RWS)
+  * Last acceptable segment(LAS)
+  * Last segment received(LSR)
+* Maintain invariant:  <img src="https://www.zhihu.com/equation?tex=%28LAS%20-%20LSR%29%20%5Cleq%20RWS" alt="(LAS - LSR) \leq RWS" class="ee_img tr_noresize" eeimg="1"> 
+* 如果收到的packet比LAS小，则发送ack
+  * 发送cumulative acks: 收到1, 2, 3, 5，发送3
+  * TCP acks are next expected data，因此要加一，上个例子改为4，初值为0</p>
+<p><strong>RWS, SWS, and Sequence Space</strong>
+*  <img src="https://www.zhihu.com/equation?tex=RWS%20%5Cgeq%201%2C%20SWS%20%5Cgeq%201%2C%20RWS%20%5Cleq%20SWS" alt="RWS \geq 1, SWS \geq 1, RWS \leq SWS" class="ee_img tr_noresize" eeimg="1"> 
+* if  <img src="https://www.zhihu.com/equation?tex=RWS%20%3D%201" alt="RWS = 1" class="ee_img tr_noresize" eeimg="1"> , "go back N" protocol ,need SWS+1 sequence numbers (需要多重传)
+* if  <img src="https://www.zhihu.com/equation?tex=RWS%20%3D%20SWS" alt="RWS = SWS" class="ee_img tr_noresize" eeimg="1"> , need 2SWS sequence numbers
+* 通常需要 <img src="https://www.zhihu.com/equation?tex=RWS%2BSWS" alt="RWS+SWS" class="ee_img tr_noresize" eeimg="1">  sequence numbers：考虑临界情况，SWS最左侧的ACK没有成功发送，重传后收到了RWS最右侧的ACK</p>
+<p><strong>TCP Flow Control</strong></p>
+<ul>
+<li>Receiver advertises RWS using window field</li>
+<li>Sender can only send data up to LAR+SWS</li>
+</ul>
+<h5 id="2-9-retransmission-strategies">2-9 Retransmission Strategies<a class="headerlink" href="#2-9-retransmission-strategies" title="Permanent link">&para;</a></h5>
+<p>protocol可能的运转方式 (ARQ: automatic repeat request)
+* Go-back-N: pessimistic，重传ack, ack+1, ack+2 ...
+  * e.g. RWS=1的情形
+* Selective repeat: optimistic，重传ack, last_sent, last_sent+1, ...
+  * e.g. RWS=SWS=N的情形
+  * 对burst of losses效果不好</p>
+<h5 id="2-10-tcp-header">2-10 TCP Header<a class="headerlink" href="#2-10-tcp-header" title="Permanent link">&para;</a></h5>
+<p><img src="https://raw.githubusercontent.com/huangrt01/Markdown-Transformer-and-Uploader/mynote/Notes/Computer-Networking-Lecture-CS144-Stanford/015.jpg" alt="TCP header" style="zoom:100%;" /></p>
+<ul>
+<li>pseudo header：类似2-2，checksum的计算囊括了IP header</li>
+<li>ack: 如果是bi-directional，也携带data信息；如果是uni-directional，好像不携带</li>
+<li>URG: urgent, PSH: push</li>
+<li>ACK: 除了第一个packet SYN，其它seg的ACK都置换为1  </li>
+<li>RST: reset the connection</li>
+<li>urgent pointer：和URG联系，指出哪里urgent</li>
+</ul>
+<h5 id="2-11-tcp-setup-and-teardown">2-11 TCP Setup and Teardown<a class="headerlink" href="#2-11-tcp-setup-and-teardown" title="Permanent link">&para;</a></h5>
+<p>状态机的实现很简洁，核心是如何 set up 和 clean up (port number, etc)</p>
+<p><strong>3-way handshake</strong></p>
+<p>Active opener and Passive opener</p>
+<ol>
+<li>client: SYN, 送base number(syqno) to identify bytes</li>
+<li>server: SYN+ACK, 也送base number</li>
+<li>client: ACK</li>
+</ol>
+<p>支持“simultaneous open”</p>
+<p>传送TCP segment，最小可以1byte，比如在ssh session打字</p>
+<p><strong>connection teardown</strong></p>
+<ol>
+<li>client: FIN</li>
+<li>server: (Data +) ACK</li>
+<li>server: FIN</li>
+<li>client: ACK</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/huangrt01/Markdown-Transformer-and-Uploader/mynote/Notes/Computer-Networking-Lecture-CS144-Stanford/018.jpg" alt="Clean Teardown" style="zoom:45%;" /></p>
+<ul>
+<li><a href="https://draveness.me/whys-the-design-tcp-time-wait/">为什么 TCP 协议有 TIME_WAIT 状态</a></li>
+<li><code>TIME_WAIT</code> 仅在主动断开连接的一方出现，被动断开连接的一方会直接进入 <code>CLOSED</code> 状态，进入 <code>TIME_WAIT</code> 的客户端需要等待 2 MSL 才可以真正关闭连接</li>
+<li>不直接关闭连接的原因：<ul>
+<li>防止延迟的数据段被其他使用相同源地址、源端口、目的地址以及目的端口的 TCP 连接收到</li>
+<li>RFC 793</li>
+<li><code>#define TCP_TIMEWAIT_LEN (60*HZ) /* how long to wait to destroy TIME-WAIT state, about 60 seconds  */</code>
+        * 但是如果主机在过去一分钟时间内与目标主机的特定端口创建的 TCP 连接数超过 28,232，那么再创建新的 TCP 连接就会发生错误，也就是说如果我们不调整主机的配置，那么每秒能够建立的最大 TCP 连接数为 ~470</li>
+<li>保证 TCP 连接的远程被正确关闭，即等待被动关闭连接的一方收到 <code>FIN</code> 对应的 <code>ACK</code> 消息</li>
+<li>防止TIME-WAIT 较短导致的握手终止，服务端发送<code>RST</code></li>
+</ul>
+</li>
+<li>
+<p>处理方案：除了上图的两者，还可以：</p>
+<ul>
+<li>修改 <code>net.ipv4.ip_local_port_range</code> 选项中的可用端口范围，增加可同时存在的 TCP 连接数上限；</li>
+</ul>
+</li>
+<li>
+<p><a href="https://domsch.com/linux/lpc2010/Scaling_techniques_for_servers_with_high_connection%20rates.pdf">Scaling Techniques for Servers with High Connection Rates</a></p>
+</li>
+<li>problems<ul>
+<li>Servers with high connection/transaction rates</li>
+<li>TCP servers, e.g. web server</li>
+<li>UDP servers, e.g. DNS server</li>
+<li>On multi-core systems, using multiple servicing threads, e.g. one thread per servicing core.</li>
+<li>The single server socket becomes bottleneck</li>
+<li>Cache line bounces</li>
+<li>Hard to achieve load balance</li>
+<li>Things will only get worse with more cores</li>
+</ul>
+</li>
+<li>Single TCP Server Socket<ul>
+<li>solution 1: Use a listener thread to dispatch established connections to server threads</li>
+<li>The single listener thread becomes bottleneck due to high connection rate</li>
+<li>Cache misses of the socket structure</li>
+<li>Load balance is not an issue here</li>
+<li>solution 2: All server threads accept() on the single server socket</li>
+<li>Lock contention on the server socket</li>
+<li>Cache line bouncing of the server socket</li>
+<li>Loads (number of accepted connections per thread) are usually not balanced <ul>
+<li>Larger latency on busier CPUs</li>
+<li>It can almost be achieved by accept() at random intervals, but it is hard to decide the interval value, and may introduce latency</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Single UDP Server Socket</li>
+<li>New Socket Option - SO_REUSEPORT<ul>
+<li>Allow multiple sockets bind()/listen() to the same local address and TCP/UDP port </li>
+<li>Every thread can have its own server socket</li>
+<li>No locking contention on the server socket</li>
+<li>Every thread can have its own server socket No locking contention on the server socket</li>
+<li>Load balance is achieved by kernel - kernel randomly picks a socket to receive the TCP connection or UDP request</li>
+<li>For security reason, all these sockets must be opened by the same user, so other users can not "steal" packets</li>
+</ul>
+</li>
+<li>How to enable?<ul>
+<li>sysctl net.core.allow_reuseport=1</li>
+<li>Before bind(), setsockopt SO_REUSEADDR and SO_REUSEPORT</li>
+<li>Then the same as a normal socket - bind()/listen() /accept()</li>
+</ul>
+</li>
+<li>Known Issues<ul>
+<li>Hash</li>
+<li>Have not solved the cache line bouncing problem completely</li>
+<li>Solved: The accepting thread is the processing thread</li>
+<li>Unsolved: The processed packets can be from another CPU<ul>
+<li>Instead of distribute randomly, deliver to the thread/socket on the same CPU （input queue和server thread一一对应）</li>
+<li>But hardware may not support as many RxQs as CPUs</li>
+</ul>
+</li>
+<li>Some scheduler mechanism may harm the performance</li>
+<li>Affine wakeup - too aggressive in certain conditions, causing cache misses</li>
+</ul>
+</li>
+</ul>
+<h5 id="2-12-tcp-recap">2-12 TCP Recap<a class="headerlink" href="#2-12-tcp-recap" title="Permanent link">&para;</a></h5>
+<p>IP和UDP都是best-effort and unreliable，但是我们不需要担心truncation和corruption，因为：
+* Header checksum (IP)
+* Data checksum (UDP)</p>
+<p><img src="https://raw.githubusercontent.com/huangrt01/Markdown-Transformer-and-Uploader/mynote/Notes/Computer-Networking-Lecture-CS144-Stanford/016.jpeg" alt="HTTP" style="zoom:45%;" /></p>
+<p><img src="https://raw.githubusercontent.com/huangrt01/Markdown-Transformer-and-Uploader/mynote/Notes/Computer-Networking-Lecture-CS144-Stanford/017.jpg" alt="HTTP3" style="zoom:60%;" /></p>
+<h5 id="2-13-tcpip-kevin-fall">2-13 TCP/IP -- Kevin Fall<a class="headerlink" href="#2-13-tcpip-kevin-fall" title="Permanent link">&para;</a></h5>
+<p>《TCP/IP Illustrated》2nd edition </p>
+<p>securites: firewalls;  architectural underpinnings</p>
+<p>packets和datagrams是两个核心概念，datagrams为了明确目的地，在设计时有更多的trade-off</p>
+<p>3-d printing、枪、DRM(Digital Rights Management)</p>
+<h5 id="3-0-packet-switching">3-0 Packet Switching<a class="headerlink" href="#3-0-packet-switching" title="Permanent link">&para;</a></h5>
+<p>Packet -&gt; self-contained data unit</p>
+<p>packet delay</p>
+<ul>
+<li>Packetization delay</li>
+<li>Propagation delay</li>
+<li>Queueing delay</li>
+</ul>
+<h5 id="3-1-the-history-of-networks">3-1 The History of Networks<a class="headerlink" href="#3-1-the-history-of-networks" title="Permanent link">&para;</a></h5>
+<p>Semaphore telegraphs by Chappe (France)，发展出以下概念：</p>
+<ul>
+<li>Codes</li>
+<li>Flow Control</li>
+<li>Synchronization</li>
+<li>Error detection and retransmission</li>
+<li>Encryption</li>
+</ul>
+<p>Pre-defined messages -&gt; arbitrary messages -&gt; compression -&gt; control signals "Protocols"</p>
+<h5 id="3-2-what-is-packet-switching">3-2 What is packet switching?<a class="headerlink" href="#3-2-what-is-packet-switching" title="Permanent link">&para;</a></h5>
+<p>Circuit Switching</p>
+<ul>
+<li>telephone: dedicated wire -&gt; circuit switch -&gt; dedicated wire</li>
+<li>each phone call: 64 kb/s, no share with anybody else (private, guaranteed, isolated data rate from e2e)</li>
+<li>A 10Gb/s trunk line can carry over 150000 calls</li>
+</ul>
+<p>Circuit Switching 用于 Internet 的缺点</p>
+<ul>
+<li>Inefficient: bursty communication (images, ssh connection, web pages)</li>
+<li>Diverse Rates</li>
+<li>State Management</li>
+</ul>
+<p>Packet Switching </p>
+<ul>
+<li>Network = end hosts + links + packet switches</li>
+<li>forwarding table (routed individually by looking up)</li>
+<li>All packets share the full capacity of a link</li>
+<li>The routers maintain no per-communication state</li>
+<li>have buffers: must send one at a time during periods of congestion</li>
+<li>有不同 types: routers、ethernet switches</li>
+</ul>
+<p>Why Internet uses packet switching</p>
+<ul>
+<li>Efficient use of expensive links</li>
+<li>Resilience to failure of links &amp; routers</li>
+<li>the Internet was to be a datagram subnet</li>
+<li>Internet was designed to be the interconnection of the existing networks</li>
+</ul>
+<h5 id="3-3-terminology-end-to-end-delay-and-queueing">3-3 Terminology, End to End Delay and Queueing<a class="headerlink" href="#3-3-terminology-end-to-end-delay-and-queueing" title="Permanent link">&para;</a></h5>
+<p>Propagation Delay:  <img src="https://www.zhihu.com/equation?tex=t_l%20%3D%20%5Cfrac%7Bl%7D%7Bc%7D" alt="t_l = \frac{l}{c}" class="ee_img tr_noresize" eeimg="1"> </p>
+<ul>
+<li>single bit to travel over a link</li>
+<li>1000km, 2*10^8m/s ---&gt; 5ms</li>
+<li>不受 link rate 影响</li>
+</ul>
+<p>Packetization Delay:  <img src="https://www.zhihu.com/equation?tex=t_p%3D%5Cfrac%7Bp%7D%7Br%7D" alt="t_p=\frac{p}{r}" class="ee_img tr_noresize" eeimg="1"> </p>
+<ul>
+<li>64byte packet, 100Mb/s link ---&gt; 5.12us</li>
+<li>1kbit (1024bit) packet, 1kb/s link (1000bit/s) ---&gt; 1.024s</li>
+</ul>
+<p>E2E delay  <img src="https://www.zhihu.com/equation?tex=t%3D%5Csum_i%28%5Cfrac%7Bp%7D%7Br_i%7D%2B%5Cfrac%7Bl_i%7D%7Bc%7D%2BQ_i%28t%29%29" alt="t=\sum_i(\frac{p}{r_i}+\frac{l_i}{c}+Q_i(t))" class="ee_img tr_noresize" eeimg="1"> </p>
+<ul>
+<li>
+<p>store and forward network</p>
+</li>
+<li>
+<p>router 理论上能等到 header 直接开始 packetization (cut through switching)，internet router 通常不这样做，是收到整个 packet 再发送</p>
+</li>
+<li>queueing delay -&gt; packet delay variation</li>
+</ul>
+<h5 id="3-4-playback-buffers">3-4 Playback Buffers<a class="headerlink" href="#3-4-playback-buffers" title="Permanent link">&para;</a></h5>
+<p>Real-time applications (e.g. YouTube and Skype) have to cope with variable queueing delay</p>
+<p><img alt="playback-buffer" src="https://raw.githubusercontent.com/huangrt01/Markdown-Transformer-and-Uploader/mynote/Notes/Computer-Networking-Lecture-CS144-Stanford/playback-buffer.png" /></p>
+<ul>
+<li>variable delay 有下界</li>
+<li>receive 曲线斜率有上界</li>
+</ul>
+<h5 id="3-5-simple-deterministic-queue-model">3-5 Simple Deterministic Queue Model<a class="headerlink" href="#3-5-simple-deterministic-queue-model" title="Permanent link">&para;</a></h5>
+<p><img src="https://www.zhihu.com/equation?tex=Q%28t%29%20%3D%20A%28t%29-D%28t%29" alt="Q(t) = A(t)-D(t)" class="ee_img tr_noresize" eeimg="1"> </p>
+<p>d(t): 水平截距的差，表示单个 byte 的 queueing time</p>
+<p>Q: Why not send the entire message in one packet?</p>
+<p>A: parallel transmission across all links -&gt; reduce e2e latency</p>
+<p>---&gt; Statistical Multiplexing Gain = 2C/R</p>
+<h5 id="3-6-queueing-model-properties">3-6 Queueing Model Properties<a class="headerlink" href="#3-6-queueing-model-properties" title="Permanent link">&para;</a></h5>
+<p>Queues with Random Arrival Processes (Queueing Theory)</p>
+<ul>
+<li>Bustiness increases delay</li>
+<li>Determinism minimizes delay</li>
+<li>Little's Result</li>
+<li><img src="https://www.zhihu.com/equation?tex=L%3D%5Clambda%20d" alt="L=\lambda d" class="ee_img tr_noresize" eeimg="1"> , where d = average delay, lambda = arival rate, L = average number that are in the queue</li>
+<li>The M/M/1 queue</li>
+<li>用 Poisson process 建模 aggregation of many independent random events，lambda = arrival rate</li>
+<li>network traffic is very bursty =&gt; 用 poisson 过程建模 the arrival of new flows</li>
+<li>M/M/1 Queue:  <img src="https://www.zhihu.com/equation?tex=d%3D%5Cfrac%7B1%7D%7B%5Cmu-%5Clambda%7D%2C%20L%3D%5Clambda%20d%20%3D%20%5Cfrac%7B%5Cfrac%7B%5Clambda%7D%7B%5Cmu%7D%7D%7B1-%5Cfrac%7B%5Clambda%7D%7B%5Cmu%7D%7D" alt="d=\frac{1}{\mu-\lambda}, L=\lambda d = \frac{\frac{\lambda}{\mu}}{1-\frac{\lambda}{\mu}}" class="ee_img tr_noresize" eeimg="1"> </li>
+</ul>
+<h5 id="3-7-switching-and-forwarding">3-7 Switching and Forwarding<a class="headerlink" href="#3-7-switching-and-forwarding" title="Permanent link">&para;</a></h5>
+<h5 id="congestion-control">Congestion Control<a class="headerlink" href="#congestion-control" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Why</li>
+<li>What if the receiver’s window size is really big?<ul>
+<li>Sender transmits too many segments. Most overflow router’s queue and are dropped. We call this “congestion.”</li>
+<li>Sender must resend the same bytes again and again. Eventually, stream comes out of receiver’s TCP correctly</li>
+</ul>
+</li>
+<li>The problem with unlimited sending: collapse and fairness</li>
+<li>In networking, almost any problem that involves decentralized resource allocation = congestion control.</li>
+<li>What</li>
+<li>a <strong>second and tighter</strong> window maintained by sender<ul>
+<li>receiver’s window (advertised from receiver to sender)</li>
+<li>“congestion window” cwnd (maintained by sender)</li>
+</ul>
+</li>
+<li>How much data can be “on the link” at any moment?<ul>
+<li>(5 Mbit/s) x (100 ms) = 62.5 kilobytes</li>
+</ul>
+</li>
+<li>Ideal total number of bytes outstanding = bandwidth x delay product (BDP).</li>
+<li>“No loss” window: anything less than BDP + max queue size.</li>
+<li>Note: 用 window 不用 rate，误差小</li>
+<li>How</li>
+<li>“Additive Increase, Multiplicative Decrease” algorithm (AIMD)</li>
+<li>One possibility: increase on success, decrease on loss</li>
+<li>Start with cwnd at small value (e.g. 3 segments)</li>
+<li>On success (segment fully acknowledged), increase by 1 segment per RTT<ul>
+<li>On each byte acknowledged: cwnd += (segment size)/cwnd</li>
+</ul>
+</li>
+<li>On loss, assume congestion. Cut cwnd in half!<ul>
+<li>Loss inferred when:</li>
+<li>segment was sent a long time ago, still not acknowledged</li>
+<li>or several later-sent segments have been acknowledged</li>
+</ul>
+</li>
+<li>
+<p>Slow-start: exponential growth at the beginning</p>
+<ul>
+<li>On each byte acknowledged: cwnd++</li>
+<li>On first loss, cut cwnd in half and revert to AIMD</li>
+</ul>
+</li>
+<li>
+<p>rpc框架congestion control可能和tcp congestion control相结合</p>
+</li>
+<li>https://capnproto.org/news/2020-04-23-capnproto-0.8.html</li>
+<li>it queries the send buffer size of the underlying network socket, and sets that as the “window size” for each stream.</li>
+<li>But, the TCP socket buffer size only approximates the BDP of the first hop. A better solution would measure the end-to-end BDP using an algorithm like <a href="https://queue.acm.org/detail.cfm?id=3022184">BBR</a>.</li>
+<li><a href="https://docs.oracle.com/cd/E37838_01/html/E61060/frmkern7-sect1-flow.html">Oracle STREAMS's Flow Control</a></li>
+<li>状态从后往前propagation的设计，<code>canputnext()</code></li>
+<li>
+<p>阻塞则 <code>putbq</code></p>
+</li>
+<li>
+<p><a href="https://www.zhihu.com/question/42308970">TCP_NODELAY 和 Nagle 算法</a></p>
+</li>
+<li>
+<p>tcp协议栈默认关闭nodelay的</p>
+</li>
+<li>
+<p><code>if there is new data to send
+      if the window size &gt;= MSS and available data is &gt;= MSS
+        send complete MSS segment now
+      else
+        if there is unconfirmed data still in the pipe
+          enqueue data in the buffer until an acknowledge is received
+        else
+          send data immediately
+        end if
+      end if
+    end if</code></p>
+</li>
+</ul>
+<h3 id="potpourri">potpourri<a class="headerlink" href="#potpourri" title="Permanent link">&para;</a></h3>
+<h4 id="rfc">RFC<a class="headerlink" href="#rfc" title="Permanent link">&para;</a></h4>
+<ul>
+<li>RFC 792: ICMP Message</li>
+<li>RFC 821: SMTP</li>
+<li><a href="https://datatracker.ietf.org/doc/rfc1958/?include_text=1">RFC 1958</a>:Architectural Principles of the Internet</li>
+<li><a href="https://datatracker.ietf.org/doc/rfc2606/">RFC 2606</a>: localhost</li>
+<li><a href="https://datatracker.ietf.org/doc/rfc6298/?include_text=1">RFC 6298</a>: Computing TCP's Retransmission Timer</li>
+<li><a href="https://tools.ietf.org/html/rfc6335">RFC 6335</a>: port number</li>
+<li>
+<p>RFC 7414: A Roadmap for TCP</p>
+</li>
+<li>
+<p><a href="https://www.cnblogs.com/Orgliny/p/5780796.html">TCP backlog: syns queue and accept queue</a></p>
+</li>
+<li><a href="https://www.youtube.com/watch?v=Q-BpqyOT3a8">What is a REST API?</a></li>
+<li>Representational State Transfer (REST)</li>
+<li>Architecture style</li>
+<li>Relies on a stateless, client-server protocol, almost alwasys HTTP<ul>
+<li>GET: retrieve data from a specified resource</li>
+<li>POST: submit data to be processed to a specified resource</li>
+<li>PUT: update a specified resource</li>
+<li>DELETE</li>
+<li>HEAD: same as get but does not return a body</li>
+<li>OPTIONS: return the supported HTTP methods</li>
+<li>PATCH: update partial resources</li>
+</ul>
+</li>
+<li>Treats server objects as resources that can be created or destroyed</li>
+<li>GitHub REST API: https://docs.github.com/en/rest</li>
+<li>推荐 Postman 工具</li>
+<li><a href="https://blog.csdn.net/sandware/article/details/40923491">AF_INET域与AF_UNIX域socket通信原理对比</a></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/types.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;unistd.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/un.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/socket.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/types.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stddef.h&gt;</span>
+
+<span class="cp">#define UNIX_SOCK_PATH_MAX_LEN (sizeof(((struct sockaddr_un*)0)-&gt;sun_path))</span>
+<span class="cp">#define COMMAND_MAX_LEN 64</span>
+<span class="c1">//file name format is project_pid.sock</span>
+<span class="cp">#define SOCK_PATH_FORMAT &quot;/dev/shm/project_%llu.sock&quot;</span>
+
+<span class="kt">char</span><span class="w"> </span><span class="n">control_sock_path</span><span class="p">[</span><span class="n">UNIX_SOCK_PATH_MAX_LEN</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="sc">&#39;\0&#39;</span><span class="p">,};</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">argv</span><span class="p">[])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">fd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">socket</span><span class="p">(</span><span class="n">AF_UNIX</span><span class="p">,</span><span class="w"> </span><span class="n">SOCK_STREAM</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">fd</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;socket error</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">snprintf</span><span class="p">(</span><span class="n">control_sock_path</span><span class="p">,</span>
+<span class="w">            </span><span class="n">UNIX_SOCK_PATH_MAX_LEN</span><span class="p">,</span>
+<span class="w">            </span><span class="n">UNIX_SOCK_PATH_FORMAT</span><span class="p">,</span>
+<span class="w">            </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="p">)</span><span class="n">atoll</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]));</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">control_sock_path</span><span class="p">);</span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr_un</span><span class="w"> </span><span class="n">un</span><span class="p">;</span>
+<span class="w">    </span><span class="n">memset</span><span class="p">(</span><span class="o">&amp;</span><span class="n">un</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">un</span><span class="p">));</span>
+<span class="w">    </span><span class="n">strncpy</span><span class="p">(</span><span class="n">un</span><span class="p">.</span><span class="n">sun_path</span><span class="p">,</span><span class="w"> </span><span class="n">control_sock_path</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">un</span><span class="p">.</span><span class="n">sun_path</span><span class="p">));</span>
+<span class="w">    </span><span class="n">un</span><span class="p">.</span><span class="n">sun_family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AF_UNIX</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">socklen_t</span><span class="w"> </span><span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">offsetof</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr_un</span><span class="p">,</span><span class="w"> </span><span class="n">sun_path</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">un</span><span class="p">.</span><span class="n">sun_path</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">connect</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">un</span><span class="p">,</span><span class="w"> </span><span class="n">len</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+<span class="w">        </span><span class="n">close</span><span class="p">(</span><span class="n">fd</span><span class="p">);</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;connect error</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">process</span><span class="p">(</span><span class="n">fd</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><a href="https://www.zhihu.com/question/268204483/answer/334644846">代理，网关，隧道，有什么区别与联系？ - 知乎</a></li>
+</ul>
+<h5 id="wireshark">wireshark<a class="headerlink" href="#wireshark" title="Permanent link">&para;</a></h5>
+<p><a href="https://segmentfault.com/a/1190000019734707">谈谈Linux中的TCP重传抓包分析</a></p>
+<div class="highlight"><pre><span></span><code>telnet cs144.keithw.org http
+GET /hello HTTP/1.1 # path part,第三个slash后面的部分
+Host: cs144.keithw.org # host part,`https://`和第三个slash之间的部分
+
+tcp.port == 90 and ip.addr== XXX
+tcp.len &gt; 0
+ip.ttl == XXX
+icmp.code == 0
+</code></pre></div>
+<p>课程作业：</p>
+<p>1.Ping</p>
+<p>2.SMTP：在TCP上层</p>
+<p>3.Traceroute
+* VM的第一跳是到laptop，不会decrement the TTL，因此hop 10对应TTL 9</p>
+<h4 id="wifi">WiFi 与 路由器<a class="headerlink" href="#wifi" title="Permanent link">&para;</a></h4>
+<ul>
+<li>WIFI5 的连接速度最高 866.7 Mbps，只有开启 WIFI6 模式，并且启用160MHZ，才能突破 866.7 Mbps</li>
+<li>路由器 LAN-LAN 级联</li>
+</ul>
+<h4 id="tcp">TCP 吞吐研究<a class="headerlink" href="#tcp" title="Permanent link">&para;</a></h4>
+<ul>
+<li>千兆以太网的裸吞吐量是 125MB/s，应用层的吞吐率大约在 117MB/s 上下</li>
+<li>【2022年】普遍机器带宽是25or100GB/s了，量级和内存带宽接近，极限情况下的包相关memcpy不可忽略</li>
+<li>在不考虑 jumbo frame 的情况下，计算过程是: 对于千兆以太网，每秒能传输 1000Mbit 数据，即 125000000B/s，每个以太网 frame 的固定开销有:preamble(8B)、MAC(12B)、type(2B)、payload (46B ~ 1500B)、CRC(4B)、gap(12B)，因此最小的以太网帧是 84B，每秒可发送约 1488000 帧(换言之，对于一问一答的 RPC、其 qps 上限约是 700k/s)，最大的以太网帧是 1538B，每秒可发送 81 274 帧。 </li>
+<li>再来算 TCP 有效载荷:一个 TCP segment 包含 IP header(20B)和 TCP header(20B)，还有 Timestamp option(12B)，因此 TCP 的最大吞吐量是 81274 × (1500-52) = 117MB/s，合 112MiB/s。</li>
+</ul>
+<h3 id="_1">论文阅读<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<h4 id="ethane-taking-control-of-the-enterprise-sigcomm-07">《Ethane: Taking Control of the Enterprise, SIGCOMM 07》<a class="headerlink" href="#ethane-taking-control-of-the-enterprise-sigcomm-07" title="Permanent link">&para;</a></h4>
+<p>make networks more manageable and more secure，一种思路是全方位的增加控制，相当于新增一层，只是hide了复杂度；于是提出ethane：</p>
+<p>Ethane的思想</p>
+<ul>
+<li>The network should be governed by policies declared over high-level names</li>
+<li>Policy should determine the path that packets follow</li>
+<li>The network should enforce a strong binding between a packet
+  and its origin.</li>
+</ul>
+<p>Ethane的优势</p>
+<ul>
+<li>Security follows management.</li>
+<li>Incremental deployability.</li>
+<li>Significant deployment experience.</li>
+</ul>
+<p>设计思想</p>
+<ul>
+<li>Controllers: 决定是否允许packet传输</li>
+<li>Switches: a simple flow table and a secure channel to the Controller</li>
+<li>flow是一个重要的属性概念</li>
+<li>Binding: When machines use DHCP to request an IP address, Ethane assigns it knowing to which switch port the machine is connected, enabling Ethane to attribute an arriving packet to a physical port.</li>
+</ul>
+<p>其它细节</p>
+<ul>
+<li>Replicating the Controller: Fault-Tolerance and Scalability</li>
+<li>cold-standby (having no network binding state) or warm-standby (having network binding state) modes</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      quaintness
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/quaintness" target="_blank" rel="noopener" title="GitHub | quaintness" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      
+        <script src="../../../mkdocs/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

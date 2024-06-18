@@ -1,0 +1,2337 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Record and Share">
+      
+      
+        <meta name="author" content="quaintness">
+      
+      
+        <link rel="canonical" href="https://quaintness.github.io/CS/Basics/6_0001/">
+      
+      
+        <link rel="prev" href="../../Intro_CS/">
+      
+      
+        <link rel="next" href="../6_006/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
+    
+    
+      
+        <title>Intro to CS (MIT 6.0001) - Welcome to Wonderland</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/no-footer.css">
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/unordered-list-symbols.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction-to-computer-science-and-programming-in-python" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Welcome to Wonderland" class="md-header__button md-logo" aria-label="Welcome to Wonderland" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Welcome to Wonderland
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Intro to CS (MIT 6.0001)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/quaintness/quaintness.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    quaintness.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../Intro_CS/" class="md-tabs__link">
+          
+  
+    
+  
+  Computer Science
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Languages/English/Intro_Languages.md" class="md-tabs__link">
+          
+  
+    
+  
+  Languages
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Welcome to Wonderland" class="md-nav__button md-logo" aria-label="Welcome to Wonderland" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Welcome to Wonderland
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/quaintness/quaintness.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    quaintness.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Computer Science
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Computer Science
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Intro_CS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro CS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Basics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Intro to CS (MIT 6.0001)
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Intro to CS (MIT 6.0001)
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-5-tuples-lists-aliasing-mutability-and-cloning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 5 Tuples, Lists, Aliasing, Mutability and Cloning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lecture 5 Tuples, Lists, Aliasing, Mutability and Cloning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tuples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tuples ()
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tuples ()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characteristics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lists []
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lists []">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#characteristics_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characteristics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods-for-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods for lists
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-6-recursion-and-dictionaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 6 Recursion and Dictionaries
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lecture 6 Recursion and Dictionaries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recursion-arrow_forward-devide-and-conquer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursion :arrow_forward: Devide and conquer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recursion :arrow_forward: Devide and conquer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#characteristics_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characteristics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dictionary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dictionary {}
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dictionary {}">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#characteristics_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characteristics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-7-testing-debugging-exceptions-and-assertions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 7 Testing, debugging, exceptions and assertions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lecture 7 Testing, debugging, exceptions and assertions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#testing-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing approaches
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exceptions-and-assertions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exceptions and assertions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-8-object-oriented-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 8 Object Oriented Programming
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lecture 8 Object Oriented Programming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advantages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advantages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getters-and-setters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getters and Setters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default Arguments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inheritance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inheritance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-10-understanding-programming-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 10 Understanding Programming Efficiency
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lecture 10 Understanding Programming Efficiency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-evaluate-efficiency-three-ways" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to evaluate efficiency (Three ways)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to evaluate efficiency (Three ways)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-set-a-timer-and-time-your-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Set a timer and time your algorithm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-count-the-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Count the operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-order-of-growth-o" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Order of growth \(O ()\)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-11-searching-and-sorting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 11 Searching and Sorting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lecture 11 Searching and Sorting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sorting-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sorting Algorithms
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6_006/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Algorithm (MIT 6.006)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Computer-Networking-Lecture-CS144-Stanford/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Computer Networking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Linux-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Machine Learning
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Machine Learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ML/CS229/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CS229
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ML/CS229_Problem_Set.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CS229bPS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ML/CS231n/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CS231n
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Languages
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Languages
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Languages/English/Intro_Languages.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    English
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            English
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Languages/English/English_Grammar_Notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grammar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Languages/English/IELTS_Notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IELTS Tips
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-5-tuples-lists-aliasing-mutability-and-cloning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 5 Tuples, Lists, Aliasing, Mutability and Cloning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lecture 5 Tuples, Lists, Aliasing, Mutability and Cloning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tuples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tuples ()
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tuples ()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characteristics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lists []
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lists []">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#characteristics_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characteristics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods-for-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods for lists
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-6-recursion-and-dictionaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 6 Recursion and Dictionaries
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lecture 6 Recursion and Dictionaries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recursion-arrow_forward-devide-and-conquer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursion :arrow_forward: Devide and conquer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recursion :arrow_forward: Devide and conquer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#characteristics_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characteristics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dictionary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dictionary {}
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dictionary {}">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#characteristics_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characteristics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-7-testing-debugging-exceptions-and-assertions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 7 Testing, debugging, exceptions and assertions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lecture 7 Testing, debugging, exceptions and assertions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#testing-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing approaches
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exceptions-and-assertions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exceptions and assertions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-8-object-oriented-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 8 Object Oriented Programming
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lecture 8 Object Oriented Programming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advantages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advantages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getters-and-setters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getters and Setters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default Arguments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inheritance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inheritance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-10-understanding-programming-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 10 Understanding Programming Efficiency
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lecture 10 Understanding Programming Efficiency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-evaluate-efficiency-three-ways" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to evaluate efficiency (Three ways)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to evaluate efficiency (Three ways)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-set-a-timer-and-time-your-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Set a timer and time your algorithm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-count-the-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Count the operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-order-of-growth-o" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Order of growth \(O ()\)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-11-searching-and-sorting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 11 Searching and Sorting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lecture 11 Searching and Sorting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sorting-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sorting Algorithms
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/quaintness/quaintness.github.io/edit/main/docs/CS/Basics/6_0001.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="introduction-to-computer-science-and-programming-in-python">Introduction to Computer Science and Programming in Python<a class="headerlink" href="#introduction-to-computer-science-and-programming-in-python" title="Permanent link">&para;</a></h1>
+<p><img src="https://gitee.com/violets/typora--images/raw/main/imgs/202112021640958.png" alt="image-20211202164019525" style="zoom: 25%;" /></p>
+<p>[toc]</p>
+<h2 id="lecture-5-tuples-lists-aliasing-mutability-and-cloning">Lecture 5 Tuples, Lists, Aliasing, Mutability and Cloning<a class="headerlink" href="#lecture-5-tuples-lists-aliasing-mutability-and-cloning" title="Permanent link">&para;</a></h2>
+<h3 id="tuples">Tuples ()<a class="headerlink" href="#tuples" title="Permanent link">&para;</a></h3>
+<p>Tuples hold collection of data.</p>
+<h4 id="characteristics">Characteristics<a class="headerlink" href="#characteristics" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Tuples are immutable</p>
+</li>
+<li>
+<p>conveniently used to swap varoable values</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>used to <strong>return more than one value from a function</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">quotient_and_remainder</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+  <span class="n">quotient</span> <span class="o">=</span> <span class="n">x</span> <span class="o">//</span> <span class="n">y</span>
+    <span class="n">remainder</span> <span class="o">=</span> <span class="n">x</span> <span class="o">%</span> <span class="n">y</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">quotient</span><span class="p">,</span><span class="n">remainder</span><span class="p">)</span>
+
+<span class="p">(</span><span class="n">quot</span><span class="p">,</span><span class="n">rem</span><span class="p">)</span> <span class="o">=</span> <span class="n">quotient_and_remainder</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="lists">Lists []<a class="headerlink" href="#lists" title="Permanent link">&para;</a></h3>
+<h4 id="characteristics_1">Characteristics<a class="headerlink" href="#characteristics_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Lists are mutable objects.</p>
+</li>
+<li>
+<p>Often used to convert list to strings and vice versa for better operation.</p>
+</li>
+</ul>
+<p><img src="https://gitee.com/violets/typora--images/raw/main/imgs/202112021515913.png" alt="image-20211202151532871" style="zoom:67%;" /></p>
+<ul>
+<li>If you don't want side effects of list, you should clone it.</li>
+</ul>
+<p><em><u></em><em>Side effect</em><em> means if you alter a  list, all variables point to this list changed their value.</u></em></p>
+<ul>
+<li>Don't modify a list's length when you iterate it. *Solution: Clone it first (b = a[:]) *</li>
+</ul>
+<h4 id="methods-for-lists">Methods for lists<a class="headerlink" href="#methods-for-lists" title="Permanent link">&para;</a></h4>
+<p>Assume L is a list.</p>
+<ol>
+<li>
+<p>L.append()</p>
+</li>
+<li>
+<p>L.extend()</p>
+</li>
+<li>
+<p>L.pop()</p>
+</li>
+</ol>
+<p><em><u>remove element at the end of list. </em><em>This function's return value gonna to be the element removed.</em><em></u></em></p>
+<ol>
+<li>L.remove(element)</li>
+</ol>
+<p><em><u>remove certain element from list L, but only remove the very first occurance of it.</u></em></p>
+<ol>
+<li>L.split(element)</li>
+</ol>
+<p><img src="https://gitee.com/violets/typora--images/raw/main/imgs/202112021509117.png" alt="image-20211202150943053" style="zoom: 50%;" /></p>
+<ol>
+<li>sort() AND sorted()</li>
+</ol>
+<p><em>sorted(L)</em> :arrow_right: <em>returns sorted list, doesn't mutate L</em></p>
+<p><em>L.sort() ​</em>:arrow_right: <em>mutates a sorted L</em></p>
+<p><em>L.reverse()</em> :arrow_right: <em>mutates a reversed L</em></p>
+<h2 id="lecture-6-recursion-and-dictionaries">Lecture 6 Recursion and Dictionaries<a class="headerlink" href="#lecture-6-recursion-and-dictionaries" title="Permanent link">&para;</a></h2>
+<h3 id="recursion-arrow_forward-devide-and-conquer">Recursion :arrow_forward: <em>Devide and conquer</em><a class="headerlink" href="#recursion-arrow_forward-devide-and-conquer" title="Permanent link">&para;</a></h3>
+<p>Semantically, recursion means <u>a function call itself in its definition.</u></p>
+<p>To avoid infinite recursion, you should ensure there's at least one or more base cases that are easy to solve.</p>
+<p>for and while loop have  a state variable tells you exactly how your loop going.</p>
+<p>Typecally, recursion contains two steps:</p>
+<ol>
+<li>Recurise step:</li>
+</ol>
+<p>think how to reduce problem to a <strong>simpler/smaller version</strong> of the same problem.</p>
+<ol>
+<li>Base case:</li>
+</ol>
+<p>keep resucing problem until reach a simple case that can be <strong>solved directly</strong> </p>
+<h4 id="characteristics_2">Characteristics<a class="headerlink" href="#characteristics_2" title="Permanent link">&para;</a></h4>
+<ol>
+<li>More intuitive to understand than iterative loop (for, while).</li>
+<li>more efficient to write</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="c1"># Use Recursion to solve Hannoi Tower Problem</span>
+<span class="k">def</span> <span class="nf">Hannoi_Tower</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">fr</span><span class="p">,</span><span class="n">to</span><span class="p">,</span><span class="n">spare</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Move from&quot;</span><span class="p">,</span> <span class="n">fr</span><span class="p">,</span> <span class="s2">&quot;to&quot;</span><span class="p">,</span> <span class="n">to</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">Hannoi_Tower</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">fr</span><span class="p">,</span> <span class="n">spare</span><span class="p">,</span> <span class="n">to</span><span class="p">)</span>
+        <span class="n">Hannoi_Tower</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">fr</span><span class="p">,</span> <span class="n">to</span><span class="p">,</span> <span class="n">spare</span><span class="p">)</span>
+        <span class="n">Hannoi_Tower</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">spare</span><span class="p">,</span> <span class="n">to</span><span class="p">,</span> <span class="n">fr</span><span class="p">)</span>
+
+<span class="n">Hannoi_Tower</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;T1&quot;</span><span class="p">,</span> <span class="s2">&quot;T2&quot;</span><span class="p">,</span> <span class="s2">&quot;T3&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Calculate fibonacci number <em><u>This recursion has more than one base case.</u></em></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">Fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Assume n is int &gt;= 0</span>
+<span class="sd">    Returns fibonacci of n</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">Fibonacci</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">Fibonacci</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">Fibonacci</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Fibonacci</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Fibonacci</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+</code></pre></div>
+<h3 id="dictionary">Dictionary {}<a class="headerlink" href="#dictionary" title="Permanent link">&para;</a></h3>
+<h4 id="characteristics_3">Characteristics<a class="headerlink" href="#characteristics_3" title="Permanent link">&para;</a></h4>
+<ol>
+<li>keys need to be unique and immutable</li>
+</ol>
+<p><em><u>Keys' data type can only be ints, floats, strings, tuples, booleans.</u></em></p>
+<ol>
+<li>
+<p>Can directly mutate dictionary; makes it easier to iterate.</p>
+</li>
+<li>
+<p>Dictionaries are not only valuable for store away data, but also valuable on procedure calls when intermediate values are not going to change.</p>
+</li>
+</ol>
+<p><em>Fibonacci with a dictionary can be very efficient.</em></p>
+<div class="highlight"><pre><span></span><code><span class="c1">#####################################</span>
+<span class="c1"># EXAMPLE: comparing fibonacci using memoization</span>
+<span class="c1">#####################################</span>
+
+
+<span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">2</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">fib_efficient</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">d</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">ans</span> <span class="o">=</span> <span class="n">fib_efficient</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span><span class="o">+</span><span class="n">fib_efficient</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+        <span class="n">d</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">ans</span>
+        <span class="k">return</span> <span class="n">ans</span>
+
+<span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
+
+<span class="n">argToUse</span> <span class="o">=</span> <span class="mi">34</span>
+<span class="c1">#print(&quot;&quot;)</span>
+<span class="c1">#print(&#39;using fib&#39;)</span>
+<span class="c1">#print(fib(argToUse))</span>
+<span class="c1">#print(&quot;&quot;)</span>
+<span class="c1">#print(&#39;using fib_efficient&#39;)</span>
+<span class="c1">#print(fib_efficient(argToUse, d))</span>
+</code></pre></div>
+<h4 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h4>
+<p>Assume <strong><em><u>grades</u></em></strong> is  a dictionary.</p>
+<ul>
+<li>grades.keys()</li>
+</ul>
+<p>returns dictionary keys in arbitary order.</p>
+<ul>
+<li>grades.values()</li>
+</ul>
+<h2 id="lecture-7-testing-debugging-exceptions-and-assertions">Lecture 7 Testing, debugging, exceptions and assertions<a class="headerlink" href="#lecture-7-testing-debugging-exceptions-and-assertions" title="Permanent link">&para;</a></h2>
+<h3 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Unit testing</li>
+<li>validate each piece of program</li>
+<li>testing each function separately</li>
+<li>Regression testing</li>
+<li>add test for bugs as you find them</li>
+<li>catch reintroduced errors that were previously fixed</li>
+<li>Integration testing</li>
+<li>does overall program work?</li>
+<li>tend to rush to do this</li>
+</ol>
+<h4 id="testing-approaches">Testing approaches<a class="headerlink" href="#testing-approaches" title="Permanent link">&para;</a></h4>
+<ol>
+<li>random testing (Not Recommend)</li>
+<li>Black box testing</li>
+<li>Glass box testing</li>
+</ol>
+<h3 id="exceptions-and-assertions">Exceptions and assertions<a class="headerlink" href="#exceptions-and-assertions" title="Permanent link">&para;</a></h3>
+<p>Exceptions and assertions make it easier to locate a source of bug.</p>
+<ul>
+<li>
+<p>Exceptions help you when you get wrong input. </p>
+</li>
+<li>
+<p>Assertions make you know where the program get unwanted values and terminate you program immediately.</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">######################################</span>
+<span class="c1"># EXAMPLE: Raising your own exceptions</span>
+<span class="c1">######################################</span>
+<span class="k">def</span> <span class="nf">get_ratios</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="n">L2</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Assumes: L1 and L2 are lists of equal length of numbers</span>
+<span class="sd">        Returns: a list containing L1[i]/L2[i] &quot;&quot;&quot;</span>
+    <span class="n">ratios</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">L1</span><span class="p">)):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">ratios</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">L1</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">/</span><span class="n">L2</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+        <span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+            <span class="n">ratios</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;nan&#39;</span><span class="p">))</span> <span class="c1">#nan = Not a Number</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;get_ratios called with bad arg&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;success&quot;</span><span class="p">)</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;executed no matter what!&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ratios</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">get_ratios</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># avg function: version with assert</span>
+<span class="k">def</span> <span class="nf">avg</span><span class="p">(</span><span class="n">grades</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">grades</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;warning: no grades data&#39;</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">grades</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">grades</span><span class="p">)</span>
+
+
+<span class="n">test_grades</span> <span class="o">=</span> <span class="p">[[[</span><span class="s1">&#39;peter&#39;</span><span class="p">,</span> <span class="s1">&#39;parker&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mf">80.0</span><span class="p">,</span> <span class="mf">70.0</span><span class="p">,</span> <span class="mf">85.0</span><span class="p">]],</span> 
+              <span class="p">[[</span><span class="s1">&#39;bruce&#39;</span><span class="p">,</span> <span class="s1">&#39;wayne&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mf">100.0</span><span class="p">,</span> <span class="mf">80.0</span><span class="p">,</span> <span class="mf">74.0</span><span class="p">]],</span>
+              <span class="p">[[</span><span class="s1">&#39;captain&#39;</span><span class="p">,</span> <span class="s1">&#39;america&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mf">80.0</span><span class="p">,</span> <span class="mf">70.0</span><span class="p">,</span> <span class="mf">96.0</span><span class="p">]],</span>
+              <span class="p">[[</span><span class="s1">&#39;deadpool&#39;</span><span class="p">],</span> <span class="p">[]]]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">get_stats</span><span class="p">(</span><span class="n">test_grades</span><span class="p">))</span>
+</code></pre></div>
+<h2 id="lecture-8-object-oriented-programming">Lecture 8  Object Oriented Programming<a class="headerlink" href="#lecture-8-object-oriented-programming" title="Permanent link">&para;</a></h2>
+<p>Object Oriented Programming makes you able to bundle this data  and bundle some internal representation and some ways to interact with a program into these packages, and with packages, you can create objects, and all objects are going to behave exact the same way (same internal representation and same way that you can interact with them).</p>
+<p><strong>Object</strong>: a instance of your class that has the type, the name of your class.</p>
+<p><strong>Attributes</strong>: data and procedures that "belong" to the class.</p>
+<p><strong>Method</strong>: <em><u>(procedural attributes)</u></em> consider it as a function that only works with this particular type of object.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Coordinate</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="c1"># define attributes here</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Generally you define data attributes inside this __init__</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Python calls __str__ method when used with print on your class object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;&lt;&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;, &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;&gt;&quot;</span>
+
+<span class="c1"># Coordinate is a subclass of object, inherits all its attributes</span>
+<span class="c1"># object is a superclass of Coordinate</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">Coordinate</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">Coordinate</span><span class="p">))</span>
+</code></pre></div>
+<hr />
+<p><strong>__init__</strong>  is a special method tells Python when you first create an object of this type, call this method.</p>
+<p><strong>__str__</strong> has to return a string</p>
+<p><strong>self</strong> represents a particular instance of the class. (For methods that belong to the class, the first parameter is always going to be self (by convention).)</p>
+<hr />
+<h3 id="advantages">Advantages<a class="headerlink" href="#advantages" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Bundle data into packages</li>
+<li>devide-and-conquer development</li>
+<li>classes make it easier to reuse code</li>
+<li>Allows us to add layers of abstraction to our code</li>
+</ol>
+<p>## Lecture 9 Classes and Inheritance</p>
+<h3 id="getters-and-setters">Getters and Setters<a class="headerlink" href="#getters-and-setters" title="Permanent link">&para;</a></h3>
+<p>Getters and Setters can prevent bugs from come into play latter on someone decides to change implementation.</p>
+<p><strong>getters</strong>: return  the values of any of the data attributes</p>
+<p><strong>setters</strong>: going to set the data attributes to whatever is passed in</p>
+<p>:warning: <em><u>Getters and setters should be used outside of class to access data attributes.</u></em> (Reason: Information hiding)</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Animal</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">def</span> <span class="nf">get_age</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span>
+    <span class="k">def</span> <span class="nf">get_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+    <span class="k">def</span> <span class="nf">set_age</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">newage</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">newage</span>
+    <span class="k">def</span> <span class="nf">set_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">newname</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">newname</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;animal:&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;:&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">---- animal tests ----&quot;</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">Animal</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="c1"># Two ways to access data attributes</span>
+<span class="n">a</span><span class="o">.</span><span class="n">age</span>
+<span class="n">a</span><span class="o">.</span><span class="n">get_age</span><span class="p">()</span>
+<span class="c1"># Better to use getters and setters to access data attributes</span>
+</code></pre></div>
+<h3 id="default-arguments">Default Arguments<a class="headerlink" href="#default-arguments" title="Permanent link">&para;</a></h3>
+<p>Default arguments are passed into functions/methods.</p>
+<h3 id="inheritance">Inheritance<a class="headerlink" href="#inheritance" title="Permanent link">&para;</a></h3>
+<ul>
+<li>If subclass doesn't have __init__, it'll use its superclass's __init__. </li>
+</ul>
+<p>This characteristic remains true for any other methods.</p>
+<ul>
+<li>Class variables' value gonna shared between all of the instances in the class. While instance variables can have different values for each instance.</li>
+</ul>
+<p>You should access your class variables use class name. <code>self.rid = Rabbit.tag</code> <em>Rabbit is a class name, Rabbit.tag is a class variable.</em> </p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="c1">#################################</span>
+<span class="c1">## Animal abstract data type </span>
+<span class="c1">#################################</span>
+<span class="k">class</span> <span class="nc">Animal</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">def</span> <span class="nf">get_age</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span>
+    <span class="k">def</span> <span class="nf">get_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+    <span class="k">def</span> <span class="nf">set_age</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">newage</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">newage</span>
+    <span class="k">def</span> <span class="nf">set_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">newname</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">newname</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;animal:&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;:&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">---- animal tests ----&quot;</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">Animal</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">get_age</span><span class="p">())</span>
+<span class="n">a</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s2">&quot;fluffy&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">set_name</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+
+
+<span class="c1">#################################</span>
+<span class="c1">## Inheritance example </span>
+<span class="c1">#################################</span>
+<span class="k">class</span> <span class="nc">Cat</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">speak</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;meow&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;cat:&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;:&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">---- cat tests ----&quot;</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">Cat</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">c</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s2">&quot;fluffy&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="n">c</span><span class="o">.</span><span class="n">speak</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">get_age</span><span class="p">())</span>
+<span class="c1">#a.speak() # error because there is no speak method for Animal class</span>
+
+
+<span class="c1">#################################</span>
+<span class="c1">## Inheritance example</span>
+<span class="c1">#################################</span>
+<span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+        <span class="n">Animal</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">friends</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">def</span> <span class="nf">get_friends</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">friends</span>
+    <span class="k">def</span> <span class="nf">speak</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">add_friend</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fname</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">fname</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">friends</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">friends</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">age_diff</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="n">diff</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">-</span> <span class="n">other</span><span class="o">.</span><span class="n">age</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">diff</span><span class="p">),</span> <span class="s2">&quot;year difference&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;person:&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;:&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">---- person tests ----&quot;</span><span class="p">)</span>
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;jack&quot;</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;jill&quot;</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">get_name</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">get_age</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p2</span><span class="o">.</span><span class="n">get_name</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p2</span><span class="o">.</span><span class="n">get_age</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span>
+<span class="n">p1</span><span class="o">.</span><span class="n">speak</span><span class="p">()</span>
+<span class="n">p1</span><span class="o">.</span><span class="n">age_diff</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span>
+
+
+<span class="c1">#################################</span>
+<span class="c1">## Inheritance example</span>
+<span class="c1">#################################</span>
+<span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">major</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">Person</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">major</span> <span class="o">=</span> <span class="n">major</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;student:&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;:&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;:&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">major</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">change_major</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">major</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">major</span> <span class="o">=</span> <span class="n">major</span>
+    <span class="k">def</span> <span class="nf">speak</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="mf">0.25</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;i have homework&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="mf">0.25</span> <span class="o">&lt;=</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="mf">0.5</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;i need sleep&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="mf">0.5</span> <span class="o">&lt;=</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="mf">0.75</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;i should eat&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;i am watching tv&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">---- student tests ----&quot;</span><span class="p">)</span>
+<span class="n">s1</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s1">&#39;alice&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;CS&quot;</span><span class="p">)</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s1">&#39;beth&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s1</span><span class="o">.</span><span class="n">get_name</span><span class="p">(),</span><span class="s2">&quot;says:&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+<span class="n">s1</span><span class="o">.</span><span class="n">speak</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s2</span><span class="o">.</span><span class="n">get_name</span><span class="p">(),</span><span class="s2">&quot;says:&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+<span class="n">s2</span><span class="o">.</span><span class="n">speak</span><span class="p">()</span>
+
+
+
+<span class="c1">#################################</span>
+<span class="c1">## Use of class variables  </span>
+<span class="c1">### Class variables&#39; value gonna shared between all of the instances in the class.</span>
+<span class="c1">#################################</span>
+<span class="k">class</span> <span class="nc">Rabbit</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+    <span class="c1"># a class variable, tag, shared across all instances</span>
+    <span class="n">tag</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">parent1</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">parent2</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">Animal</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parent1</span> <span class="o">=</span> <span class="n">parent1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parent2</span> <span class="o">=</span> <span class="n">parent2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rid</span> <span class="o">=</span> <span class="n">Rabbit</span><span class="o">.</span><span class="n">tag</span>
+        <span class="n">Rabbit</span><span class="o">.</span><span class="n">tag</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">def</span> <span class="nf">get_rid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># zfill used to add leading zeroes 001 instead of 1</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rid</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">get_parent1</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent1</span>
+    <span class="k">def</span> <span class="nf">get_parent2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent2</span>
+    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="c1"># returning object of same type as this class</span>
+        <span class="k">return</span> <span class="n">Rabbit</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span>
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="c1"># compare the ids of self and other&#39;s parents</span>
+        <span class="c1"># don&#39;t care about the order of the parents</span>
+        <span class="c1"># the backslash tells python I want to break up my line</span>
+        <span class="n">parents_same</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent1</span><span class="o">.</span><span class="n">rid</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">parent1</span><span class="o">.</span><span class="n">rid</span> \
+                       <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent2</span><span class="o">.</span><span class="n">rid</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">parent2</span><span class="o">.</span><span class="n">rid</span>
+        <span class="n">parents_opposite</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent2</span><span class="o">.</span><span class="n">rid</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">parent1</span><span class="o">.</span><span class="n">rid</span> \
+                           <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent1</span><span class="o">.</span><span class="n">rid</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">parent2</span><span class="o">.</span><span class="n">rid</span>
+        <span class="k">return</span> <span class="n">parents_same</span> <span class="ow">or</span> <span class="n">parents_opposite</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;rabbit:&quot;</span><span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_rid</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">---- rabbit tests ----&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;---- testing creating rabbits ----&quot;</span><span class="p">)</span>
+<span class="n">r1</span> <span class="o">=</span> <span class="n">Rabbit</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">r2</span> <span class="o">=</span> <span class="n">Rabbit</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">r3</span> <span class="o">=</span> <span class="n">Rabbit</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;r1:&quot;</span><span class="p">,</span> <span class="n">r1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;r2:&quot;</span><span class="p">,</span> <span class="n">r2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;r3:&quot;</span><span class="p">,</span> <span class="n">r3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;r1 parent1:&quot;</span><span class="p">,</span> <span class="n">r1</span><span class="o">.</span><span class="n">get_parent1</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;r1 parent2:&quot;</span><span class="p">,</span> <span class="n">r1</span><span class="o">.</span><span class="n">get_parent2</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;---- testing rabbit addition ----&quot;</span><span class="p">)</span>
+<span class="n">r4</span> <span class="o">=</span> <span class="n">r1</span><span class="o">+</span><span class="n">r2</span>   <span class="c1"># r1.__add__(r2)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;r1:&quot;</span><span class="p">,</span> <span class="n">r1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;r2:&quot;</span><span class="p">,</span> <span class="n">r2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;r4:&quot;</span><span class="p">,</span> <span class="n">r4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;r4 parent1:&quot;</span><span class="p">,</span> <span class="n">r4</span><span class="o">.</span><span class="n">get_parent1</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;r4 parent2:&quot;</span><span class="p">,</span> <span class="n">r4</span><span class="o">.</span><span class="n">get_parent2</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;---- testing rabbit equality ----&quot;</span><span class="p">)</span>
+<span class="n">r5</span> <span class="o">=</span> <span class="n">r3</span><span class="o">+</span><span class="n">r4</span>
+<span class="n">r6</span> <span class="o">=</span> <span class="n">r4</span><span class="o">+</span><span class="n">r3</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;r3:&quot;</span><span class="p">,</span> <span class="n">r3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;r4:&quot;</span><span class="p">,</span> <span class="n">r4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;r5:&quot;</span><span class="p">,</span> <span class="n">r5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;r6:&quot;</span><span class="p">,</span> <span class="n">r6</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;r5 parent1:&quot;</span><span class="p">,</span> <span class="n">r5</span><span class="o">.</span><span class="n">get_parent1</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;r5 parent2:&quot;</span><span class="p">,</span> <span class="n">r5</span><span class="o">.</span><span class="n">get_parent2</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;r6 parent1:&quot;</span><span class="p">,</span> <span class="n">r6</span><span class="o">.</span><span class="n">get_parent1</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;r6 parent2:&quot;</span><span class="p">,</span> <span class="n">r6</span><span class="o">.</span><span class="n">get_parent2</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;r5 and r6 have same parents?&quot;</span><span class="p">,</span> <span class="n">r5</span> <span class="o">==</span> <span class="n">r6</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;r4 and r6 have same parents?&quot;</span><span class="p">,</span> <span class="n">r4</span> <span class="o">==</span> <span class="n">r6</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="lecture-10-understanding-programming-efficiency">Lecture 10 Understanding Programming Efficiency<a class="headerlink" href="#lecture-10-understanding-programming-efficiency" title="Permanent link">&para;</a></h2>
+<p>Program efficiency  refers both to space and time, but primarily to time.</p>
+<ul>
+<li>Order of growth (<em>the big O notation</em>)</li>
+</ul>
+<p>Two ways to understand program efficiency</p>
+<ul>
+<li>How can you <u>reason about(predict)</u> the time a program takes to solve a particular size problem</li>
+<li>How can we relate choices in algorithm design to the time efficiency of resulting algorithm</li>
+</ul>
+<p>Choices of designing algorithms</p>
+<ul>
+<li>(choice of implementation) Different ways to achieve an operation</li>
+</ul>
+<p><em><u></em><em>e.g.</em><em> Using for loop or while loop</u></em></p>
+<ul>
+<li>(choice of algorithm) Choose different algorithms</li>
+</ul>
+<p><em><u></em><em>e.g.</em><em> Do it recursively or iterally</u></em></p>
+<h3 id="how-to-evaluate-efficiency-three-ways">How to evaluate efficiency <em><u>(Three ways)</u></em><a class="headerlink" href="#how-to-evaluate-efficiency-three-ways" title="Permanent link">&para;</a></h3>
+<p>What we want to evaluate here is the algorithm, not the machine or implementations. And especially want to understand how does it scale? <em><u>if you change size of  the algorithm, in which way it will affect algorithm efficiency.</u></em></p>
+<h4 id="1-set-a-timer-and-time-your-algorithm">1. Set a timer and time your algorithm<a class="headerlink" href="#1-set-a-timer-and-time-your-algorithm" title="Permanent link">&para;</a></h4>
+<p><u><em>Timer evaluate time between different algorithms, but it varies on a lot of  other factors.</em></u></p>
+<ol>
+<li>
+<p>varies between implementations</p>
+</li>
+<li>
+<p>varies between computers</p>
+</li>
+<li>
+<p>not predictable based on small inputs</p>
+</li>
+</ol>
+<p><em><u>Because for  really large sized problems will have issues like get things out of memory and bring them back in to the computer</u></em></p>
+<h4 id="2-count-the-operations">2. Count the operations<a class="headerlink" href="#2-count-the-operations" title="Permanent link">&para;</a></h4>
+<ol>
+<li>count depends on algorithm :heavy_check_mark:</li>
+<li>count depends  on implementations :heavy_multiplication_x:</li>
+<li>count independent of computers :heavy_check_mark:</li>
+<li>no clear definition of which operations to count :heavy_multiplication_x:</li>
+<li>count varies for different inputs and can come up with a relationship between inputs and the count :heavy_check_mark:</li>
+</ol>
+<h4 id="3-order-of-growth-o">3. Order of growth <span class="arithmatex">\(O ()\)</span><a class="headerlink" href="#3-order-of-growth-o" title="Permanent link">&para;</a></h4>
+<p><img src="https://gitee.com/violets/typora--images/raw/main/imgs/202112131010382.png" alt="image-20211210161456780" style="zoom: 25%;" /></p>
+<p>Going to look for as tight as possible an upper bound of growth as a function of the size of input in the worst case.</p>
+<p>Focus on what happens when the size of the problem gets arbitrarily large. And express size of efficiency in terms of size of input. We want to know what the relationship between if you increase the size of input and the runtime after you do that.</p>
+<p>Usually, when we talk about complexity, we gonna focus on the worst case behavior. Change in average speed doesn't mean it change the order of growth of one algorithm.</p>
+<p><em><u>most appropriate way of assessing the impact of choices of algorithm in solving a problem; and in measuring the inherent difficulty in solving a problem.</u></em></p>
+<p><strong>Worst case asymptotic complexity</strong></p>
+<ul>
+<li>
+<p>ignore additive constants</p>
+</li>
+<li>
+<p>ignore multiplicative constants</p>
+</li>
+</ul>
+<p><strong>Law of Addition for <span class="arithmatex">\(O()\)</span>:</strong></p>
+<p>Used with sequential statements
+$$
+O(f(n)) + O(g(n)) = O(f(n)+g(n))
+$$
+<strong>Law of  for <span class="arithmatex">\(O()\)</span>:</strong></p>
+<p>Used with nested statements/loops:
+$$
+O(f(n)) * O(g(n)) = O(f(n)<em>g(n))
+$$
+Nested loops typically(not always) have that kind of behavior. (</em><u>Nested loop might be implicit. e.g. <code>ele in Alist</code></u>*)</p>
+<p><strong>Some basic order of growth</strong></p>
+<ol>
+<li>
+<p><span class="arithmatex">\(O(1)\)</span> independent of input problem's size</p>
+</li>
+<li>
+<p><span class="arithmatex">\(O(n)\)</span> problem reduces linearly each time. (e.g. loop)</p>
+</li>
+<li>
+<p><span class="arithmatex">\(O(log(n))\)</span> problem divides it size each time (e.g. bisection)</p>
+</li>
+<li>
+<p><span class="arithmatex">\(O(n\space log(n))\)</span> (e.g. merge sort algorithm)</p>
+</li>
+<li>
+<p><span class="arithmatex">\(O(n^C)\)</span> [Polynomial Complexity] nested loops or recursive function calls</p>
+</li>
+<li>
+<p><span class="arithmatex">\(O(C ^ n)\)</span> [Exponential Complexity] </p>
+</li>
+</ol>
+<p>Two situations for exponential complexity (Use recurrence relation to calculate complexity):</p>
+<ol>
+<li>
+<p>recursive functions where more than one recursive call for each size of problem. <em><u>e.g. Hanoi Tower</u></em></p>
+</li>
+<li>
+<p>Can also be buried inside of how you growth the size of the problem. <em><u> Loop grows in size each time around.</u></em></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">genSubsets</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[[]]</span> <span class="c1">#list of empty list</span>
+    <span class="n">smaller</span> <span class="o">=</span> <span class="n">genSubsets</span><span class="p">(</span><span class="n">L</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># all subsets without last element</span>
+    <span class="n">extra</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">:]</span> <span class="c1"># create a list of just last element</span>
+    <span class="n">new</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">small</span> <span class="ow">in</span> <span class="n">smaller</span><span class="p">:</span>
+        <span class="n">new</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">small</span><span class="o">+</span><span class="n">extra</span><span class="p">)</span>  <span class="c1"># for all smaller solutions, add one with last element</span>
+    <span class="k">return</span> <span class="n">smaller</span><span class="o">+</span><span class="n">new</span>  <span class="c1"># combine those with last element and those without</span>
+</code></pre></div>
+<p><em>The for loop size (i.e. <code>len(smaller)</code>) going to be growing exponentially.  If  <code>len(L) = n</code> the loop size gonna to be <span class="arithmatex">\(2^{n-1}\)</span> in this case.</em> </p>
+</li>
+</ol>
+<h2 id="lecture-11-searching-and-sorting">Lecture 11 Searching and Sorting<a class="headerlink" href="#lecture-11-searching-and-sorting" title="Permanent link">&para;</a></h2>
+<p><em>Exhaustive Enumeration</em></p>
+<p>Searching is to find items in a collection. That collection can be either implicit <em><u>(e. g. find square roots, the collection is all the numbers between some point and some other point )</u></em> or explicit.</p>
+<h3 id="sorting-algorithms">Sorting Algorithms<a class="headerlink" href="#sorting-algorithms" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Monkey/Bogo sort [Complexity: <span class="arithmatex">\(O(n^n)\)</span>]</li>
+</ol>
+<p>Randomly permute elements in a collection, check if the sequence of elements is sorted.</p>
+<ol>
+<li>Bubble sort [Complexity: <span class="arithmatex">\(O(n^2)\)</span>]</li>
+</ol>
+<p>Compare elements pairwise, move the smaller on to the first of these two, continue until no more swap can be done.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">bubble_sort</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+    <span class="n">swap</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">swap</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;bubble sort: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">L</span><span class="p">))</span>
+        <span class="n">swap</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">L</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">L</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+                <span class="n">swap</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="n">temp</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+                <span class="n">L</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                <span class="n">L</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span>
+
+<span class="n">testList</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">13</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bubble_sort</span><span class="p">(</span><span class="n">testList</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">testList</span><span class="p">)</span>
+</code></pre></div>
+<ol>
+<li>Selection sort [Complexity: <span class="arithmatex">\(O(n^2)\)</span>]</li>
+</ol>
+<p>Find the smallest element, put it in front.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">selection_sort</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+    <span class="n">suffixSt</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">suffixSt</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;selection sort: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">L</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">suffixSt</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">L</span><span class="p">[</span><span class="n">suffixSt</span><span class="p">]:</span>
+                <span class="n">L</span><span class="p">[</span><span class="n">suffixSt</span><span class="p">],</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">L</span><span class="p">[</span><span class="n">suffixSt</span><span class="p">]</span>
+        <span class="n">suffixSt</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">testList</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">13</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">selection_sort</span><span class="p">(</span><span class="n">testList</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">testList</span><span class="p">)</span>
+</code></pre></div>
+<ol>
+<li>Merge sort</li>
+</ol>
+<p>Divide list into two sublists (continue divide until length of these sublists at most 2), sort them, then compare the first element of each, take the smaller one add to result. Keep doing that until one of  the list is empty and copy the reminder of the other list.</p>
+<p><img src="C:%5CUsers%5CLENOVO%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20211212113031713.png" alt="image-20211212113031713" style="zoom: 50%;" /></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">merge</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">left</span><span class="p">)</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">right</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">left</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">right</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+            <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">left</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">right</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+            <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">left</span><span class="p">)):</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">left</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">j</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">right</span><span class="p">)):</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">right</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+        <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;merge: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">left</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&amp;&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">right</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; to &#39;</span> <span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="k">def</span> <span class="nf">merge_sort</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;merge sort: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">L</span><span class="p">))</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">L</span><span class="p">[:]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">middle</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span>
+        <span class="n">left</span> <span class="o">=</span> <span class="n">merge_sort</span><span class="p">(</span><span class="n">L</span><span class="p">[:</span><span class="n">middle</span><span class="p">])</span>
+        <span class="n">right</span> <span class="o">=</span> <span class="n">merge_sort</span><span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="n">middle</span><span class="p">:])</span>
+        <span class="k">return</span> <span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span>
+
+<span class="n">testList</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">13</span><span class="p">]</span>
+
+<span class="c1">#print(&#39;&#39;)</span>
+<span class="c1">#print(merge_sort(testList))</span>
+</code></pre></div>
+<p><strong>Calculate the complexity of merge sort</strong></p>
+<p><img src="https://gitee.com/violets/typora--images/raw/main/imgs/202112131010602.png" alt="image-20211213100139630" style="zoom: 67%;" /></p>
+<p>To compute the total cost represented by the recurrence of merge sort, we simply add up the costs of all the levels. <em><u>Where constant <span class="arithmatex">\(c\)</span> represents the time required to solve problems of size 1 as well as the time per array element of the divide and combine steps.</u></em> The recursion tree has <span class="arithmatex">\(log{n} +1\)</span> levels, each costing <span class="arithmatex">\(cn\)</span>, for a total cost of <span class="arithmatex">\(cn(log{n}+1)=cnlog{n}+cn\)</span>. Ignoring the low-order term and the constant c gives the desired result of <span class="arithmatex">\(O (nlog{n})\)</span>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      quaintness
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/quaintness" target="_blank" rel="noopener" title="GitHub | quaintness" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      
+        <script src="../../../mkdocs/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
