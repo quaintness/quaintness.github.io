@@ -322,4 +322,50 @@ quaint@jarvis:~/Desktop$ ls -li file1 file3 #file3 is not a regular file
     locate zip | grep bin #This command lists all files and directories with both `zip` and `bin` in their name
     ```
     
-    
+
+## Regular expression
+
+- Interactive Tutorial : [Rexone](https://regexone.com/)
+
+- [Language Guide for Python](https://regexone.com/references/python)
+
+  > 1. **Raw Python Strings**: Using raw Python strings (i.e. `r"strings"`), which is easier to read, instead regular Python strings
+  >
+  > 2. ##### **Matching a string**: `re` package
+  >
+  >    ```python
+  >    matchObject = re.search(pattern, input_str, flags=0)
+  >    ```
+  >
+  > 3. **Capturing groups**:
+  >
+  >    ```python
+  >    # perform a global search over the whole input string, return a list
+  >    matchList = re.findall(pattern, input_str, flags=0)
+  >    # returns an iterator of re.MatchObjects to walk through
+  >    matchList = re.finditer(pattern, input_str, flags=0)
+  >    ```
+  >
+  > 4. **Finding and replacing strings**
+  >
+  >    ```python
+  >    replacedString = re.sub(pattern, replacement_pattern, input_str, count, flags=0)
+  >    ```
+  >
+  > 5. **`re` Flags**
+  >
+  >    - [`re.IGNORECASE`](https://docs.python.org/3.6/library/re.html#re.IGNORECASE) makes the pattern case insensitive so that it matches strings of different capitalizations
+  >    - [`re.MULTILINE`](https://docs.python.org/3.6/library/re.html#re.MULTILINE) is necessary if your input string has newline characters (*\n*), this flag allows the start and end metacharacter (*^* and *$* respectively) to match at the beginning and end of each line instead of at the beginning and end of the whole input string
+  >    - [`re.DOTALL`](https://docs.python.org/3.6/library/re.html#re.DOTALL) allows the dot (*.*) metacharacter match all characters, including the newline character (*\n*)
+  >
+  > 6. **Compiling a pattern for performance**
+  >
+  >    ```python
+  >    regexObject = re.compile(pattern, flags=0)
+  >    ```
+  >
+  > ***Links***
+  >
+  > - [Python Documentation for Regular Expressions](https://docs.python.org/3.6/library/re.html)
+  >
+  > - [Python Compatible Regex Tester](https://regex101.com/#python)
